@@ -34,6 +34,7 @@ class TicketToRide():
             assert self.game_engine.game_isset == True
             assert self.game_engine.game_ended == False
             while not self.game_engine.game_ended:
+                print(self.game_engine.turn)
                 self.take_turns()
             for player in self.game_engine.final_standings:
                     scores[player.turn_order] += player.points

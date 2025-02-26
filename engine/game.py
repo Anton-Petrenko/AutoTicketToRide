@@ -3,6 +3,7 @@ import matplotlib
 import matplotlib.pyplot
 from .lib import *
 import networkx as nx
+from copy import deepcopy
 from random import randint
 from itertools import combinations
 
@@ -31,6 +32,17 @@ class GameOptions:
 
         assert 0 < dests_dealt_per_player_start
         self.dests_dealt_per_player_start = 3
+    
+    def copy(self):
+        ret = GameOptions(deepcopy(self.players))
+        ret.is_copy = True
+        ret.logs = False
+        ret.seed = deepcopy(self.seed)
+        ret.filename_paths = deepcopy(self.filename_paths)
+        ret.filename_dests = deepcopy(self.filename_dests)
+        ret.reshuffle_limit = deepcopy(self.reshuffle_limit)
+        ret.dests_dealt_per_player_start = deepcopy(self.dests_dealt_per_player_start)
+        return ret
 
 class GameEngine:
 
@@ -103,6 +115,28 @@ class GameEngine:
         deck = ['PINK']*pink+['WHITE']*white+['BLUE']*blue+['YELLOW']*yellow+['ORANGE']*orange+['BLACK']*black+['RED']*red+['GREEN']*green+['WILD']*wild
         return Deck(deck)
     
+    def clone(self):
+        ret = GameEngine()
+        ret.is_copy = True
+        ret.turn = deepcopy(self.turn)
+        ret.board = deepcopy(self.board)
+        ret.options = self.options.copy()
+        ret.game_isset = deepcopy(self.game_isset)
+        ret.last_round = deepcopy(self.last_round)
+        ret.game_ended = deepcopy(self.game_ended)
+        ret.faceup_cards = deepcopy(self.faceup_cards)
+        ret.former_action = deepcopy(self.former_action)
+        ret.initial_round = deepcopy(self.initial_round)
+        ret.final_standings = deepcopy(self.final_standings)
+        ret.last_round_turn = deepcopy(self.last_round_turn)
+        ret.traincolor_deck = deepcopy(self.traincolor_deck)
+        ret.destination_deck = deepcopy(self.destination_deck)
+        ret.destinations_dealt = deepcopy(self.destinations_dealt)
+        ret.player_making_move = deepcopy(self.player_making_move)
+        ret.no_valid_moves_inarow = deepcopy(self.no_valid_moves_inarow)
+        ret.traincolor_discard_deck = deepcopy(self.traincolor_discard_deck)
+        return ret
+
     def validate_faceup_cards(self):
 
         if self.faceup_cards.count('WILD') >= 3:
@@ -228,7 +262,6 @@ class GameEngine:
         assert len(self.destinations_dealt) > 0
 
         self.add_log_line(f"Picks {len(action.destinations)} destinations", 1)
-
         for destination in action.destinations:
             assert destination in self.destinations_dealt
             self.add_log_line(str(destination), 2)

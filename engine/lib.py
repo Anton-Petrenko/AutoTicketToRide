@@ -10,44 +10,7 @@ CHOOSE_DESTINATIONS = 4
 POINTS_BY_LENGTH = {1:1, 2:2, 3:4, 4:7, 5:10, 6:15}
 COLOR_INDEXING = {'PINK': 0, 'WHITE': 1, 'BLUE': 2, 'YELLOW': 3, 'ORANGE': 4, 'BLACK': 5, 'RED': 6, 'GREEN': 7, 'WILD': 8}
 GRAPH_COLORMAP = {0: 'blue', 1: 'red', 2: 'green', 3: 'orange', 4: 'black'}
-CITY_LOCATIONS = {
-    'VANCOUVER': np.array([-0.91, 0.90]), 
-    'CALGARY': np.array([-0.62, 0.97]),
-    'SEATTLE': np.array([-0.91, 0.69]),
-    'HELENA': np.array([-0.39, 0.45]),
-    'WINNIPEG': np.array([-0.11, 0.95]),
-    'PORTLAND': np.array([-0.96, 0.49]),
-    'DULUTH': np.array([0.13, 0.48]),
-    'OMAHA': np.array([0.07, 0.11]),
-    'DENVER': np.array([-0.26, -0.16]),
-    'SALT LAKE CITY': np.array([-0.56, -0.03]),
-    'SAULT ST. MARIE': np.array([0.41, 0.74]),
-    'SAN FRANCISCO': np.array([-1, -0.28]),
-    'TORONTO': np.array([0.66, 0.66]),
-    'CHICAGO': np.array([0.4, 0.24]),
-    'KANSAS CITY': np.array([0.11, -0.08]),
-    'OKLAHOMA CITY': np.array([0.06, -0.42]),
-    'SANTA FE': np.array([-0.28, -0.5]),
-    'PHOENIX': np.array([-0.55, -0.71]),
-    'LAS VEGAS': np.array([-0.68, -0.46]),
-    'MONTREAL': np.array([0.84, 1]),
-    'LOS ANGELES': np.array([-0.84, -0.69]),
-    'PITTSBURGH': np.array([0.70, 0.30]),
-    'SAINT LOUIS': np.array([0.3, -0.08]),
-    'LITTLE ROCK': np.array([0.27, -0.44]),
-    'DALLAS': np.array([0.11, -0.75]),
-    'EL PASO': np.array([-0.29, -0.86]),
-    'BOSTON': np.array([1, 0.76]),
-    'NEW YORK': np.array([0.88, 0.46]),
-    'WASHINGTON': np.array([0.9, 0.12]),
-    'RALEIGH': np.array([0.78, -0.14]),
-    'NASHVILLE': np.array([0.51, -0.24]),
-    'NEW ORLEANS': np.array([0.42, -0.89]),
-    'HOUSTON': np.array([0.2, -0.92]),
-    'CHARLESTON': np.array([0.83, -0.4]),
-    'ATLANTA': np.array([0.63, -0.37]),
-    'MIAMI': np.array([0.91, -1])
-}
+CITY_LOCATIONS = {'VANCOUVER': np.array([-0.91, 0.90]), 'CALGARY': np.array([-0.62, 0.97]),'SEATTLE': np.array([-0.91, 0.69]),'HELENA': np.array([-0.39, 0.45]),'WINNIPEG': np.array([-0.11, 0.95]),'PORTLAND': np.array([-0.96, 0.49]),'DULUTH': np.array([0.13, 0.48]),'OMAHA': np.array([0.07, 0.11]),'DENVER': np.array([-0.26, -0.16]),'SALT LAKE CITY': np.array([-0.56, -0.03]),'SAULT ST. MARIE': np.array([0.41, 0.74]),'SAN FRANCISCO': np.array([-1, -0.28]),'TORONTO': np.array([0.66, 0.66]),'CHICAGO': np.array([0.4, 0.24]),'KANSAS CITY': np.array([0.11, -0.08]),'OKLAHOMA CITY': np.array([0.06, -0.42]),'SANTA FE': np.array([-0.28, -0.5]),'PHOENIX': np.array([-0.55, -0.71]),'LAS VEGAS': np.array([-0.68, -0.46]),'MONTREAL': np.array([0.84, 1]),'LOS ANGELES': np.array([-0.84, -0.69]),'PITTSBURGH': np.array([0.70, 0.30]),'SAINT LOUIS': np.array([0.3, -0.08]),'LITTLE ROCK': np.array([0.27, -0.44]),'DALLAS': np.array([0.11, -0.75]),'EL PASO': np.array([-0.29, -0.86]),'BOSTON': np.array([1, 0.76]),'NEW YORK': np.array([0.88, 0.46]),'WASHINGTON': np.array([0.9, 0.12]),'RALEIGH': np.array([0.78, -0.14]),'NASHVILLE': np.array([0.51, -0.24]),'NEW ORLEANS': np.array([0.42, -0.89]),'HOUSTON': np.array([0.2, -0.92]),'CHARLESTON': np.array([0.83, -0.4]),'ATLANTA': np.array([0.63, -0.37]),'MIAMI': np.array([0.91, -1])}
 
 class Player:
 
@@ -111,6 +74,9 @@ class DestinationCard:
     
     def __str__(self) -> str:
         return f"DESTINATION: [{self.id}] {self.city1} --{self.points}-- {self.city2}"
+    
+    def __eq__(self, value):
+        return isinstance(value, DestinationCard) and self.id == value.id
 
 class Action:
     def __init__(self, type: int, faceup_card_at_time: list[str]):
