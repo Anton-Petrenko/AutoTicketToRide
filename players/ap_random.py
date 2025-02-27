@@ -2,7 +2,7 @@ from random import choice
 from engine.lib import Player
 from engine.game import GameEngine
 
-class RandomAgent(Player):
+class Random(Player):
 
     def __init__(self, name = "RandomAgent"):
         super().__init__(name)

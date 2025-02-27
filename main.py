@@ -1,6 +1,6 @@
-from ai import *
 from engine import *
-import agents as Agents
+from alphazero import *
+import players as Player
 
 # self.stateToInput is not implemented
 # color counting in general is not implemented
@@ -10,10 +10,16 @@ import agents as Agents
 
 if __name__ == "__main__":
 
-    options = GameOptions(
-        players=[Agents.RandomAgent(), Agents.FlatWinsMonteCarlo()]
+    game_options = GameOptions(
+        logs=False
+    )
+    alphazero_options = AlphaZeroTrainingOptions(
+        game_options, 
+        num_players=2
     )
 
-    ttr = TicketToRide(options)
-    ttr.setup_game()
-    ttr.play()
+    # ttr = TicketToRide(game_options)
+    # ttr.play()
+
+    ai = AlphaZeroTrainer(alphazero_options)
+    ai.train()

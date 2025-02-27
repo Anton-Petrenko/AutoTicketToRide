@@ -6,6 +6,7 @@ class TicketToRide():
 
     def __init__(self, options: GameOptions):
         assert isinstance(options, GameOptions)
+        assert options.players != None
         self.options = options
         self.players_list = deepcopy(self.options.players)
         self.game_engine = None
@@ -28,8 +29,9 @@ class TicketToRide():
     def play(self, num_games: int = 1):
         assert num_games > 0
 
-        scores = [0]*len(self.options.players)
         if num_games == 1:
+            if getattr(self, 'game_engine') == None:
+                self.game_engine = self.setup_game()
             assert getattr(self, 'game_engine') != None
             assert self.game_engine.game_isset == True
             assert self.game_engine.game_ended == False
@@ -40,6 +42,7 @@ class TicketToRide():
                     scores[player.turn_order] += player.points
 
         else:
+            scores = [0]*len(self.options.players)
             for _ in range(num_games):
                 print(f"Playing game {_+1}...")
                 self.options.players = deepcopy(self.players_list)

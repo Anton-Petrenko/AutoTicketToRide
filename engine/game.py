@@ -10,7 +10,7 @@ from itertools import combinations
 class GameOptions:
     def __init__(
             self,
-            players: list[Player],
+            players: list[Player] = None,
             logs: bool = True,
             seed: int = randint(0, 999999999),
             is_copy: bool = False,
@@ -20,7 +20,7 @@ class GameOptions:
             dests_dealt_per_player_start: int = 3
             ):
         
-        assert 2 <= len(players) <= 5
+        if players: assert 2 <= len(players) <= 5
         self.players = players
         
         self.is_copy = is_copy
@@ -52,9 +52,10 @@ class GameEngine:
     def setup_game(self, options: GameOptions):
         assert isinstance(options, GameOptions)
 
+        self.state_history = []
+
         self.turn = 0
         self.logs = []
-        self.states = []
         self.is_copy = options.is_copy
         self.former_action = None
         self.player_making_move = 0
@@ -74,8 +75,9 @@ class GameEngine:
         self.traincolor_discard_deck: Deck = Deck()
         self.traincolor_deck: Deck[str] = self.get_traincolors()
 
-        for player in options.players:
-            player.train_colors.extend(self.traincolor_deck.draw(4))
+        if len(options.players) > 0:
+            for player in options.players:
+                player.train_colors.extend(self.traincolor_deck.draw(4))
 
         self.faceup_cards: list[str] = self.traincolor_deck.draw(5)
         self.validate_faceup_cards()
@@ -84,6 +86,7 @@ class GameEngine:
         
         for i, player in enumerate(options.players):
             player.turn_order = i
+            player.color_counts = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] for i in range(len(options.players))]
 
         self.initial_round = True
         self.destinations_dealt.extend(self.destination_deck.draw(options.dests_dealt_per_player_start))
@@ -125,6 +128,7 @@ class GameEngine:
         ret.last_round = deepcopy(self.last_round)
         ret.game_ended = deepcopy(self.game_ended)
         ret.faceup_cards = deepcopy(self.faceup_cards)
+        ret.state_history = deepcopy(self.state_history)
         ret.former_action = deepcopy(self.former_action)
         ret.initial_round = deepcopy(self.initial_round)
         ret.final_standings = deepcopy(self.final_standings)
@@ -431,6 +435,46 @@ class GameEngine:
         self.add_log_line("Dealing destination cards:", 1)
         for card in self.destinations_dealt:
             self.add_log_line(str(card), 2)
+
+    def state_representation(self) -> np.ndarray:
+
+        cities = self.get_destinations()
+
+        next_players = [self.player_making_move]
+        for _ in range(len(self.options.players)-1):
+            next_players.append((next_players[len(next_players)-1]+1) % len(self.options.players))
+        
+        ret = []
+
+        temp = [0]*len(cities)
+        for destination in self.destinations_dealt:
+            temp[destination.id] = 1
+        ret.extend(temp)
+        
+        temp = [0]*len(cities)
+        for destination in self.options.players[self.player_making_move].destinations:
+            temp[destination.id] = 1
+        ret.extend(temp)
+        
+        temp = [0]*(len(self.options.players)-1)
+        for i, turn_order in enumerate(next_players[1:]):
+            temp[i] = len(self.options.players[turn_order].destinations)
+        ret.extend(temp)
+
+        for turn_order in next_players:
+            temp = [0]*100
+            edges = [edge for edge in self.board.edges(data=True) if edge[2]['owner'] == turn_order]
+            for edge in edges:
+                temp[edge[2]['index']] = 1
+            ret.extend(temp)
+        
+        ret.extend([self.faceup_cards.count(color) for color in COLOR_INDEXING.keys()])
+
+        ret.extend([self.options.players[next_players[0]].train_colors.count(color) for color in COLOR_INDEXING.keys()])
+        for turn_order in next_players[1:]:
+            ret.extend(self.options.players[next_players[0]].color_counts[turn_order])
+        
+        return ret
 
     def add_log_line(self, log: str, indent: int = 0):
         if not self.options.logs: return

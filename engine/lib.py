@@ -20,6 +20,7 @@ class Player:
         self.turn_order = None
         self.trains_left = 45
         self.train_colors: list[str] = []
+        self.color_counts: list[list[int]] = []
         self.destinations: list[DestinationCard] = []
     
     def decide(self):
