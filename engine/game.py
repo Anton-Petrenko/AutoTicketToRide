@@ -13,10 +13,20 @@ class GameOptions:
             players: list[Player] = None,
             logs: bool = True,
             seed: int = randint(0, 999999999),
+            pink_trains: int = 12,
+            white_trains: int = 12,
+            blue_trains: int = 12,
+            yellow_trains: int = 12,
+            orange_trains: int = 12,
+            black_trains: int = 12,
+            red_trains: int = 12,
+            green_trains: int = 12,
+            wild_trains: int = 12,
             is_copy: bool = False,
             filename_paths: str = "USA_paths.txt",
             filename_dests: str = "USA_destinations.txt",
             reshuffle_limit: int = 10,
+            dests_dealt_on_request: int = 3,
             dests_dealt_per_player_start: int = 3
             ):
         
@@ -30,8 +40,19 @@ class GameOptions:
         self.filename_dests = filename_dests
         self.reshuffle_limit = reshuffle_limit
 
+        self.pink_trains = pink_trains
+        self.white_trains = white_trains
+        self.blue_trains = blue_trains
+        self.yellow_trains = yellow_trains
+        self.orange_trains = orange_trains
+        self.black_trains = black_trains
+        self.red_trains = red_trains
+        self.green_trains = green_trains
+        self.wild_trains = wild_trains
+
         assert 0 < dests_dealt_per_player_start
-        self.dests_dealt_per_player_start = 3
+        self.dests_dealt_per_player_start = dests_dealt_per_player_start
+        self.dests_dealt_on_request = dests_dealt_on_request
     
     def copy(self):
         ret = GameOptions(deepcopy(self.players))
@@ -73,7 +94,7 @@ class GameEngine:
         self.board.add_edges_from((route.city1, route.city2, {'weight': route.weight, 'color': route.color, 'owner': None, 'index': route.id}) for route in self.get_routes(options.filename_paths))
         
         self.traincolor_discard_deck: Deck = Deck()
-        self.traincolor_deck: Deck[str] = self.get_traincolors()
+        self.traincolor_deck: Deck[str] = Deck(self.get_traincolors(options.pink_trains, options.white_trains, options.blue_trains, options.yellow_trains, options.orange_trains, options.black_trains, options.red_trains, options.green_trains, options.wild_trains))
 
         if len(options.players) > 0:
             for player in options.players:
@@ -116,7 +137,7 @@ class GameEngine:
     def get_traincolors(self, pink: int = 12, white: int = 12, blue: int = 12, yellow: int = 12, orange: int = 12, black: int = 12, red: int = 12, green: int = 12, wild: int = 12):
         
         deck = ['PINK']*pink+['WHITE']*white+['BLUE']*blue+['YELLOW']*yellow+['ORANGE']*orange+['BLACK']*black+['RED']*red+['GREEN']*green+['WILD']*wild
-        return Deck(deck)
+        return deck
     
     def clone(self):
         ret = GameEngine()
@@ -428,7 +449,7 @@ class GameEngine:
 
     def deal_destinations(self):
 
-        while len(self.destinations_dealt) < 3 and len(self.destination_deck.cards) > 0:
+        while len(self.destinations_dealt) < self.options.dests_dealt_on_request and len(self.destination_deck.cards) > 0:
             self.destinations_dealt.extend(self.destination_deck.draw(1))
         
         assert len(self.destinations_dealt) > 0
@@ -474,7 +495,7 @@ class GameEngine:
         for turn_order in next_players[1:]:
             ret.extend(self.options.players[next_players[0]].color_counts[turn_order])
         
-        return ret
+        return np.array([ret])
 
     def add_log_line(self, log: str, indent: int = 0):
         if not self.options.logs: return

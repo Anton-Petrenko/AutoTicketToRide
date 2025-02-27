@@ -1,3 +1,5 @@
+import os
+print(f"[{os.getpid()}] [AutoTicketToRide] main: Expect 2 additional TensorFlow import statements...")
 from engine import *
 from alphazero import *
 import players as Player

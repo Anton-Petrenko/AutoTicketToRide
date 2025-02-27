@@ -1,7 +1,8 @@
 import os
+import math
 from ai import NeuralNet, NeuralNetOptions
 from multiprocessing import Process, Queue
-from engine import GameEngine, GameOptions, Player
+from engine import GameEngine, GameOptions, Player, Action
 
 class AlphaZeroNode():
     def __init__(self, prior: float):
@@ -30,7 +31,14 @@ class AlphaZeroTrainingOptions():
 class AlphaZeroTrainer():
     def __init__(self, options: AlphaZeroTrainingOptions):
         self.options = options
-        self.neural_net_options = NeuralNetOptions(len(self.options.game_options.players))
+
+        game = GameEngine()
+        game.setup_game(GameOptions(players=[Player("") for i in range(len(self.options.game_options.players))]))
+        output_lengths = [4, 0, 0, 0, 1]
+        output_lengths[1] = len(set(game.get_traincolors()))
+        output_lengths[2] = game.options.dests_dealt_on_request
+        output_lengths[3] = len(game.get_routes())
+        self.neural_net_options = NeuralNetOptions(len(self.options.game_options.players), len(game.state_representation()[0]), output_lengths)
 
     def train(self):
 
@@ -63,9 +71,14 @@ class AlphaZeroTrainer():
             break
     
     def run_mcts(self, game: GameEngine, network: NeuralNet):
-        # everything is set up to pick up where you left off here.
         root = AlphaZeroNode(0)
         self.evaluate(root, game, network)
     
-    def evaluate(self, root: AlphaZeroNode, game: GameEngine, network: NeuralNet):
-        print()
+    def evaluate(self, node: AlphaZeroNode, game: GameEngine, network: NeuralNet):
+        network_out = network.inference(game.state_representation())
+        node.to_play = game.player_making_move
+        policy = {action: math.exp(self.get_logit_move(network_out, action)) for action in game.get_valid_moves()}
+    
+    def get_logit_move(self, network_out: NeuralNet.NeuralNetOutput, action: Action):
+        # Ended here!
+        pass
