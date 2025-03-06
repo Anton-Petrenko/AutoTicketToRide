@@ -4,11 +4,15 @@ from engine import *
 from alphazero import *
 import players as Player
 
-# self.stateToInput is not implemented
-# color counting in general is not implemented
-# note: destination card points are only awarded at the end, not as they are completed
 # longest route not implemented
-# check mcts action hashing for children dictionary
+# check mcts & alphazero action hashing for children dictionary
+# what is a good way to get the probability of making a move given the neural net output?
+# actions have faceupcard data that was previously used in the hashing function for it - ensure this is still happening
+# figure out a good root_dirichlet_alpha is (research) honestly just look at add_exploration_noise functoin in general
+# figure out what pb_c_base and pb_c_init is in the ucb formula
+# make sure game.history is saving the right stuff
+# rename num_sampling_moves to something more intuitive - find out what it means
+# figure out store_search_statistics
 
 if __name__ == "__main__":
 
@@ -17,7 +21,8 @@ if __name__ == "__main__":
     )
     alphazero_options = AlphaZeroTrainingOptions(
         game_options, 
-        num_players=2
+        num_players=2,
+        simulations_per_move=1
     )
 
     # ttr = TicketToRide(game_options)

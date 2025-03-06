@@ -116,7 +116,7 @@ class ChooseDestinations(Action):
         self.destinations: list[DestinationCard] | None = destinations
     
     def __str__(self):
-        return f"ACTION: Choose {len(self.destinations)} destinations"
+        return f"ACTION: Choose {len(self.destinations)} {[str(dest) for dest in self.destinations]} destinations"
 
 class DrawDestinations(Action):
     def __init__(self, type, faceup_card_at_time):

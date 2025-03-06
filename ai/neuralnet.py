@@ -1,8 +1,8 @@
 from numpy import ndarray
 from players.ap_random import Random
-from keras.api.layers import Dense, Input
+from keras.layers import Dense, Input
 from engine import GameEngine, GameOptions
-from keras.api.models import load_model, Sequential, Model
+from keras.models import load_model, Sequential, Model
 
 class NeuralNetOptions:
     def __init__(
@@ -42,5 +42,5 @@ class NeuralNet:
         return model
     
     def inference(self, input: ndarray):
-        return self.NeuralNetOutput(self.options, self.model.predict(input))
+        return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=0))
     

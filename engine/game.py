@@ -27,7 +27,8 @@ class GameOptions:
             filename_dests: str = "USA_destinations.txt",
             reshuffle_limit: int = 10,
             dests_dealt_on_request: int = 3,
-            dests_dealt_per_player_start: int = 3
+            dests_dealt_per_player_start: int = 3,
+            traincolors_dealt_per_player_start: int = 4
             ):
         
         if players: assert 2 <= len(players) <= 5
@@ -53,6 +54,7 @@ class GameOptions:
         assert 0 < dests_dealt_per_player_start
         self.dests_dealt_per_player_start = dests_dealt_per_player_start
         self.dests_dealt_on_request = dests_dealt_on_request
+        self.traincolor_dealt_per_player_start = traincolors_dealt_per_player_start
     
     def copy(self):
         ret = GameOptions(deepcopy(self.players))
@@ -73,7 +75,7 @@ class GameEngine:
     def setup_game(self, options: GameOptions):
         assert isinstance(options, GameOptions)
 
-        self.state_history = []
+        self.history: list[tuple[Action, np.ndarray]] = []
 
         self.turn = 0
         self.logs = []
@@ -98,7 +100,7 @@ class GameEngine:
 
         if len(options.players) > 0:
             for player in options.players:
-                player.train_colors.extend(self.traincolor_deck.draw(4))
+                player.train_colors.extend(self.traincolor_deck.draw(options.traincolor_dealt_per_player_start))
 
         self.faceup_cards: list[str] = self.traincolor_deck.draw(5)
         self.validate_faceup_cards()
@@ -107,7 +109,7 @@ class GameEngine:
         
         for i, player in enumerate(options.players):
             player.turn_order = i
-            player.color_counts = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] for i in range(len(options.players))]
+            player.color_counts = [[0, 0, 0, 0, 0, 0, 0, 0, 0, options.traincolor_dealt_per_player_start] for i in range(len(options.players))]
 
         self.initial_round = True
         self.destinations_dealt.extend(self.destination_deck.draw(options.dests_dealt_per_player_start))
@@ -149,7 +151,7 @@ class GameEngine:
         ret.last_round = deepcopy(self.last_round)
         ret.game_ended = deepcopy(self.game_ended)
         ret.faceup_cards = deepcopy(self.faceup_cards)
-        ret.state_history = deepcopy(self.state_history)
+        ret.history = deepcopy(self.history)
         ret.former_action = deepcopy(self.former_action)
         ret.initial_round = deepcopy(self.initial_round)
         ret.final_standings = deepcopy(self.final_standings)
@@ -342,24 +344,41 @@ class GameEngine:
             for destination in player.destinations:
                 if player_board.has_node(destination.city1) and player_board.has_node(destination.city2):
                     if nx.has_path(player_board, destination.city1, destination.city2):
-                        player.points += destination.points
                         self.add_log_line(f"(+{destination.points}) {destination} completed", 1)
                     else: self.add_log_line(f"(-{destination.points}) {destination} not completed", 1)
                 else: self.add_log_line(f"(-{destination.points}) {destination} not completed", 1)
-            
+
+            temp_array = [self.get_max_weight_for_node(player_board, node, []) for node in player_board.nodes()]
+            temp = 0
+            if len(temp_array) > 0:
+                temp = max(temp_array)
+            # Stopped here!!
+
         self.add_log_line("")
+
         self.final_standings = sorted([player for player in self.options.players], key = lambda player: player.points, reverse=True)
         for i, player in enumerate(self.final_standings):
             self.add_log_line(f"{i+1}. (Player {player.turn_order}) {player.name} | {player.points} points")
 
-    def apply(self, action: Action):
+    def get_max_weight_for_node(self, player_board: nx.MultiGraph, source, visited_edges):
+        temp_edges = [e for e in player_board.edges() if e not in visited_edges and source in e]
+        if len(temp_edges) == 0:
+            return 0
+        else:
+            result = []
+            result.extend([(self.get_max_weight_for_node(player_board, x, visited_edges+[(x, y)]) + player_board[x][y][0]['weight']) for (x, y) in temp_edges if source == y])
+            result.extend([(self.get_max_weight_for_node(player_board, x, visited_edges+[(x, y)]) + player_board[y][x][0]['weight']) for (x, y) in temp_edges if source == x])
+            return max(result)
 
+    def apply(self, action: Action):
+        
         if action == None:
             self.no_valid_moves_inarow += 1
             self.former_action = None
             self.end_turn()
             if self.no_valid_moves_inarow == len(self.options.players):
                 self.end_game()
+            if not self.is_copy: self.history.append((action, self.state_representation()))
             return
 
         assert isinstance(action, Action)
@@ -394,6 +413,7 @@ class GameEngine:
             raise ValueError()
         
         self.end_turn()
+        if not self.is_copy: self.history.append()
     
     def place_route(self, action):
         assert isinstance(action, PlaceRoute)
@@ -418,13 +438,33 @@ class GameEngine:
         self.options.players[self.player_making_move].points += POINTS_BY_LENGTH[action.route.weight]
         self.traincolor_discard_deck.insert(colors_to_use)
 
+        for color in colors_to_use:
+            for player in self.options.players:
+                if player.color_counts[self.player_making_move][COLOR_INDEXING[color]] == 0:
+                    player.color_counts[self.player_making_move][9] -= 1
+                else:
+                    player.color_counts[self.player_making_move][COLOR_INDEXING[color]] -= 1
+                assert all(counts >= 0 for counts in player.color_counts[self.player_making_move])
+
         self.add_log_line(f"Placed {action.route}", 1)
         self.add_log_line(f"using {colors_to_use} derived from {action.color_precedence}", 2)
         self.add_log_line(f"[PLAYER COLORS]: {self.options.players[self.player_making_move].train_colors}", 1)
 
+        player_board = nx.MultiGraph()
+        player_board.add_edges_from([edge for edge in self.board.edges(data=True) if edge[2]['owner'] == self.options.players[self.player_making_move].turn_order])
+        for destination in self.options.players[self.player_making_move].destinations:
+            if player_board.has_node(destination.city1) and player_board.has_node(destination.city2):
+                if nx.has_path(player_board, destination.city1, destination.city2):
+                    player.points += destination.points
+                    self.add_log_line(f"(+{destination.points}) {destination} completed", 1)
+    
     def draw_facedown(self):
         card_drawn = self.traincolor_deck.draw(1)
         self.options.players[self.player_making_move].train_colors.extend(card_drawn)
+        
+        for player in self.options.players:
+            player.color_counts[self.player_making_move][9] += 1
+        
         self.add_log_line(f"[FACEDOWN DECK]: Picked up {card_drawn[0]}", 1)
 
     def draw_faceup(self, color: str):
@@ -445,6 +485,9 @@ class GameEngine:
                 self.faceup_cards.extend(self.traincolor_deck.draw(1))
             self.options.players[self.player_making_move].train_colors.append(color)
         
+        for player in self.options.players:
+            player.color_counts[self.player_making_move][COLOR_INDEXING[color]] += 1
+
         self.add_log_line(f"[FACEUP DECK]: Picked up {color}", 1)
 
     def deal_destinations(self):
