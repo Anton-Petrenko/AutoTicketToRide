@@ -2,7 +2,8 @@ import os
 import math
 from time import sleep
 from ai import NeuralNet, NeuralNetOptions
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, Manager
+from multiprocessing.managers import ListProxy
 from engine import *
 
 class AlphaZeroNode():
@@ -33,7 +34,9 @@ class AlphaZeroTrainingOptions():
             simulations_per_move: int = 800,
             pb_c_base: int = 19652,
             pb_c_init: int = 1.25,
-            num_sampling_moves: int = 30
+            num_sampling_moves: int = 30,
+            games_in_sampled_batch: int = 10,
+            batch_size: int = 5
             ):
         game_options.players = None
         self.max_moves_per_game = max_moves_per_game
@@ -47,6 +50,10 @@ class AlphaZeroTrainingOptions():
         self.pb_c_base = pb_c_base
         self.pb_c_init = pb_c_init
         self.num_sampling_moves = num_sampling_moves
+
+        assert games_in_sampled_batch >= batch_size
+        self.games_in_sampled_batch = games_in_sampled_batch
+        self.batch_size = batch_size
 
 class AlphaZeroTrainer():
     def __init__(self, options: AlphaZeroTrainingOptions):
@@ -65,7 +72,9 @@ class AlphaZeroTrainer():
         if not os.path.exists("latest_network.keras"):
             NeuralNet(self.neural_net_options, self.options.network_path).model.save("latest_network.keras")
 
-        training_set_games = Queue(self.options.max_games_stored)
+        # training_set_games = Queue(self.options.max_games_stored)
+        manager = Manager()
+        training_set_games = manager.list()
         
         game_gen_process = Process(target=self.generate_games, args=[training_set_games])
         network_update_process = Process(target=self.train_network, args=[training_set_games])
@@ -76,23 +85,33 @@ class AlphaZeroTrainer():
         game_gen_process.join()
         network_update_process.join()
 
-    def generate_games(self, training_set_games: Queue):
+    def generate_games(self, training_set_games: ListProxy):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
         game = self.play_game(network)
         print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Adding game to training set")
-        training_set_games.put(game)
+        training_set_games.append(game)
 
-    def train_network(self, training_set_games: Queue):
+    def train_network(self, training_set_games: ListProxy[GameEngine]):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
-        while training_set_games.empty():
-            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Training set is empty")
+        while len(training_set_games) != self.options.games_in_sampled_batch:
+            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Training set has {len(training_set_games)} games")
             sleep(30)
-        print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Detected the training set update!")
+        batch = self.sample_batch(training_set_games)
+    
+    def sample_batch(self, training_set_games: ListProxy[GameEngine]):
+        move_sum = float(sum(len(game.history) for game in training_set_games))
+        games = np.random.choice(
+            training_set_games, 
+            size=self.options.batch_size, 
+            p=[len(game.history) / move_sum for game in training_set_games]
+        )
+        game_pos: list[tuple[GameEngine, int]] = [(game, np.random.randint(len(game.history))) for game in games]
+        # return [(game.state_representation(), ) for (game, index) in game_pos]
 
     def play_game(self, network: NeuralNet):
         game = GameEngine()
         game.setup_game(self.options.game_options)
-        while not game.game_ended and len(game.action_history) < self.options.max_moves_per_game:
+        while not game.game_ended and len(game.history) < self.options.max_moves_per_game:
             print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Current game at turn {game.turn}")
             action, root = self.run_mcts(game, network)
             game.apply(action)
@@ -121,7 +140,7 @@ class AlphaZeroTrainer():
 
     def select_action(self, game: GameEngine, root: AlphaZeroNode):
         visit_counts = [(child.visit_count, action) for action, child in root.children.items()]
-        if len(game.action_history) < self.options.num_sampling_moves:
+        if len(game.history) < self.options.num_sampling_moves:
             visits, action = self.softmax_sample(visit_counts)
         else:
             visits, action = max(visit_counts)

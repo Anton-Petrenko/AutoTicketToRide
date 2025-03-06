@@ -372,6 +372,8 @@ class GameEngine:
 
     def apply(self, action: Action):
         
+        state_before_action = self.state_representation()
+
         if action == None:
             self.no_valid_moves_inarow += 1
             self.former_action = None
@@ -413,7 +415,7 @@ class GameEngine:
             raise ValueError()
         
         self.end_turn()
-        if not self.is_copy: self.history.append()
+        if not self.is_copy: self.history.append((action, self.state_representation()))
     
     def place_route(self, action):
         assert isinstance(action, PlaceRoute)

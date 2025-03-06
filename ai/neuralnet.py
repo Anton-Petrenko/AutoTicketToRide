@@ -1,7 +1,7 @@
 from numpy import ndarray
 from players.ap_random import Random
 from keras.layers import Dense, Input
-from engine import GameEngine, GameOptions
+from engine import GameEngine, GameOptions, Action
 from keras.models import load_model, Sequential, Model
 
 class NeuralNetOptions:
@@ -44,3 +44,5 @@ class NeuralNet:
     def inference(self, input: ndarray):
         return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=0))
     
+    def update_weights(self, batch: ndarray[tuple[Action, ndarray]], weight_decay: float):
+        pass

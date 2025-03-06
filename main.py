@@ -13,6 +13,10 @@ import players as Player
 # make sure game.history is saving the right stuff
 # rename num_sampling_moves to something more intuitive - find out what it means
 # figure out store_search_statistics
+# figure out exactly what softmax_sample is
+# in sample_batch, history is stored as (action, game representation AFTER action)
+
+#STOPPED AT: figuring out netwok training, specifically sample_batch
 
 if __name__ == "__main__":
 
