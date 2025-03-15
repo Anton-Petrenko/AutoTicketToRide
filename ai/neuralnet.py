@@ -1,8 +1,9 @@
 from numpy import ndarray
 from players.ap_random import Random
-from keras.layers import Dense, Input
+from keras.api.layers import Dense, Input
 from engine import GameEngine, GameOptions, Action
-from keras.models import load_model, Sequential, Model
+from keras.api.models import load_model, Sequential, Model
+from keras.api.losses import BinaryCrossentropy
 
 class NeuralNetOptions:
     def __init__(
@@ -38,7 +39,7 @@ class NeuralNet:
         model.add(Input((self.options.state_size,)))
         model.add(Dense(511))
         model.add(Dense(sum(self.options.output_lengths), name="output"))
-        model.compile()
+        model.compile(loss=BinaryCrossentropy())
         return model
     
     def inference(self, input: ndarray):

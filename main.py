@@ -19,6 +19,8 @@ import players as Player
 # Maybe look over that crazy assertion line in make_target when choosing destinations
 # Check game win prob target in make_target - correctly deducing which player made the move at that point in the game?
 # update_weights is very barebones right now compared to alphagozero pseudo.
+# in neuralnet.py, take a look at the loss given to the compile() of the model... and the optimizer
+# make_target() reshaping was solely for test purposes, be careful, the first number in shape is meant to be for the batch size in keras. do batch training instead of in the loop please.
 
 #STOPPED AT: figuring out netwok training, specifically sample_batch
 
@@ -28,9 +30,10 @@ if __name__ == "__main__":
         logs=False
     )
     alphazero_options = AlphaZeroTrainingOptions(
-        game_options, 
+        game_options,
         num_players=2,
-        simulations_per_move=1
+        simulations_per_move=1,
+        games_in_sampled_batch=1
     )
 
     # ttr = TicketToRide(game_options)

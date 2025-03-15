@@ -3,7 +3,6 @@ import math
 from time import sleep
 from ai import NeuralNet, NeuralNetOptions
 from multiprocessing import Process, Queue, Manager
-from multiprocessing.managers import ListProxy
 from engine import *
 
 class AlphaZeroNode():
@@ -51,7 +50,6 @@ class AlphaZeroTrainingOptions():
         self.pb_c_init = pb_c_init
         self.num_sampling_moves = num_sampling_moves
 
-        assert games_in_sampled_batch >= batch_size
         self.games_in_sampled_batch = games_in_sampled_batch
         self.batch_size = batch_size
 
@@ -84,21 +82,22 @@ class AlphaZeroTrainer():
         game_gen_process.join()
         network_update_process.join()
 
-    def generate_games(self, training_set_games: ListProxy):
+    def generate_games(self, training_set_games: list):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
         game = self.play_game(network)
         print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Adding game to training set")
         training_set_games.append(game)
 
-    def train_network(self, training_set_games: ListProxy[GameEngine]):
+    def train_network(self, training_set_games: list[GameEngine]):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
         while len(training_set_games) != self.options.games_in_sampled_batch:
             print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Training set has {len(training_set_games)} games")
-            sleep(30)
+            sleep(10)
+        print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Training set has {len(training_set_games)} games")
         batch = self.sample_batch(training_set_games)
         network.update_weights(batch)
     
-    def sample_batch(self, training_set_games: ListProxy[GameEngine]) -> list[tuple[list[int], list[int]]]:
+    def sample_batch(self, training_set_games: list[GameEngine]) -> list[tuple[list[int], list[int]]]:
         move_sum = float(sum(len(game.history) for game in training_set_games))
         games = np.random.choice(
             training_set_games,
@@ -142,7 +141,7 @@ class AlphaZeroTrainer():
         if game.final_standings[0].turn_order == (game.turn-1)%len(game.options.players):
             game_win_prob_target = [1]
         
-        return action_target + color_target + destination_target + route_claim_target + game_win_prob_target
+        return np.array(action_target + color_target + destination_target + route_claim_target + game_win_prob_target).reshape((1, 117))
         
     def play_game(self, network: NeuralNet):
         game = GameEngine()
