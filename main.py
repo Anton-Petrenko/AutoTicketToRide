@@ -15,6 +15,10 @@ import players as Player
 # figure out store_search_statistics
 # figure out exactly what softmax_sample is
 # in sample_batch, history is stored as (action, game representation AFTER action)
+# In logit move calc, are we taking into account the difference in notation of choosing/drawing routes? doesnt seem like choosing routes is accounted for here...
+# Maybe look over that crazy assertion line in make_target when choosing destinations
+# Check game win prob target in make_target - correctly deducing which player made the move at that point in the game?
+# update_weights is very barebones right now compared to alphagozero pseudo.
 
 #STOPPED AT: figuring out netwok training, specifically sample_batch
 

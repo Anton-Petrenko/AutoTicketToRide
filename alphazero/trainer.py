@@ -61,8 +61,7 @@ class AlphaZeroTrainer():
 
         game = GameEngine()
         game.setup_game(GameOptions(players=[Player("") for i in range(len(self.options.game_options.players))]))
-        output_lengths = [4, 0, 0, 0, 1]
-        output_lengths[1] = len(set(game.get_traincolors()))
+        output_lengths = [4, 9, 0, 0, 1]
         output_lengths[2] = game.options.dests_dealt_on_request
         output_lengths[3] = len(game.get_routes())
         self.neural_net_options = NeuralNetOptions(len(self.options.game_options.players), len(game.state_representation()[0]), output_lengths)
@@ -97,17 +96,54 @@ class AlphaZeroTrainer():
             print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Training set has {len(training_set_games)} games")
             sleep(30)
         batch = self.sample_batch(training_set_games)
+        network.update_weights(batch)
     
-    def sample_batch(self, training_set_games: ListProxy[GameEngine]):
+    def sample_batch(self, training_set_games: ListProxy[GameEngine]) -> list[tuple[list[int], list[int]]]:
         move_sum = float(sum(len(game.history) for game in training_set_games))
         games = np.random.choice(
-            training_set_games, 
-            size=self.options.batch_size, 
+            training_set_games,
+            size=self.options.batch_size,
             p=[len(game.history) / move_sum for game in training_set_games]
         )
-        game_pos: list[tuple[GameEngine, int]] = [(game, np.random.randint(len(game.history))) for game in games]
-        # return [(game.state_representation(), ) for (game, index) in game_pos]
+        game_pos = [(game, np.random.randint(len(game.history))) for game in games]
+        return [(game.history[index][1], self.make_target(game, game.history[index][1], game.history[index][0])) for (game, index) in game_pos]
 
+    def make_target(self, game: GameEngine, state_representation: list[int], action: Action):
+        assert isinstance(action, Action)
+
+        action_target = [0, 0, 0, 0]
+        if action.type == CHOOSE_DESTINATIONS: action_target[3] = 1
+        else: action_target[action.type] = 1
+
+        color_target = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        if action.type == PLACE_ROUTE:
+            assert isinstance(action, PlaceRoute)
+            for i, color in enumerate(action.color_precedence):
+                color_target[COLOR_INDEXING[color]] = 1 - (0.1*i)
+        elif action.type == DRAW_FACEUP:
+            assert isinstance(action, DrawCard)
+            color_target[COLOR_INDEXING[action.color]] = 1
+        
+        destination_target = [0]*self.neural_net_options.output_lengths[2]
+        if action.type == CHOOSE_DESTINATIONS:
+            assert isinstance(action, ChooseDestinations)
+            assert action.faceup_destinations_at_time != None
+            for i, destination in enumerate(action.faceup_destinations_at_time):
+                for action_dest in action.destinations:
+                    if action_dest.id == destination.id:
+                        destination_target[i] = 1
+        
+        route_claim_target = [0]*len(game.get_routes())
+        if action.type == PLACE_ROUTE:
+            assert isinstance(action, PlaceRoute)
+            route_claim_target[action.route.id] = 1
+        
+        game_win_prob_target = [0]
+        if game.final_standings[0].turn_order == (game.turn-1)%len(game.options.players):
+            game_win_prob_target = [1]
+        
+        return action_target + color_target + destination_target + route_claim_target + game_win_prob_target
+        
     def play_game(self, network: NeuralNet):
         game = GameEngine()
         game.setup_game(self.options.game_options)

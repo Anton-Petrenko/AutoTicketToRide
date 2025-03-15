@@ -44,5 +44,7 @@ class NeuralNet:
     def inference(self, input: ndarray):
         return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=0))
     
-    def update_weights(self, batch: ndarray[tuple[Action, ndarray]], weight_decay: float):
-        pass
+    def update_weights(self, batch: list[tuple[list[int], list[int]]]):
+        for state_representation_prior, target_policy in batch:
+            inference = self.inference(state_representation_prior)
+            self.model.train_on_batch(state_representation_prior, target_policy)

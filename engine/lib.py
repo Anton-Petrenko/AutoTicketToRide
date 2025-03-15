@@ -109,11 +109,12 @@ class DrawCard(Action):
             return f"ACTION: Draw card from face down deck"
 
 class ChooseDestinations(Action):
-    def __init__(self, type: int, faceup_card_at_time: list[str], destinations: list[DestinationCard] = None):
+    def __init__(self, type: int, faceup_card_at_time: list[str], destinations: list[DestinationCard] = None, dest_deal: list[DestinationCard] = None):
         super().__init__(type, faceup_card_at_time)
         assert isinstance(destinations, list) if type == CHOOSE_DESTINATIONS else True
         assert isinstance(destinations, None) if type == DRAW_DESTINATIONS else True
         self.destinations: list[DestinationCard] | None = destinations
+        self.faceup_destinations_at_time: list[DestinationCard] | None = dest_deal
     
     def __str__(self):
         return f"ACTION: Choose {len(self.destinations)} {[str(dest) for dest in self.destinations]} destinations"

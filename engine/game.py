@@ -91,6 +91,7 @@ class GameEngine:
         self.game_ended = False
         self.last_round = False
         self.destinations_dealt: list[DestinationCard] = []
+        self.color_indexing: dict[str, int] = {}
 
         self.board: nx.MultiGraph = nx.MultiGraph()
         self.board.add_edges_from((route.city1, route.city2, {'weight': route.weight, 'color': route.color, 'owner': None, 'index': route.id}) for route in self.get_routes(options.filename_paths))
@@ -198,7 +199,7 @@ class GameEngine:
                     dests_to_take = []
                     for index in list(z):
                         dests_to_take.append(self.destinations_dealt[index])
-                    valid_moves.append(ChooseDestinations(CHOOSE_DESTINATIONS, self.faceup_cards, dests_to_take))
+                    valid_moves.append(ChooseDestinations(CHOOSE_DESTINATIONS, self.faceup_cards, dests_to_take, deepcopy(self.destinations_dealt)))
             return valid_moves
 
         if self.former_action:
@@ -214,7 +215,7 @@ class GameEngine:
                         dests_to_take = []
                         for index in list(z):
                             dests_to_take.append(self.destinations_dealt[index])
-                        valid_moves.append(ChooseDestinations(CHOOSE_DESTINATIONS, self.faceup_cards, dests_to_take))
+                        valid_moves.append(ChooseDestinations(CHOOSE_DESTINATIONS, self.faceup_cards, dests_to_take, deepcopy(self.destinations_dealt)))
         else:
             valid_moves.extend(self.claimable_route_actions())
             valid_moves.extend([DrawCard(DRAW_FACEUP, self.faceup_cards.copy(), color) for color in self.faceup_cards])
@@ -380,7 +381,7 @@ class GameEngine:
             self.end_turn()
             if self.no_valid_moves_inarow == len(self.options.players):
                 self.end_game()
-            if not self.is_copy: self.history.append((action, self.state_representation()))
+            if not self.is_copy: self.history.append((action, state_before_action))
             return
 
         assert isinstance(action, Action)
@@ -415,7 +416,7 @@ class GameEngine:
             raise ValueError()
         
         self.end_turn()
-        if not self.is_copy: self.history.append((action, self.state_representation()))
+        if not self.is_copy: self.history.append((action, state_before_action))
     
     def place_route(self, action):
         assert isinstance(action, PlaceRoute)
