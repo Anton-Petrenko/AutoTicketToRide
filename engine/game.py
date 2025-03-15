@@ -360,6 +360,8 @@ class GameEngine:
         self.final_standings = sorted([player for player in self.options.players], key = lambda player: player.points, reverse=True)
         for i, player in enumerate(self.final_standings):
             self.add_log_line(f"{i+1}. (Player {player.turn_order}) {player.name} | {player.points} points")
+        
+        if self.options.logs: self.save_log()
 
     def get_max_weight_for_node(self, player_board: nx.MultiGraph, source, visited_edges):
         temp_edges = [e for e in player_board.edges() if e not in visited_edges and source in e]
@@ -458,7 +460,7 @@ class GameEngine:
         for destination in self.options.players[self.player_making_move].destinations:
             if player_board.has_node(destination.city1) and player_board.has_node(destination.city2):
                 if nx.has_path(player_board, destination.city1, destination.city2):
-                    player.points += destination.points
+                    player.points += destination.points*2
                     self.add_log_line(f"(+{destination.points}) {destination} completed", 1)
     
     def draw_facedown(self):

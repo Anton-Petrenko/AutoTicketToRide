@@ -31,15 +31,16 @@ class TicketToRide():
 
         if num_games == 1:
             if getattr(self, 'game_engine') == None:
-                self.game_engine = self.setup_game()
+                self.setup_game()
             assert getattr(self, 'game_engine') != None
             assert self.game_engine.game_isset == True
             assert self.game_engine.game_ended == False
             while not self.game_engine.game_ended:
                 print(self.game_engine.turn)
                 self.take_turns()
+            scores = [0]*len(self.options.players)
             for player in self.game_engine.final_standings:
-                    scores[player.turn_order] += player.points
+                scores[player.turn_order] += player.points
 
         else:
             scores = [0]*len(self.options.players)

@@ -27,17 +27,18 @@ import players as Player
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        logs=False
+        players=[Player.Random(), Player.Random()],
+        logs=True
     )
-    alphazero_options = AlphaZeroTrainingOptions(
-        game_options,
-        num_players=2,
-        simulations_per_move=1,
-        games_in_sampled_batch=1
-    )
+    # alphazero_options = AlphaZeroTrainingOptions(
+    #     game_options,
+    #     num_players=2,
+    #     simulations_per_move=1,
+    #     games_in_sampled_batch=1
+    # )
 
-    # ttr = TicketToRide(game_options)
-    # ttr.play()
+    ttr = TicketToRide(game_options)
+    ttr.play()
 
-    ai = AlphaZeroTrainer(alphazero_options)
-    ai.train()
+    # ai = AlphaZeroTrainer(alphazero_options)
+    # ai.train()
