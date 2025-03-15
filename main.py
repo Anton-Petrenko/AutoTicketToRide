@@ -28,17 +28,30 @@ if __name__ == "__main__":
 
     game_options = GameOptions(
         players=[Player.Random(), Player.Random()],
-        logs=True
+        logs=False,
+        filename_paths="CT_paths.txt",
+        filename_dests="CT_destinations.txt",
+        red_trains=6,
+        blue_trains=6,
+        pink_trains=0,
+        wild_trains=6,
+        black_trains=0,
+        green_trains=6,
+        white_trains=0,
+        orange_trains=0,
+        yellow_trains=6,
+        traincars_per_player=10
     )
-    # alphazero_options = AlphaZeroTrainingOptions(
-    #     game_options,
-    #     num_players=2,
-    #     simulations_per_move=1,
-    #     games_in_sampled_batch=1
-    # )
 
-    ttr = TicketToRide(game_options)
-    ttr.play()
+    alphazero_options = AlphaZeroTrainingOptions(
+        game_options,
+        num_players=2,
+        simulations_per_move=1,
+        games_in_sampled_batch=1
+    )
 
-    # ai = AlphaZeroTrainer(alphazero_options)
-    # ai.train()
+    # ttr = TicketToRide(game_options)
+    # ttr.play(1000)
+
+    ai = AlphaZeroTrainer(alphazero_options)
+    ai.train()

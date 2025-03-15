@@ -28,7 +28,8 @@ class GameOptions:
             reshuffle_limit: int = 10,
             dests_dealt_on_request: int = 3,
             dests_dealt_per_player_start: int = 3,
-            traincolors_dealt_per_player_start: int = 4
+            traincolors_dealt_per_player_start: int = 4,
+            traincars_per_player: int = 45
             ):
         
         if players: assert 2 <= len(players) <= 5
@@ -50,6 +51,7 @@ class GameOptions:
         self.red_trains = red_trains
         self.green_trains = green_trains
         self.wild_trains = wild_trains
+        self.traincars_per_player = traincars_per_player
 
         assert 0 < dests_dealt_per_player_start
         self.dests_dealt_per_player_start = dests_dealt_per_player_start
@@ -101,6 +103,7 @@ class GameEngine:
 
         if len(options.players) > 0:
             for player in options.players:
+                player.trains_left = options.traincars_per_player
                 player.train_colors.extend(self.traincolor_deck.draw(options.traincolor_dealt_per_player_start))
 
         self.faceup_cards: list[str] = self.traincolor_deck.draw(5)

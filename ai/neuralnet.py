@@ -48,4 +48,5 @@ class NeuralNet:
     def update_weights(self, batch: list[tuple[list[int], list[int]]]):
         for state_representation_prior, target_policy in batch:
             inference = self.inference(state_representation_prior)
+            print(target_policy)
             self.model.train_on_batch(state_representation_prior, target_policy)
