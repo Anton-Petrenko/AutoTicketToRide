@@ -77,6 +77,8 @@ class GameEngine:
     def setup_game(self, options: GameOptions):
         assert isinstance(options, GameOptions)
 
+        self.player_id_history: list[int] = []
+        self.child_visits: list[list[int]] = []
         self.history: list[tuple[Action, np.ndarray]] = []
 
         self.turn = 0
@@ -93,7 +95,6 @@ class GameEngine:
         self.game_ended = False
         self.last_round = False
         self.destinations_dealt: list[DestinationCard] = []
-        self.color_indexing: dict[str, int] = {}
 
         self.board: nx.MultiGraph = nx.MultiGraph()
         self.board.add_edges_from((route.city1, route.city2, {'weight': route.weight, 'color': route.color, 'owner': None, 'index': route.id}) for route in self.get_routes(options.filename_paths))
@@ -166,6 +167,8 @@ class GameEngine:
         ret.player_making_move = deepcopy(self.player_making_move)
         ret.no_valid_moves_inarow = deepcopy(self.no_valid_moves_inarow)
         ret.traincolor_discard_deck = deepcopy(self.traincolor_discard_deck)
+        ret.child_visits = deepcopy(self.child_visits)
+        ret.player_id_history = deepcopy(self.player_id_history)
         return ret
 
     def validate_faceup_cards(self):
@@ -339,6 +342,8 @@ class GameEngine:
     def end_game(self):
         self.game_ended = True
         
+        longest_route_value = None
+        longest_route_player: list[int] = []
         for player in self.options.players:
             self.add_log_line(f"Player {player.turn_order} - {player.name}:")
             player_board = nx.MultiGraph()
@@ -356,7 +361,18 @@ class GameEngine:
             temp = 0
             if len(temp_array) > 0:
                 temp = max(temp_array)
-            # Stopped here!!
+            if longest_route_value == None or temp >= longest_route_value:
+                if longest_route_value and temp > longest_route_value:
+                    longest_route_player = [player.turn_order]
+                else:
+                    longest_route_player.append(player.turn_order)
+                longest_route_value = temp
+        
+        self.add_log_line("")
+
+        for player_turnorder in longest_route_player:
+            self.options.players[player_turnorder].points += 10
+            self.add_log_line(f"Player {player_turnorder} - {self.options.players[player_turnorder].name} gets the longest route! (+10)")
 
         self.add_log_line("")
 
@@ -378,6 +394,7 @@ class GameEngine:
 
     def apply(self, action: Action):
         
+        self.player_id_history.append(self.player_making_move)
         state_before_action = self.state_representation()
 
         if action == None:
@@ -452,7 +469,7 @@ class GameEngine:
                     player.color_counts[self.player_making_move][9] -= 1
                 else:
                     player.color_counts[self.player_making_move][COLOR_INDEXING[color]] -= 1
-                assert all(counts >= 0 for counts in player.color_counts[self.player_making_move])
+                assert all(counts >= 0 for counts in player.color_counts[self.player_making_move]), self.save_log("error_log.txt")
 
         self.add_log_line(f"Placed {action.route}", 1)
         self.add_log_line(f"using {colors_to_use} derived from {action.color_precedence}", 2)
@@ -508,7 +525,7 @@ class GameEngine:
         for card in self.destinations_dealt:
             self.add_log_line(str(card), 2)
 
-    def state_representation(self) -> np.ndarray:
+    def state_representation(self) -> list[int]:
 
         cities = self.get_destinations()
 
@@ -546,7 +563,7 @@ class GameEngine:
         for turn_order in next_players[1:]:
             ret.extend(self.options.players[next_players[0]].color_counts[turn_order])
         
-        return np.array([ret])
+        return ret
 
     def add_log_line(self, log: str, indent: int = 0):
         if not self.options.logs: return

@@ -1,9 +1,9 @@
 from numpy import ndarray
 from players.ap_random import Random
-from keras.api.layers import Dense, Input
+from keras.layers import Dense, Input
 from engine import GameEngine, GameOptions, Action
-from keras.api.models import load_model, Sequential, Model
-from keras.api.losses import BinaryCrossentropy
+from keras.models import load_model, Sequential, Model
+from keras.losses import BinaryCrossentropy
 
 class NeuralNetOptions:
     def __init__(
@@ -45,8 +45,8 @@ class NeuralNet:
     def inference(self, input: ndarray):
         return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=0))
     
-    def update_weights(self, batch: list[tuple[list[int], list[int]]]):
-        for state_representation_prior, target_policy in batch:
-            inference = self.inference(state_representation_prior)
-            print(target_policy)
-            self.model.train_on_batch(state_representation_prior, target_policy)
+    def update_weights(self, inputs: list[int], outputs: list[int]):
+        self.model.fit(inputs, outputs, verbose=0)
+    
+    def save_to_file(self, filename: str):
+        self.model.save(f"saved/{filename}.keras")

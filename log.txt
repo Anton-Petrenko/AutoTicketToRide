@@ -1,0 +1,161 @@
+PREGAME: Player 0 - AlphaZero
+
+	Picks 2 destinations
+		DESTINATION: [3] SIMSBURY --5-- VERNON
+		DESTINATION: [6] HARTFORD --4-- VERNON
+
+PREGAME: Player 1 - AlphaZero
+
+	Picks 2 destinations
+		DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY
+		DESTINATION: [1] SOUTHINGTON --5-- VERNON
+
+TURN 0: Player 0 - AlphaZero
+
+	[PLAYER COLORS]: ['WILD', 'YELLOW', 'RED', 'RED']
+	Placed ROUTE: [1] SOUTHINGTON --2 YELLOW-- HARTFORD
+		using ['WILD', 'YELLOW'] derived from ['WILD', 'YELLOW']
+	[PLAYER COLORS]: ['RED', 'RED']
+
+TURN 1: Player 1 - AlphaZero
+
+	[GAME FACEUP]: ['WILD', 'GREEN', 'GREEN', 'RED', 'GREEN']
+	[FACEUP DECK]: Picked up GREEN
+	[GAME FACEUP]: ['WILD', 'GREEN', 'RED', 'GREEN', 'YELLOW']
+	[FACEUP DECK]: Picked up GREEN
+
+TURN 2: Player 0 - AlphaZero
+
+	[PLAYER COLORS]: ['RED', 'RED']
+	Placed ROUTE: [2] SOUTHINGTON --1 RED-- WETHERSFIELD
+		using ['RED'] derived from ['RED']
+	[PLAYER COLORS]: ['RED']
+
+TURN 3: Player 1 - AlphaZero
+
+	[PLAYER COLORS]: ['WILD', 'GREEN', 'GREEN', 'BLUE', 'GREEN', 'GREEN']
+	Placed ROUTE: [13] GLASTONBURY --1 GRAY-- MANCHESTER
+		using ['GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['WILD', 'GREEN', 'BLUE', 'GREEN', 'GREEN']
+
+TURN 4: Player 0 - AlphaZero
+
+	[PLAYER COLORS]: ['RED']
+	Placed ROUTE: [5] SIMSBURY --1 GRAY-- HARTFORD
+		using ['RED'] derived from ['RED']
+	[PLAYER COLORS]: []
+
+TURN 5: Player 1 - AlphaZero
+
+	[GAME FACEUP]: ['WILD', 'RED', 'GREEN', 'YELLOW', 'BLUE']
+	[FACEUP DECK]: Picked up RED
+	[GAME FACEUP]: ['WILD', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW']
+	[FACEUP DECK]: Picked up GREEN
+
+TURN 6: Player 0 - AlphaZero
+
+	[GAME FACEUP]: ['WILD', 'YELLOW', 'BLUE', 'YELLOW', 'RED']
+	[FACEUP DECK]: Picked up RED
+	[FACEDOWN DECK]: Picked up YELLOW
+
+TURN 7: Player 1 - AlphaZero
+
+	[PLAYER COLORS]: ['WILD', 'GREEN', 'BLUE', 'GREEN', 'GREEN', 'RED', 'GREEN']
+	Placed ROUTE: [3] SOUTHINGTON --3 GREEN-- GLASTONBURY
+		using ['GREEN', 'GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['WILD', 'BLUE', 'RED', 'GREEN']
+
+TURN 8: Player 0 - AlphaZero
+
+	[GAME FACEUP]: ['WILD', 'YELLOW', 'BLUE', 'YELLOW', 'WILD']
+	[FACEUP DECK]: Picked up WILD
+
+TURN 9: Player 1 - AlphaZero
+
+	Dealing destination cards:
+		DESTINATION: [5] WETHERSFIELD --3-- MANCHESTER
+		DESTINATION: [2] SIMSBURY --3-- MANCHESTER
+		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
+	Picks 2 destinations
+		DESTINATION: [5] WETHERSFIELD --3-- MANCHESTER
+		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
+
+TURN 10: Player 0 - AlphaZero
+
+	Dealing destination cards:
+		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
+		DESTINATION: [2] SIMSBURY --3-- MANCHESTER
+	Picks 1 destinations
+		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
+
+TURN 11: Player 1 - AlphaZero
+
+	[FACEDOWN DECK]: Picked up BLUE
+	[FACEDOWN DECK]: Picked up RED
+
+TURN 12: Player 0 - AlphaZero
+
+	[PLAYER COLORS]: ['RED', 'YELLOW', 'WILD']
+	Placed ROUTE: [9] HARTFORD --1 GREEN-- WETHERSFIELD
+		using ['WILD'] derived from ['WILD']
+	[PLAYER COLORS]: ['RED', 'YELLOW']
+
+TURN 13: Player 1 - AlphaZero
+
+	[PLAYER COLORS]: ['WILD', 'BLUE', 'RED', 'GREEN', 'BLUE', 'RED']
+	Placed ROUTE: [7] HARTFORD --2 RED-- MANCHESTER
+		using ['RED', 'RED'] derived from ['RED']
+	[PLAYER COLORS]: ['WILD', 'BLUE', 'GREEN', 'BLUE']
+
+TURN 14: Player 0 - AlphaZero
+
+	[FACEDOWN DECK]: Picked up BLUE
+	[GAME FACEUP]: ['YELLOW', 'BLUE', 'YELLOW', 'WILD', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+TURN 15: Player 1 - AlphaZero
+
+	[PLAYER COLORS]: ['WILD', 'BLUE', 'GREEN', 'BLUE']
+	Placed ROUTE: [0] SOUTHINGTON --2 BLUE-- SIMSBURY
+		using ['BLUE', 'BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['WILD', 'GREEN']
+	(+4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY completed
+
+	This turn has triggered the last round!
+TURN 16: Player 0 - AlphaZero
+
+	[PLAYER COLORS]: ['RED', 'YELLOW', 'BLUE', 'YELLOW']
+	Placed ROUTE: [10] WETHERSFIELD --2 YELLOW-- GLASTONBURY
+		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['RED', 'BLUE']
+
+TURN 17: Player 1 - AlphaZero
+
+	[GAME FACEUP]: ['BLUE', 'YELLOW', 'WILD', 'YELLOW', 'BLUE']
+	[FACEUP DECK]: Picked up BLUE
+	[GAME FACEUP]: ['YELLOW', 'WILD', 'YELLOW', 'BLUE', 'WILD']
+	[FACEUP DECK]: Picked up BLUE
+
+Player 0 - AlphaZero:
+	(+2) placed SOUTHINGTON --2 YELLOW-- HARTFORD
+	(+1) placed SOUTHINGTON --1 RED-- WETHERSFIELD
+	(+1) placed HARTFORD --1 GRAY-- SIMSBURY
+	(+1) placed HARTFORD --1 GREEN-- WETHERSFIELD
+	(+2) placed WETHERSFIELD --2 YELLOW-- GLASTONBURY
+	(-5) DESTINATION: [3] SIMSBURY --5-- VERNON not completed
+	(-4) DESTINATION: [6] HARTFORD --4-- VERNON not completed
+	(-4) DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER not completed
+Player 1 - AlphaZero:
+	(+2) placed SOUTHINGTON --2 BLUE-- SIMSBURY
+	(+4) placed SOUTHINGTON --3 GREEN-- GLASTONBURY
+	(+1) placed GLASTONBURY --1 GRAY-- MANCHESTER
+	(+2) placed HARTFORD --2 RED-- MANCHESTER
+	(-2) DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY not completed
+	(-5) DESTINATION: [1] SOUTHINGTON --5-- VERNON not completed
+	(-3) DESTINATION: [5] WETHERSFIELD --3-- MANCHESTER not completed
+	(+4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY completed
+
+Player 0 - AlphaZero gets the longest route! (+10)
+
+1. (Player 0) AlphaZero | 4 points
+2. (Player 1) AlphaZero | 3 points

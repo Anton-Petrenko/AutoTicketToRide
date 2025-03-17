@@ -4,31 +4,21 @@ from engine import *
 from alphazero import *
 import players as Player
 
-# longest route not implemented
-# check mcts & alphazero action hashing for children dictionary
-# what is a good way to get the probability of making a move given the neural net output?
-# actions have faceupcard data that was previously used in the hashing function for it - ensure this is still happening
 # figure out a good root_dirichlet_alpha is (research) honestly just look at add_exploration_noise functoin in general
 # figure out what pb_c_base and pb_c_init is in the ucb formula
-# make sure game.history is saving the right stuff
-# rename num_sampling_moves to something more intuitive - find out what it means
-# figure out store_search_statistics
-# figure out exactly what softmax_sample is
-# in sample_batch, history is stored as (action, game representation AFTER action)
-# In logit move calc, are we taking into account the difference in notation of choosing/drawing routes? doesnt seem like choosing routes is accounted for here...
-# Maybe look over that crazy assertion line in make_target when choosing destinations
-# Check game win prob target in make_target - correctly deducing which player made the move at that point in the game?
+# rename num_sampling_moves to something more intuitive - find out what it means and figure out exactly what softmax_sample is - currently BROKEN!!
+# Check game win prob target in make_target - not 100% certain the player making move at that point + winner of game is being correctly deduced
 # update_weights is very barebones right now compared to alphagozero pseudo.
 # in neuralnet.py, take a look at the loss given to the compile() of the model... and the optimizer
 # make_target() reshaping was solely for test purposes, be careful, the first number in shape is meant to be for the batch size in keras. do batch training instead of in the loop please.
-
-#STOPPED AT: figuring out netwok training, specifically sample_batch
+# Get logit move - make sure this is correct - revisit!!
+# might be able to make things more efficient by weeding out deepcopy's of game variables which are not used in game copies...
 
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        players=[Player.Random(), Player.Random()],
-        logs=False,
+        players=[Player.Random("Random1"), Player.Random("Random2")],
+        logs=True,
         filename_paths="CT_paths.txt",
         filename_dests="CT_destinations.txt",
         red_trains=6,
@@ -46,12 +36,12 @@ if __name__ == "__main__":
     alphazero_options = AlphaZeroTrainingOptions(
         game_options,
         num_players=2,
-        simulations_per_move=1,
-        games_in_sampled_batch=1
+        simulations_per_move=100,
+        games_in_sampled_batch=100
     )
 
     # ttr = TicketToRide(game_options)
-    # ttr.play(1000)
+    # ttr.play(1)
 
     ai = AlphaZeroTrainer(alphazero_options)
     ai.train()

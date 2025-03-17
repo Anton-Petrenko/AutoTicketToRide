@@ -1,1 +1,1 @@
-from .trainer import AlphaZeroTrainer, AlphaZeroTrainingOptions
+from .trainer import AlphaZeroTrainer, AlphaZeroTrainingOptions, AlphaZeroNode
