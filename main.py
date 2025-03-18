@@ -13,6 +13,7 @@ import players as Player
 # make_target() reshaping was solely for test purposes, be careful, the first number in shape is meant to be for the batch size in keras. do batch training instead of in the loop please.
 # Get logit move - make sure this is correct - revisit!!
 # might be able to make things more efficient by weeding out deepcopy's of game variables which are not used in game copies...
+# when deciding logits of moves, axe the color calculation for solid color routes - the model has no choice - probability is not important there, and wilds are not important - sometimes these things have no choice
 
 if __name__ == "__main__":
 
