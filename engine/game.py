@@ -104,8 +104,10 @@ class GameEngine:
 
         if len(options.players) > 0:
             for player in options.players:
+                player.points = 0
                 player.trains_left = options.traincars_per_player
-                player.train_colors.extend(self.traincolor_deck.draw(options.traincolor_dealt_per_player_start))
+                player.train_colors = self.traincolor_deck.draw(options.traincolor_dealt_per_player_start)
+                player.destinations = []
 
         self.faceup_cards: list[str] = self.traincolor_deck.draw(5)
         self.validate_faceup_cards()
@@ -149,6 +151,7 @@ class GameEngine:
     def clone(self):
         ret = GameEngine()
         ret.is_copy = True
+        ret.logs = deepcopy(self.logs)
         ret.turn = deepcopy(self.turn)
         ret.board = deepcopy(self.board)
         ret.options = self.options.copy()
@@ -436,7 +439,11 @@ class GameEngine:
             self.former_action = None
         else:
             raise ValueError()
-        
+
+        self.add_log_line("")
+        for player in self.options.players:
+            self.add_log_line(f'{player.name} {player.turn_order} {player.color_counts}', 1)
+
         self.end_turn()
         if not self.is_copy: self.history.append((action, state_before_action))
     

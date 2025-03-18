@@ -69,7 +69,6 @@ class AlphaZeroTrainer():
         if not os.path.exists("latest_network.keras"):
             NeuralNet(self.neural_net_options, self.options.network_path).model.save("latest_network.keras")
 
-        # training_set_games = Queue(self.options.max_games_stored)
         manager = Manager()
         training_set_games = manager.list()
         
@@ -83,27 +82,35 @@ class AlphaZeroTrainer():
         network_update_process.join()
 
     def generate_games(self, training_set_games: list):
+        network = NeuralNet(self.neural_net_options, "latest_network.keras")
         for x in range(100000000):
-            network = NeuralNet(self.neural_net_options, "latest_network.keras")
             game = self.play_game(network)
             print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroGenerator: Adding game to training set")
             if len(training_set_games) > self.options.games_in_sampled_batch:
-                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroGenerator: Removing game to make space")
                 training_set_games.pop(0)
             training_set_games.append(game)
+
+    def get_latest_network_num(self):
+        try:
+            ret = max([int(y.replace("model", "")) for y in [x.replace(".keras", "") for x in [f for f in os.listdir("./saved/") if os.path.isfile(os.path.join("./saved/", f))]]])
+        except:
+            ret = -1
+        return ret
 
     def train_network(self, training_set_games: list[GameEngine]):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
         for x in range(100000000):
-            while len(training_set_games) != self.options.games_in_sampled_batch:
+            while len(training_set_games) < self.options.games_in_sampled_batch:
                 print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Training set has {len(training_set_games)}/{self.options.games_in_sampled_batch} games")
-                sleep(100)
-            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Training network step.")
+                sleep(10)
+            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Training network (step {x})")
             inputs, outputs = self.sample_batch(training_set_games)
-            network.update_weights(np.array(inputs), np.array(outputs))
-            if x % 100 == 0:
-                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Saving network")
+            network.update_weights(np.array(inputs), outputs)
+            if x % 1000 == 0 and x != 0:
+                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Saving network as model{x}")
                 network.save_to_file(f"model{x}")
+            if x % 100:
+                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Trained network 100 times... checkpoint")
     
     def sample_batch(self, training_set_games: list[GameEngine]) -> tuple[list[int], list[int]]:
         move_sum = float(sum(len(game.history) for game in training_set_games))
@@ -114,28 +121,52 @@ class AlphaZeroTrainer():
         )
         game_pos = [(game, np.random.randint(len(game.history))) for game in games]
         inputs = []
-        outputs = []
+        actions = []
+        colors = []
+        destinations = []
+        routes = []
+        wins = []
+
         for game, index in game_pos:
             inputs.append(game.history[index][1])
-            outputs.append(self.make_target(game, index))
+            action_t, color_t, destination_t, route_t, win_t = self.make_target(game, index)
+            actions.append(action_t)
+            colors.append(color_t)
+            destinations.append(destination_t)
+            routes.append(route_t)
+            wins.append(win_t)
+
+        outputs = {
+            "action": np.array(actions),
+            "color": np.array(colors),
+            "destination": np.array(destinations),
+            "route": np.array(routes),
+            "win": np.array(wins)
+        }
+
         return inputs, outputs
 
     def make_target(self, game: GameEngine, index: int):
         
-        game_win_prob_target = [0]
+        game_win_prob_target = [-1]
         assert len(game.history) == len(game.player_id_history)
         if game.final_standings[0].turn_order == game.player_id_history[index]: 
             game_win_prob_target = [1]
         
+        actions = np.array(game.child_visits[index][:4])
+        colors = np.array(game.child_visits[index][4:(4+self.neural_net_options.output_lengths[1])])
+        dests = np.array(game.child_visits[index][(4+self.neural_net_options.output_lengths[1]):((4+self.neural_net_options.output_lengths[1])+(self.neural_net_options.output_lengths[2]))])
+        routes = np.array(game.child_visits[index][((4+self.neural_net_options.output_lengths[1])+(self.neural_net_options.output_lengths[2])):(((4+self.neural_net_options.output_lengths[1])+(self.neural_net_options.output_lengths[2]))+(self.neural_net_options.output_lengths[3]))])
+        win = np.array(game_win_prob_target)
+
         assert len(game.child_visits[index]) == 116
-        return game.child_visits[index] + game_win_prob_target
+        return (actions, colors, dests, routes, win)
         
     def play_game(self, network: NeuralNet):
         game = GameEngine()
         game.setup_game(self.options.game_options)
         while not game.game_ended and len(game.history) < self.options.max_moves_per_game:
             action, root = self.run_mcts(game, network)
-            print(action, game.player_making_move)
             game.apply(action)
             print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Current game at turn {game.turn}")
             self.store_search_statistics(root, game)
@@ -151,7 +182,6 @@ class AlphaZeroTrainer():
 
         sum_visits = sum(child.visit_count for child in root.children.values())
         for action, node in root.children.items():
-            print(node.visit_count)
             action_as_label = self.action_to_label(action, game)
             assert len(master_action) == len(action_as_label)
 
@@ -252,12 +282,13 @@ class AlphaZeroTrainer():
         if len(game.history) < self.options.num_sampling_moves:
             visits, action = self.softmax_sample(visit_counts)
         else:
-            visits, action = max(visit_counts)
+            visits, action = max(visit_counts, key=lambda x: x[0])
         return action
     
     def softmax_sample(self, visit_counts: list[tuple[int, Action]]):
-        total_visits = sum([visit_count[0] for visit_count in visit_counts])
-        return max([((visit_count / total_visits), action) for visit_count, action in visit_counts], key=lambda x: x[0])
+        sum_visits = sum(visits for visits, action in visit_counts)
+        probabilities = [visits/sum_visits for visits, action in visit_counts]
+        return visit_counts[np.random.choice(list(range(len(visit_counts))), p=probabilities)]
 
     def backpropagate(self, search_path: list[AlphaZeroNode], value: float, to_play):
         for node in search_path:
