@@ -221,10 +221,8 @@ class AlphaZeroTrainer():
             action_choice_prob[0] += 1
             assert isinstance(action, PlaceRoute)
             for cur_color in COLOR_INDEXING.keys():
-                if action.color_precedence.count(cur_color) > 0:
-                    color_choice_prob[COLOR_INDEXING[cur_color]] += (0.2 * action.color_precedence.index(cur_color))
-                else:
-                    color_choice_prob[COLOR_INDEXING[cur_color]] += 1
+                if action.color_precedence.count(cur_color) == 0:
+                    color_choice_prob[COLOR_INDEXING[cur_color]] = 1
             
             route_choice_prob[action.route.id] += 1
             
@@ -325,16 +323,18 @@ class AlphaZeroTrainer():
     def get_logit_move(self, network_out: NeuralNet.NeuralNetOutput, action: Action, destinations_dealt: list[DestinationCard]):
         assert len(network_out.action) == 4
         action_probability = network_out.action[0] if action.type == PLACE_ROUTE else network_out.action[1] if action.type == DRAW_FACEUP else network_out.action[2] if action.type == DRAW_FACEDOWN else network_out.action[3]
-        color_desire_probability = 0.5
-        dest_desire_probability = 0.5
-        route_desire_probability = 0.5
+        color_desire_probability = 1
+        dest_desire_probability = 1
+        route_desire_probability = 1
 
         if action.type == PLACE_ROUTE:
             assert isinstance(action, PlaceRoute)
-            for color in action.color_precedence:
-                color_desire_probability += (1 - network_out.color_desire[COLOR_INDEXING[color]])
-            color_desire_probability = color_desire_probability / len(action.color_precedence)
-            route_desire_probability = network_out.route_desire[action.route.id]
+            if action.route.color == "GRAY":
+                sum_val = 0
+                num_vals = len(action.color_precedence)
+                for color in action.color_precedence:
+                    sum_val += network_out.color_desire[COLOR_INDEXING[color]]
+                color_desire_probability = sum_val / num_vals
         elif action.type  == DRAW_FACEUP:
             assert isinstance(action, DrawCard) and action.color
             color_desire_probability = network_out.color_desire[COLOR_INDEXING[action.color]]
@@ -345,4 +345,4 @@ class AlphaZeroTrainer():
                 dest_desire_probability += network_out.destination_desire_by_pickup_index[destinations_dealt.index(destination)]
             dest_desire_probability = dest_desire_probability / len(action.destinations)
         
-        return (action_probability + color_desire_probability + dest_desire_probability + route_desire_probability) / 4
+        return action_probability * color_desire_probability * dest_desire_probability * route_desire_probability
