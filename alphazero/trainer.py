@@ -71,9 +71,10 @@ class AlphaZeroTrainer():
 
         manager = Manager()
         training_set_games = manager.list()
+        latest_networks = manager.list()
         
-        game_gen_process = Process(target=self.generate_games, args=[training_set_games])
-        network_update_process = Process(target=self.train_network, args=[training_set_games])
+        game_gen_process = Process(target=self.generate_games, args=[training_set_games, latest_networks])
+        network_update_process = Process(target=self.train_network, args=[training_set_games, latest_networks])
 
         network_update_process.start()
         game_gen_process.start()
@@ -81,36 +82,33 @@ class AlphaZeroTrainer():
         game_gen_process.join()
         network_update_process.join()
 
-    def generate_games(self, training_set_games: list):
+    def generate_games(self, training_set_games: list[GameEngine], latest_networks: list[NeuralNet]):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
-        for x in range(100000000):
+        cur_networks = 0
+        for x in range(10000000):
+            if len(latest_networks) != cur_networks:
+                network = latest_networks[-1]
+                print(f"[{os.getpid()}] [AutoTicketToRide] generate_games: Now using model with name ({network.name})")
             game = self.play_game(network)
-            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroGenerator: Adding game to training set")
+            print(f"[{os.getpid()}] [AutoTicketToRide] generate_games: Adding game to training set")
             if len(training_set_games) > self.options.games_in_sampled_batch:
                 training_set_games.pop(0)
             training_set_games.append(game)
 
-    def get_latest_network_num(self):
-        try:
-            ret = max([int(y.replace("model", "")) for y in [x.replace(".keras", "") for x in [f for f in os.listdir("./saved/") if os.path.isfile(os.path.join("./saved/", f))]]])
-        except:
-            ret = -1
-        return ret
-
-    def train_network(self, training_set_games: list[GameEngine]):
+    def train_network(self, training_set_games: list[GameEngine], latest_networks: list[NeuralNet]):
         network = NeuralNet(self.neural_net_options, "latest_network.keras")
-        for x in range(100000000):
+        for x in range(10000000):
             while len(training_set_games) < self.options.games_in_sampled_batch:
-                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Training set has {len(training_set_games)}/{self.options.games_in_sampled_batch} games")
+                print(f"[{os.getpid()}] [AutoTicketToRide] train_network: Training set has {len(training_set_games)}/{self.options.games_in_sampled_batch} games")
                 sleep(10)
-            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Training network (step {x})")
+            print(f"[{os.getpid()}] [AutoTicketToRide] train_network: Training network (step {x})")
             inputs, outputs = self.sample_batch(training_set_games)
             network.update_weights(np.array(inputs), outputs)
             if x % 1000 == 0 and x != 0:
-                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Saving network as model{x}")
+                print(f"[{os.getpid()}] [AutoTicketToRide] train_network: Saving network as model{x}")
                 network.save_to_file(f"model{x}")
-            if x % 100:
-                print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroNetwork: Trained network 100 times... checkpoint")
+                network.name = f"model{x}"
+                latest_networks.append(network)
     
     def sample_batch(self, training_set_games: list[GameEngine]) -> tuple[list[int], list[int]]:
         move_sum = float(sum(len(game.history) for game in training_set_games))
@@ -168,7 +166,7 @@ class AlphaZeroTrainer():
         while not game.game_ended and len(game.history) < self.options.max_moves_per_game:
             action, root = self.run_mcts(game, network)
             game.apply(action)
-            print(f"[{os.getpid()}] [AutoTicketToRide] AlphaZeroTrainer: Current game at turn {game.turn}")
+            print(f"[{os.getpid()}] [AutoTicketToRide] generate_games: Current game at turn {game.turn}")
             self.store_search_statistics(root, game)
         return game
     

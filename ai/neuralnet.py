@@ -35,8 +35,9 @@ class NeuralNet:
             self.win_chance = output[4][0]
             assert len(self.win_chance) == 1, f"[AutoTicketToRide] NeuralNetOutput: received output size {len(output)} but expecting {sum(options.output_lengths)} {options.output_lengths}"
 
-    def __init__(self, options: NeuralNetOptions, load_from_path: str = None):
+    def __init__(self, options: NeuralNetOptions, load_from_path: str = None, name: str = None):
         assert isinstance(options, NeuralNetOptions)
+        self.name = name
         self.options = options
         self.model: Model = load_model(load_from_path) if load_from_path else self.new_model()
 
