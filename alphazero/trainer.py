@@ -1,7 +1,7 @@
 import os
 import math
 from time import sleep
-from ai import NeuralNet, NeuralNetOptions
+from ai.neuralnet import NeuralNet, NeuralNetOptions
 from multiprocessing import Process, Queue, Manager
 from engine import *
 
@@ -111,12 +111,16 @@ class AlphaZeroTrainer():
                 latest_networks.append(network)
     
     def sample_batch(self, training_set_games: list[GameEngine]) -> tuple[list[int], list[int]]:
-        move_sum = float(sum(len(game.history) for game in training_set_games))
-        games = np.random.choice(
-            training_set_games,
-            size=self.options.batch_size,
-            p=[len(game.history) / move_sum for game in training_set_games]
-        )
+        for x in range(100):
+            try:
+                move_sum = float(sum(len(game.history) for game in training_set_games))
+                games = np.random.choice(
+                    training_set_games,
+                    size=self.options.batch_size,
+                    p=[len(game.history) / move_sum for game in training_set_games]
+                )
+            except:
+                print(f"[{os.getpid()}] [AutoTicketToRide] train_network: Game sampling probabilities did not add up to 1 - trying again.")
         game_pos = [(game, np.random.randint(len(game.history))) for game in games]
         inputs = []
         actions = []

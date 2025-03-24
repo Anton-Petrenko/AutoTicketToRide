@@ -1,11 +1,12 @@
-from numpy import ndarray
-from players.ap_random import Random
-from keras.api.layers import Dense, Input, BatchNormalization, ReLU, Add
-from engine import GameEngine, GameOptions, Action
-from keras.api.models import load_model, Sequential
-from keras.api.losses import BinaryCrossentropy, CategoricalCrossentropy, MeanSquaredError
-from keras.api.optimizers import Adam
+import os
+print(f"[{os.getpid()}] [AutoTicketToRide] main: Expect 2 additional TensorFlow import statements...")
+
 from keras import Model
+from numpy import ndarray
+from keras.api.optimizers import Adam
+from keras.api.models import load_model
+from keras.api.layers import Dense, Input, BatchNormalization, ReLU, Add
+from keras.api.losses import BinaryCrossentropy, CategoricalCrossentropy, MeanSquaredError
 
 class NeuralNetOptions:
     def __init__(

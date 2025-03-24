@@ -1,3 +1,4 @@
+import os
 import time
 from engine import *
 import multiprocessing
@@ -36,7 +37,7 @@ class FlatMonteCarlo(MonteCarloSearch):
         self.seconds_per_branch = seconds_per_branch
     
     def search_branch(self, action: Action) -> SearchResults:
-        
+        # print(f"[{os.getpid()}] Beginning search")
         wins = 0
         points = []
         total_simulations = 0
@@ -66,6 +67,7 @@ class FlatMonteCarlo(MonteCarloSearch):
             if game_clone.final_standings[0].turn_order == player_benefitting: wins += 1
             total_simulations += 1
         
+        # print(f"[{os.getpid()}] Search ended")
         return SearchResults(wins, points, total_simulations)
 
     def find_action(self) -> Action:
@@ -113,3 +115,11 @@ class FlatMonteCarlo(MonteCarloSearch):
                     highest_median = median_points
                     highest_index = i
             return valid_moves[highest_index]
+
+class MonteCarloPUB(MonteCarloSearch):
+    def __init__(self, game: GameEngine, seconds_per_branch: int):
+        super().__init__(game)
+        self.seconds_per_branch = seconds_per_branch
+    
+    def find_action(self):
+        self.root = MonteCarloNode(0)

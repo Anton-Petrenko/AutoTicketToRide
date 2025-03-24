@@ -1,6 +1,4 @@
-import os
-print(f"[{os.getpid()}] [AutoTicketToRide] main: Expect 2 additional TensorFlow import statements...")
-from engine import *
+from engine import GameOptions, TicketToRide
 from alphazero import *
 import players as Player
 
@@ -14,8 +12,8 @@ import players as Player
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        players=[Player.Random("Random1"), Player.Random("Random2")],
-        logs=False,
+        players=[Player.FlatWinsMonteCarlo(), Player.FlatWinsMonteCarlo()],
+        logs=True,
         filename_paths="CT_paths.txt",
         filename_dests="CT_destinations.txt",
         red_trains=6,
@@ -41,6 +39,7 @@ if __name__ == "__main__":
 
     # ttr = TicketToRide(game_options)
     # ttr.play(1)
+    # ttr.game_engine.save_log()
 
     ai = AlphaZeroTrainer(alphazero_options)
     ai.train()

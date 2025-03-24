@@ -1,5 +1,5 @@
 from .lib import *
-from .game import *
+from .game import GameOptions, GameEngine
 from copy import deepcopy
 
 class TicketToRide():

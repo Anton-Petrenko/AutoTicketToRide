@@ -1,0 +1,176 @@
+PREGAME: Player 0 - FlatWinsMonteCarlo
+
+	Picks 2 destinations
+		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
+		DESTINATION: [6] HARTFORD --4-- VERNON
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+
+PREGAME: Player 1 - FlatWinsMonteCarlo
+
+	Picks 2 destinations
+		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
+		DESTINATION: [2] SIMSBURY --3-- MANCHESTER
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+
+TURN 0: Player 0 - FlatWinsMonteCarlo
+
+	[GAME FACEUP]: ['WILD', 'YELLOW', 'BLUE', 'RED', 'WILD']
+	[FACEUP DECK]: Picked up WILD
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+
+TURN 1: Player 1 - FlatWinsMonteCarlo
+
+	[FACEDOWN DECK]: Picked up GREEN
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 5]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 5]]
+	[FACEDOWN DECK]: Picked up YELLOW
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6]]
+
+TURN 2: Player 0 - FlatWinsMonteCarlo
+
+	[GAME FACEUP]: ['YELLOW', 'BLUE', 'RED', 'WILD', 'YELLOW']
+	[FACEUP DECK]: Picked up WILD
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 2, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 2, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 6]]
+
+TURN 3: Player 1 - FlatWinsMonteCarlo
+
+	[GAME FACEUP]: ['YELLOW', 'BLUE', 'RED', 'YELLOW', 'BLUE']
+	[FACEUP DECK]: Picked up YELLOW
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 2, 4], [0, 0, 0, 1, 0, 0, 0, 0, 0, 6]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 2, 4], [0, 0, 0, 1, 0, 0, 0, 0, 0, 6]]
+	[GAME FACEUP]: ['BLUE', 'RED', 'YELLOW', 'BLUE', 'RED']
+	[FACEUP DECK]: Picked up YELLOW
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 2, 4], [0, 0, 0, 2, 0, 0, 0, 0, 0, 6]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 2, 4], [0, 0, 0, 2, 0, 0, 0, 0, 0, 6]]
+
+TURN 4: Player 0 - FlatWinsMonteCarlo
+
+	[GAME FACEUP]: ['BLUE', 'RED', 'BLUE', 'RED', 'WILD']
+	[FACEUP DECK]: Picked up RED
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 4], [0, 0, 0, 2, 0, 0, 0, 0, 0, 6]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 4], [0, 0, 0, 2, 0, 0, 0, 0, 0, 6]]
+	[FACEDOWN DECK]: Picked up RED
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 5], [0, 0, 0, 2, 0, 0, 0, 0, 0, 6]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 5], [0, 0, 0, 2, 0, 0, 0, 0, 0, 6]]
+
+TURN 5: Player 1 - FlatWinsMonteCarlo
+
+	[FACEDOWN DECK]: Picked up WILD
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 5], [0, 0, 0, 2, 0, 0, 0, 0, 0, 7]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 5], [0, 0, 0, 2, 0, 0, 0, 0, 0, 7]]
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'RED', 'WILD', 'YELLOW']
+	[FACEUP DECK]: Picked up RED
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 5], [0, 0, 0, 2, 0, 0, 1, 0, 0, 7]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 1, 0, 2, 5], [0, 0, 0, 2, 0, 0, 1, 0, 0, 7]]
+
+TURN 6: Player 0 - FlatWinsMonteCarlo
+
+	[PLAYER COLORS]: ['GREEN', 'GREEN', 'BLUE', 'WILD', 'WILD', 'WILD', 'RED', 'RED']
+	Placed ROUTE: [6] HARTFORD --3 GRAY-- SOUTH WINDSOR
+		using ['GREEN', 'GREEN', 'WILD'] derived from ['GREEN', 'WILD']
+	[PLAYER COLORS]: ['BLUE', 'WILD', 'WILD', 'RED', 'RED']
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 1, 0, 1, 3], [0, 0, 0, 2, 0, 0, 1, 0, 0, 7]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 1, 0, 1, 3], [0, 0, 0, 2, 0, 0, 1, 0, 0, 7]]
+
+TURN 7: Player 1 - FlatWinsMonteCarlo
+
+	[PLAYER COLORS]: ['BLUE', 'RED', 'GREEN', 'GREEN', 'GREEN', 'YELLOW', 'YELLOW', 'YELLOW', 'WILD', 'RED']
+	Placed ROUTE: [3] SOUTHINGTON --3 GREEN-- GLASTONBURY
+		using ['GREEN', 'GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['BLUE', 'RED', 'YELLOW', 'YELLOW', 'YELLOW', 'WILD', 'RED']
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 1, 0, 1, 3], [0, 0, 0, 2, 0, 0, 1, 0, 0, 4]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 1, 0, 1, 3], [0, 0, 0, 2, 0, 0, 1, 0, 0, 4]]
+
+TURN 8: Player 0 - FlatWinsMonteCarlo
+
+	[PLAYER COLORS]: ['BLUE', 'WILD', 'WILD', 'RED', 'RED']
+	Placed ROUTE: [4] SIMSBURY --3 RED-- SOUTH WINDSOR
+		using ['RED', 'RED', 'WILD'] derived from ['RED', 'WILD']
+	[PLAYER COLORS]: ['BLUE', 'WILD']
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 1, 0, 0, 4]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 1, 0, 0, 4]]
+
+TURN 9: Player 1 - FlatWinsMonteCarlo
+
+	[PLAYER COLORS]: ['BLUE', 'RED', 'YELLOW', 'YELLOW', 'YELLOW', 'WILD', 'RED']
+	Placed ROUTE: [0] SOUTHINGTON --2 BLUE-- SIMSBURY
+		using ['BLUE', 'WILD'] derived from ['BLUE', 'WILD']
+	[PLAYER COLORS]: ['RED', 'YELLOW', 'YELLOW', 'YELLOW', 'RED']
+	(+4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY completed
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 1, 0, 0, 2]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 1, 0, 0, 2]]
+
+TURN 10: Player 0 - FlatWinsMonteCarlo
+
+	[PLAYER COLORS]: ['BLUE', 'WILD']
+	Placed ROUTE: [14] GLASTONBURY --2 GRAY-- VERNON
+		using ['BLUE', 'WILD'] derived from ['BLUE', 'WILD']
+	[PLAYER COLORS]: []
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 0, 1, 0, 0, 2]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 2, 0, 0, 1, 0, 0, 2]]
+
+	This turn has triggered the last round!
+TURN 11: Player 1 - FlatWinsMonteCarlo
+
+	[PLAYER COLORS]: ['RED', 'YELLOW', 'YELLOW', 'YELLOW', 'RED']
+	Placed ROUTE: [5] SIMSBURY --1 GRAY-- HARTFORD
+		using ['YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['RED', 'YELLOW', 'YELLOW', 'RED']
+	(+4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY completed
+
+	FlatWinsMonteCarlo 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 2]]
+	FlatWinsMonteCarlo 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 2]]
+
+TURN 12: Player 0 - FlatWinsMonteCarlo
+
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'WILD', 'YELLOW', 'YELLOW']
+	[FACEUP DECK]: Picked up BLUE
+
+	FlatWinsMonteCarlo 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 2]]
+	FlatWinsMonteCarlo 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 2]]
+	[GAME FACEUP]: ['BLUE', 'WILD', 'YELLOW', 'YELLOW', 'RED']
+	[FACEUP DECK]: Picked up BLUE
+
+	FlatWinsMonteCarlo 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 2]]
+	FlatWinsMonteCarlo 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 1, 0, 0, 2]]
+
+Player 0 - FlatWinsMonteCarlo:
+	(+4) placed SIMSBURY --3 RED-- SOUTH WINDSOR
+	(+4) placed SOUTH WINDSOR --3 GRAY-- HARTFORD
+	(+2) placed GLASTONBURY --2 GRAY-- VERNON
+	(-4) DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER not completed
+	(-4) DESTINATION: [6] HARTFORD --4-- VERNON not completed
+Player 1 - FlatWinsMonteCarlo:
+	(+2) placed SOUTHINGTON --2 BLUE-- SIMSBURY
+	(+4) placed SOUTHINGTON --3 GREEN-- GLASTONBURY
+	(+1) placed SIMSBURY --1 GRAY-- HARTFORD
+	(+4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY completed
+	(-3) DESTINATION: [2] SIMSBURY --3-- MANCHESTER not completed
+
+Player 0 - FlatWinsMonteCarlo gets the longest route! (+10)
+Player 1 - FlatWinsMonteCarlo gets the longest route! (+10)
+
+1. (Player 1) FlatWinsMonteCarlo | 26 points
+2. (Player 0) FlatWinsMonteCarlo | 12 points
