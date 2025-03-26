@@ -29,7 +29,8 @@ class GameOptions:
             dests_dealt_on_request: int = 3,
             dests_dealt_per_player_start: int = 3,
             traincolors_dealt_per_player_start: int = 4,
-            traincars_per_player: int = 45
+            traincars_per_player: int = 45,
+            longest_route_bonus: bool = True
             ):
         
         if players: assert 2 <= len(players) <= 5
@@ -57,6 +58,7 @@ class GameOptions:
         self.dests_dealt_per_player_start = dests_dealt_per_player_start
         self.dests_dealt_on_request = dests_dealt_on_request
         self.traincolor_dealt_per_player_start = traincolors_dealt_per_player_start
+        self.longest_route_bonus = longest_route_bonus
     
     def copy(self):
         ret = GameOptions(deepcopy(self.players))
@@ -298,6 +300,9 @@ class GameEngine:
         assert isinstance(action, ChooseDestinations)
         assert len(self.destinations_dealt) > 0
 
+        player_board = nx.MultiGraph()
+        player_board.add_edges_from([edge for edge in self.board.edges(data=True) if edge[2]['owner'] == self.player_making_move])
+
         self.add_log_line(f"Picks {len(action.destinations)} destinations", 1)
         for destination in action.destinations:
             assert destination in self.destinations_dealt
@@ -305,6 +310,12 @@ class GameEngine:
             self.destinations_dealt.remove(destination)
             self.options.players[self.player_making_move].destinations.append(destination)
             self.options.players[self.player_making_move].points -= destination.points
+
+            if player_board.has_node(destination.city1) and player_board.has_node(destination.city2):
+                if nx.has_path(player_board, destination.city1, destination.city2):
+                    self.options.players[self.player_making_move].points += destination.points*2
+                    self.add_log_line(f"(+{destination.points}) {destination} completed", 1)
+                    destination.awarded = True
 
     def end_turn(self):
 
@@ -370,14 +381,13 @@ class GameEngine:
                 else:
                     longest_route_player.append(player.turn_order)
                 longest_route_value = temp
-        
-        self.add_log_line("")
 
-        for player_turnorder in longest_route_player:
-            self.options.players[player_turnorder].points += 10
-            self.add_log_line(f"Player {player_turnorder} - {self.options.players[player_turnorder].name} gets the longest route! (+10)")
-
-        self.add_log_line("")
+        if self.options.longest_route_bonus:
+            self.add_log_line("")
+            for player_turnorder in longest_route_player:
+                self.options.players[player_turnorder].points += 10
+                self.add_log_line(f"Player {player_turnorder} - {self.options.players[player_turnorder].name} gets the longest route! (+10)")
+            self.add_log_line("")
 
         self.final_standings = sorted([player for player in self.options.players], key = lambda player: player.points, reverse=True)
         for i, player in enumerate(self.final_standings):
@@ -396,7 +406,7 @@ class GameEngine:
             return max(result)
 
     def apply(self, action: Action):
-        
+
         self.player_id_history.append(self.player_making_move)
         state_before_action = self.state_representation()
 
@@ -483,12 +493,14 @@ class GameEngine:
         self.add_log_line(f"[PLAYER COLORS]: {self.options.players[self.player_making_move].train_colors}", 1)
 
         player_board = nx.MultiGraph()
-        player_board.add_edges_from([edge for edge in self.board.edges(data=True) if edge[2]['owner'] == self.options.players[self.player_making_move].turn_order])
+        player_board.add_edges_from([edge for edge in self.board.edges(data=True) if edge[2]['owner'] == self.player_making_move])
         for destination in self.options.players[self.player_making_move].destinations:
+            if destination.awarded: continue
             if player_board.has_node(destination.city1) and player_board.has_node(destination.city2):
                 if nx.has_path(player_board, destination.city1, destination.city2):
-                    player.points += destination.points*2
+                    self.options.players[self.player_making_move].points += destination.points*2
                     self.add_log_line(f"(+{destination.points}) {destination} completed", 1)
+                    destination.awarded = True
     
     def draw_facedown(self):
         card_drawn = self.traincolor_deck.draw(1)

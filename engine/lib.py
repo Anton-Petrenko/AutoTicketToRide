@@ -72,6 +72,7 @@ class DestinationCard:
         self.city1: str = city1
         self.city2: str = city2
         self.points: int = points
+        self.awarded: bool = False
     
     def __str__(self) -> str:
         return f"DESTINATION: [{self.id}] {self.city1} --{self.points}-- {self.city2}"
