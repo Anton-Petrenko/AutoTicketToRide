@@ -11,11 +11,12 @@ import players as Player
 # Note: in montecarloPUB, deciphering which routes are on the "path" is currently being done by finding the shortest way. However, there are ways that may be worth more points, but not the shortest.
 # Do we all the points earned in the game to the nodes "total_score" on that path in montecarloPUB?
 # montecarlopub does not have progressive unpruning
+# montecarlopub free routes graph is good for CT map, but needs the extra conditionals for USA map
 
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        players=[Player.ProgressivePruningBiasMonteCarlo(), Player.FlatWinsMonteCarlo()],
+        players=[Player.Random(), Player.Random()],
         logs=True,
         filename_paths="CT_paths.txt",
         filename_dests="CT_destinations.txt",
@@ -42,8 +43,12 @@ if __name__ == "__main__":
     # )
 
     ttr = TicketToRide(game_options)
-    ttr.play()
-    ttr.game_engine.visualize_board()
+    ttr.setup_game()
+    ttr.take_turns(10)
+    hungry = Player.Hungry()
+    hungry.decide(ttr.game_engine)
+    # ttr.play()
+    # ttr.game_engine.visualize_board()
 
     # ai = AlphaZeroTrainer(alphazero_options)
     # ai.train()
