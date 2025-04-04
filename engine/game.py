@@ -21,7 +21,7 @@ class GameOptions:
             black_trains: int = 12,
             red_trains: int = 12,
             green_trains: int = 12,
-            wild_trains: int = 12,
+            wild_trains: int = 14,
             is_copy: bool = False,
             filename_paths: str = "USA_paths.txt",
             filename_dests: str = "USA_destinations.txt",

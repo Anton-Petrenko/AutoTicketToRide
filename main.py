@@ -16,20 +16,20 @@ import players as Player
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        players=[Player.Random(), Player.Random()],
+        players=[Player.Random(), Player.Hungry()],
         logs=True,
-        filename_paths="CT_paths.txt",
-        filename_dests="CT_destinations.txt",
-        red_trains=6,
-        blue_trains=6,
-        pink_trains=0,
-        wild_trains=6,
-        black_trains=0,
-        green_trains=6,
-        white_trains=0,
-        orange_trains=0,
-        yellow_trains=6,
-        traincars_per_player=10,
+        filename_paths="USA_paths.txt",
+        filename_dests="USA_destinations.txt",
+        # red_trains=6,
+        # blue_trains=6,
+        # pink_trains=0,
+        # wild_trains=6,
+        # black_trains=0,
+        # green_trains=6,
+        # white_trains=0,
+        # orange_trains=0,
+        # yellow_trains=6,
+        # traincars_per_player=10,
         longest_route_bonus=False
     )
 
@@ -43,10 +43,9 @@ if __name__ == "__main__":
     # )
 
     ttr = TicketToRide(game_options)
-    ttr.setup_game()
-    ttr.take_turns(10)
-    hungry = Player.Hungry()
-    hungry.decide(ttr.game_engine)
+    ttr.play()
+    # hungry = Player.Hungry()
+    # hungry.decide(ttr.game_engine)
     # ttr.play()
     # ttr.game_engine.visualize_board()
 

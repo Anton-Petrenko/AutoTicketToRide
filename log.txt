@@ -1,6 +1,1235 @@
+PREGAME: Player 0 - RandomAgent
 
+	Picks 2 destinations
+		DESTINATION: [23] SEATTLE --22-- NEW YORK
+		DESTINATION: [27] MONTREAL --13-- NEW ORLEANS
 
-Player 0 - HungryAgent:
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	HungryAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+
+PREGAME: Player 1 - HungryAgent
+
+	Picks 2 destinations
+		DESTINATION: [24] DENVER --4-- EL PASO
+		DESTINATION: [28] SAULT ST. MARIE --9-- OKLAHOMA CITY
+
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	HungryAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+
+TURN 0: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'BLACK', 'BLUE', 'BLUE']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[0, 0, 0, 0, 0, 1, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	HungryAgent 1 [[0, 0, 0, 0, 0, 1, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'BLUE', 'BLUE', 'RED']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+
+TURN 1: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['GREEN', 'RED', 'PINK', 'BLACK']
+	Placed ROUTE: [25] OMAHA --1 GRAY-- KANSAS CITY
+		using ['PINK'] derived from ['PINK']
+	[PLAYER COLORS]: ['GREEN', 'RED', 'BLACK']
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+
+TURN 2: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'GREEN', 'WILD', 'BLUE', 'BLACK', 'BLUE']
+	Placed ROUTE: [90] RALEIGH --2 GRAY-- ATLANTA
+		using ['GREEN', 'WILD'] derived from ['GREEN', 'WILD']
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLACK', 'BLUE']
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+
+TURN 3: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'BLUE', 'RED', 'RED']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 0, 0, 3]]
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'RED', 'RED', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 1, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 1, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 1, 0, 0, 3]]
+
+TURN 4: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLACK', 'BLUE']
+	Placed ROUTE: [8] SEATTLE --1 GRAY-- PORTLAND
+		using ['BLACK'] derived from ['BLACK']
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLUE']
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 1, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 1, 0, 0, 3]]
+
+TURN 5: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'RED', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0, 1, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0, 1, 0, 0, 3]]
+	[GAME FACEUP]: ['BLUE', 'RED', 'RED', 'YELLOW', 'WILD']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0, 2, 0, 0, 3]]
+
+TURN 6: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['BLUE', 'RED', 'YELLOW', 'WILD', 'ORANGE']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0, 2, 0, 0, 3]]
+	[GAME FACEUP]: ['RED', 'YELLOW', 'WILD', 'ORANGE', 'YELLOW']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 1, 0, 0, 2], [0, 0, 2, 0, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 2, 0, 0, 0, 1, 0, 0, 2], [0, 0, 2, 0, 0, 0, 2, 0, 0, 3]]
+
+TURN 7: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['GREEN', 'RED', 'BLACK', 'BLUE', 'RED', 'BLUE', 'RED']
+	Placed ROUTE: [22] DULUTH --2 GRAY-- OMAHA
+		using ['BLUE', 'BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['GREEN', 'RED', 'BLACK', 'RED', 'RED']
+
+	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 1, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 2, 0, 0, 0, 1, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2, 0, 0, 3]]
+
+TURN 8: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLUE', 'BLUE', 'RED']
+	Placed ROUTE: [79] DALLAS --1 GRAY-- HOUSTON
+		using ['RED'] derived from ['RED']
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLUE', 'BLUE']
+
+	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 2, 0, 0, 3]]
+
+TURN 9: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['YELLOW', 'WILD', 'ORANGE', 'YELLOW', 'WHITE']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 1, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 1, 0, 0, 2, 0, 0, 3]]
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'YELLOW', 'WHITE', 'GREEN']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 2, 0, 0, 3]]
+
+TURN 10: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'YELLOW', 'GREEN', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[1, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 2, 0, 0, 3]]
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'YELLOW', 'GREEN', 'BLUE']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 2, 0, 0, 0, 0, 1, 0, 2], [0, 1, 0, 1, 0, 0, 2, 0, 0, 3]]
+	HungryAgent 1 [[1, 0, 2, 0, 0, 0, 0, 1, 0, 2], [0, 1, 0, 1, 0, 0, 2, 0, 0, 3]]
+
+TURN 11: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['GREEN', 'RED', 'BLACK', 'RED', 'RED', 'YELLOW', 'WHITE']
+	Placed ROUTE: [42] TORONTO --3 GRAY-- MONTREAL
+		using ['RED', 'RED', 'RED'] derived from ['RED']
+	[PLAYER COLORS]: ['GREEN', 'BLACK', 'YELLOW', 'WHITE']
+
+	RandomAgent 0 [[1, 0, 2, 0, 0, 0, 0, 1, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 2]]
+	HungryAgent 1 [[1, 0, 2, 0, 0, 0, 0, 1, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 2]]
+
+TURN 12: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLUE', 'BLUE', 'PINK', 'GREEN']
+	Placed ROUTE: [1] VANCOUVER --1 GRAY-- SEATTLE
+		using ['GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLUE', 'BLUE', 'PINK']
+
+	RandomAgent 0 [[1, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 2]]
+	HungryAgent 1 [[1, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 2]]
+
+TURN 13: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['GREEN', 'BLACK', 'YELLOW', 'WHITE']
+	Placed ROUTE: [92] NASHVILLE --1 GRAY-- ATLANTA
+		using ['GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['BLACK', 'YELLOW', 'WHITE']
+
+	RandomAgent 0 [[1, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 2, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 1]]
+
+TURN 14: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'BLUE', 'BLUE', 'PINK']
+	Placed ROUTE: [77] LITTLE ROCK --2 GRAY-- DALLAS
+		using ['BLUE', 'BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'PINK']
+
+	RandomAgent 0 [[1, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 1, 0, 1, 0, 0, 0, 0, 0, 1]]
+
+TURN 15: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'YELLOW', 'BLUE', 'WHITE']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[1, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 2, 0, 1, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 2, 0, 1, 0, 0, 0, 0, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 2, 0, 2, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 2, 0, 2, 0, 0, 0, 0, 0, 1]]
+
+TURN 16: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'BLUE', 'YELLOW', 'BLACK']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 0, 0, 0, 0, 2], [0, 2, 0, 2, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 0, 0, 0, 0, 2], [0, 2, 0, 2, 0, 0, 0, 0, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'BLUE', 'BLACK', 'RED']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 2, 0, 2, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 2, 0, 2, 0, 0, 0, 0, 0, 1]]
+
+TURN 17: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'YELLOW', 'WHITE', 'WHITE', 'YELLOW']
+	Placed ROUTE: [51] KANSAS CITY --2 GRAY-- OKLAHOMA CITY
+		using ['WHITE', 'WHITE'] derived from ['WHITE']
+	[PLAYER COLORS]: ['BLACK', 'YELLOW', 'YELLOW']
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 0, 0, 0, 1]]
+
+TURN 18: Player 0 - RandomAgent
+
+	Dealing destination cards:
+		DESTINATION: [20] BOSTON --12-- MIAMI
+		DESTINATION: [0] LOS ANGELES --21-- NEW YORK
+		DESTINATION: [16] LOS ANGELES --16-- CHICAGO
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 0, 0, 0, 1]]
+	Picks 2 destinations
+		DESTINATION: [20] BOSTON --12-- MIAMI
+		DESTINATION: [16] LOS ANGELES --16-- CHICAGO
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 0, 0, 0, 0, 0, 1]]
+
+TURN 19: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'BLUE', 'RED', 'ORANGE']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 1, 0, 0, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 1, 0, 0, 0, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'RED', 'ORANGE', 'GREEN']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 1, 0, 0, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 1, 0, 0, 1, 0, 1]]
+
+TURN 20: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up WILD
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 0, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 0, 1, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'RED', 'ORANGE', 'ORANGE']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 0, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 0, 1, 0, 1]]
+
+TURN 21: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'RED', 'ORANGE', 'ORANGE', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 1, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 1, 1, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'ORANGE', 'RED', 'WILD']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 0, 0, 0, 3], [0, 0, 0, 2, 1, 0, 2, 1, 0, 1]]
+
+TURN 22: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'PINK', 'YELLOW', 'BLACK', 'WILD', 'BLUE']
+	Placed ROUTE: [87] WASHINGTON --2 GRAY-- RALEIGH
+		using ['WILD', 'PINK'] derived from ['WILD', 'PINK']
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'YELLOW', 'BLACK', 'BLUE']
+
+	RandomAgent 0 [[0, 0, 1, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[0, 0, 1, 1, 0, 1, 0, 0, 0, 2], [0, 0, 0, 2, 1, 0, 2, 1, 0, 1]]
+
+TURN 23: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['RED', 'WILD', 'BLUE', 'WHITE', 'WHITE', 'YELLOW']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[0, 0, 1, 1, 0, 1, 0, 0, 0, 2], [0, 1, 0, 2, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[0, 0, 1, 1, 0, 1, 0, 0, 0, 2], [0, 1, 0, 2, 1, 0, 2, 1, 0, 1]]
+	[GAME FACEUP]: ['RED', 'WILD', 'BLUE', 'WHITE', 'YELLOW', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 0, 1, 1, 0, 1, 0, 0, 0, 2], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[0, 0, 1, 1, 0, 1, 0, 0, 0, 2], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+
+TURN 24: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'BLUE', 'YELLOW', 'BLACK', 'BLUE']
+	Placed ROUTE: [53] OKLAHOMA CITY --2 GRAY-- LITTLE ROCK
+		using ['BLUE', 'BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'BLACK']
+
+	RandomAgent 0 [[0, 0, 0, 1, 0, 1, 0, 0, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[0, 0, 0, 1, 0, 1, 0, 0, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+
+TURN 25: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'YELLOW', 'YELLOW', 'ORANGE', 'GREEN', 'RED', 'RED', 'WHITE', 'YELLOW']
+	Placed ROUTE: [63] MONTREAL --2 GRAY-- BOSTON
+		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'GREEN', 'RED', 'RED', 'WHITE', 'YELLOW']
+
+	RandomAgent 0 [[0, 0, 0, 1, 0, 1, 0, 0, 0, 1], [0, 1, 0, 1, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[0, 0, 0, 1, 0, 1, 0, 0, 0, 1], [0, 1, 0, 1, 1, 0, 2, 1, 0, 1]]
+
+TURN 26: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['RED', 'WILD', 'BLUE', 'WHITE', 'YELLOW', 'PINK']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 1, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[0, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 1, 1, 0, 2, 1, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'YELLOW', 'PINK', 'YELLOW']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 1, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 1, 1, 0, 2, 1, 0, 1]]
+
+TURN 27: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'YELLOW', 'YELLOW', 'BLACK']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 2, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 2, 1, 0, 2, 1, 0, 1]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'YELLOW', 'BLACK', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 0, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+
+TURN 28: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'BLACK', 'YELLOW', 'WILD']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 1, 0, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+	[GAME FACEUP]: ['GREEN', 'BLACK', 'ORANGE', 'GREEN', 'WHITE', 'WHITE']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 1, 1, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 1, 1, 0, 1], [0, 1, 0, 3, 1, 0, 2, 1, 0, 1]]
+
+TURN 29: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLACK', 'ORANGE', 'GREEN', 'WHITE', 'WHITE', 'PINK']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 1, 1, 0, 1], [0, 2, 0, 3, 1, 0, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 1, 1, 0, 1], [0, 2, 0, 3, 1, 0, 2, 1, 0, 1]]
+	[GAME FACEUP]: ['BLACK', 'ORANGE', 'GREEN', 'WHITE', 'PINK', 'GREEN']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 1, 1, 1, 0, 1], [0, 2, 0, 3, 1, 0, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 1, 1, 1, 0, 1], [0, 2, 0, 3, 1, 0, 2, 2, 0, 1]]
+
+TURN 30: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['BLACK', 'ORANGE', 'WHITE', 'PINK', 'GREEN', 'PINK']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 1, 1, 1, 1, 1, 0, 1], [0, 2, 0, 3, 1, 0, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 1, 1, 1, 1, 0, 1], [0, 2, 0, 3, 1, 0, 2, 2, 0, 1]]
+	[GAME FACEUP]: ['BLACK', 'WHITE', 'PINK', 'GREEN', 'PINK', 'BLACK']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 1, 1, 1, 1, 1, 2, 0, 1], [0, 2, 0, 3, 1, 0, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 1, 1, 1, 2, 0, 1], [0, 2, 0, 3, 1, 0, 2, 2, 0, 1]]
+
+TURN 31: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLACK', 'WHITE', 'PINK', 'PINK', 'BLACK', 'WILD']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[1, 0, 1, 1, 1, 1, 1, 2, 0, 1], [0, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 1, 1, 1, 2, 0, 1], [0, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+	[GAME FACEUP]: ['WHITE', 'PINK', 'PINK', 'BLACK', 'WILD', 'ORANGE']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 0, 1, 1, 1, 1, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 1, 1, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+
+TURN 32: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WHITE', 'PINK', 'BLACK', 'WILD', 'ORANGE', 'WILD']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[1, 0, 1, 1, 1, 2, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 1, 2, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'ORANGE', 'WILD', 'GREEN']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 1, 2, 2, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 2, 2, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 0, 1]]
+
+TURN 33: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'WILD', 'GREEN', 'ORANGE']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[1, 0, 1, 1, 2, 2, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 1, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 2, 2, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 1, 1]]
+
+TURN 34: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'BLACK', 'RED', 'PINK', 'BLUE', 'GREEN', 'ORANGE', 'GREEN', 'BLACK', 'ORANGE']
+	Placed ROUTE: [43] TORONTO --2 GRAY-- PITTSBURGH
+		using ['BLACK', 'BLACK'] derived from ['BLACK']
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'RED', 'PINK', 'BLUE', 'GREEN', 'ORANGE', 'GREEN', 'ORANGE']
+
+	RandomAgent 0 [[1, 0, 1, 1, 2, 0, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 1, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 2, 0, 1, 2, 0, 1], [1, 2, 0, 3, 1, 1, 2, 2, 1, 1]]
+
+TURN 35: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'GREEN', 'RED', 'RED', 'WHITE', 'YELLOW', 'YELLOW', 'YELLOW', 'WHITE', 'GREEN', 'BLACK', 'PINK', 'WILD']
+	Placed ROUTE: [19] DULUTH --3 GRAY-- SAULT ST. MARIE
+		using ['WILD', 'WHITE', 'WHITE'] derived from ['WILD', 'WHITE']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'GREEN', 'RED', 'RED', 'YELLOW', 'YELLOW', 'YELLOW', 'GREEN', 'BLACK', 'PINK']
+	(+9) DESTINATION: [28] SAULT ST. MARIE --9-- OKLAHOMA CITY completed
+
+	RandomAgent 0 [[1, 0, 1, 1, 2, 0, 1, 2, 0, 1], [1, 0, 0, 3, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 2, 0, 1, 2, 0, 1], [1, 0, 0, 3, 1, 1, 2, 2, 0, 1]]
+
+TURN 36: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'RED', 'PINK', 'BLUE', 'GREEN', 'ORANGE', 'GREEN', 'ORANGE']
+	Placed ROUTE: [31] DENVER --2 GRAY-- SANTA FE
+		using ['ORANGE', 'ORANGE'] derived from ['ORANGE']
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'RED', 'PINK', 'BLUE', 'GREEN', 'GREEN']
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 0, 1, 2, 0, 1], [1, 0, 0, 3, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 0, 1, 2, 0, 1], [1, 0, 0, 3, 1, 1, 2, 2, 0, 1]]
+
+TURN 37: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'GREEN', 'RED', 'RED', 'YELLOW', 'YELLOW', 'YELLOW', 'GREEN', 'BLACK', 'PINK']
+	Placed ROUTE: [88] RALEIGH --2 GRAY-- CHARLESTON
+		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'GREEN', 'RED', 'RED', 'YELLOW', 'GREEN', 'BLACK', 'PINK']
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 0, 1, 2, 0, 1], [1, 0, 0, 1, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 0, 1, 2, 0, 1], [1, 0, 0, 1, 1, 1, 2, 2, 0, 1]]
+
+TURN 38: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'RED', 'PINK', 'BLUE', 'GREEN', 'GREEN']
+	Placed ROUTE: [96] NEW ORLEANS --2 GRAY-- HOUSTON
+		using ['GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'RED', 'PINK', 'BLUE']
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 0, 1, 0, 0, 1], [1, 0, 0, 1, 1, 1, 2, 2, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 0, 1, 0, 0, 1], [1, 0, 0, 1, 1, 1, 2, 2, 0, 1]]
+
+TURN 39: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'GREEN', 'RED', 'RED', 'YELLOW', 'GREEN', 'BLACK', 'PINK']
+	Placed ROUTE: [48] CHICAGO --2 GREEN-- SAINT LOUIS
+		using ['GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'RED', 'RED', 'YELLOW', 'BLACK', 'PINK']
+
+	RandomAgent 0 [[1, 0, 1, 1, 0, 0, 1, 0, 0, 1], [1, 0, 0, 1, 1, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 1, 0, 0, 1, 0, 0, 1], [1, 0, 0, 1, 1, 1, 2, 0, 0, 1]]
+
+TURN 40: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'GREEN', 'ORANGE', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 0, 1, 2, 0, 0, 1, 0, 0, 1], [1, 0, 0, 1, 1, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 2, 0, 0, 1, 0, 0, 1], [1, 0, 0, 1, 1, 1, 2, 0, 0, 1]]
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'GREEN', 'ORANGE', 'ORANGE']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 1, 2, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 1, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 2, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 1, 1, 2, 0, 0, 1]]
+
+TURN 41: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'ORANGE', 'ORANGE', 'BLUE']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 2, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 2, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 2, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 2, 1, 2, 0, 0, 1]]
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'ORANGE', 'BLUE', 'ORANGE']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 2, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 3, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 2, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 3, 1, 2, 0, 0, 1]]
+
+TURN 42: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'YELLOW', 'RED', 'PINK', 'BLUE', 'YELLOW', 'GREEN']
+	Placed ROUTE: [97] CHARLESTON --2 GRAY-- ATLANTA
+		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['WHITE', 'RED', 'PINK', 'BLUE', 'GREEN']
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 3, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 3, 1, 2, 0, 0, 1]]
+
+TURN 43: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'BLUE', 'ORANGE', 'ORANGE']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 4, 1, 2, 0, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 4, 1, 2, 0, 0, 1]]
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'BLUE', 'ORANGE', 'GREEN']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 4, 1, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 1], [1, 0, 0, 1, 4, 1, 2, 1, 0, 1]]
+
+TURN 44: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 0, 1, 4, 1, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 0, 1, 4, 1, 2, 1, 0, 1]]
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'BLUE', 'ORANGE', 'RED']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 0, 1, 4, 1, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 0, 1, 4, 1, 2, 1, 0, 1]]
+
+TURN 45: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['PINK', 'WILD', 'BLUE', 'ORANGE', 'RED', 'BLUE']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 1]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 1]]
+	[FACEDOWN DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 0, 1, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 2]]
+
+TURN 46: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['PINK', 'WILD', 'ORANGE', 'RED', 'BLUE', 'BLACK']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 1, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 1, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 2]]
+	[GAME FACEUP]: ['PINK', 'WILD', 'ORANGE', 'RED', 'BLUE', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 2], [1, 0, 1, 1, 4, 1, 2, 1, 0, 2]]
+
+TURN 47: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['PINK', 'WILD', 'ORANGE', 'BLUE', 'RED', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 2], [1, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 2], [1, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	[GAME FACEUP]: ['PINK', 'WILD', 'ORANGE', 'BLUE', 'RED', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 2], [2, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 2], [2, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+
+TURN 48: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up GREEN
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 3], [2, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 3], [2, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	[FACEDOWN DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 4], [2, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 4], [2, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+
+TURN 49: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'BLUE', 'RED', 'PINK', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 4], [3, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 4], [3, 0, 1, 1, 4, 1, 3, 1, 0, 2]]
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'BLUE', 'RED', 'PINK', 'BLUE']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 4], [3, 0, 2, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 1, 0, 4], [3, 0, 2, 1, 4, 1, 3, 1, 0, 2]]
+
+TURN 50: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'RED', 'PINK', 'BLUE', 'GREEN', 'ORANGE', 'WHITE', 'BLACK', 'RED', 'GREEN', 'PINK']
+	Placed ROUTE: [62] LAS VEGAS --2 GRAY-- LOS ANGELES
+		using ['GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['WHITE', 'RED', 'PINK', 'BLUE', 'ORANGE', 'WHITE', 'BLACK', 'RED', 'PINK']
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 0, 0, 3], [3, 0, 2, 1, 4, 1, 3, 1, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 0, 0, 3], [3, 0, 2, 1, 4, 1, 3, 1, 0, 2]]
+
+TURN 51: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'ORANGE', 'RED', 'PINK', 'BLUE', 'WILD']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[1, 1, 1, 0, 0, 1, 2, 0, 0, 3], [3, 0, 2, 1, 4, 1, 3, 1, 1, 2]]
+	HungryAgent 1 [[1, 1, 1, 0, 0, 1, 2, 0, 0, 3], [3, 0, 2, 1, 4, 1, 3, 1, 1, 2]]
+
+TURN 52: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['WHITE', 'RED', 'PINK', 'BLUE', 'ORANGE', 'WHITE', 'BLACK', 'RED', 'PINK']
+	Placed ROUTE: [70] PITTSBURGH --2 GRAY-- RALEIGH
+		using ['WHITE', 'WHITE'] derived from ['WHITE']
+	[PLAYER COLORS]: ['RED', 'PINK', 'BLUE', 'ORANGE', 'BLACK', 'RED', 'PINK']
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 1, 2, 0, 0, 2], [3, 0, 2, 1, 4, 1, 3, 1, 1, 2]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 1, 2, 0, 0, 2], [3, 0, 2, 1, 4, 1, 3, 1, 1, 2]]
+
+TURN 53: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'RED', 'RED', 'YELLOW', 'BLACK', 'PINK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'RED', 'PINK', 'PINK', 'BLUE', 'WILD']
+	Placed ROUTE: [30] DENVER --4 RED-- OKLAHOMA CITY
+		using ['RED', 'RED', 'RED', 'WILD'] derived from ['RED', 'WILD']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'PINK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'PINK', 'PINK', 'BLUE']
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 1, 2, 0, 0, 2], [3, 0, 2, 1, 4, 1, 0, 1, 0, 2]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 1, 2, 0, 0, 2], [3, 0, 2, 1, 4, 1, 0, 1, 0, 2]]
+
+TURN 54: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['RED', 'PINK', 'BLUE', 'ORANGE', 'BLACK', 'RED', 'PINK']
+	Placed ROUTE: [73] SAINT LOUIS --2 GRAY-- NASHVILLE
+		using ['RED', 'RED'] derived from ['RED']
+	[PLAYER COLORS]: ['PINK', 'BLUE', 'ORANGE', 'BLACK', 'PINK']
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 1, 0, 0, 0, 2], [3, 0, 2, 1, 4, 1, 0, 1, 0, 2]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 1, 0, 0, 0, 2], [3, 0, 2, 1, 4, 1, 0, 1, 0, 2]]
+
+TURN 55: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['ORANGE', 'RED', 'PINK', 'BLUE', 'WILD', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 4, 1, 0, 1, 0, 2]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 4, 1, 0, 1, 0, 2]]
+	[GAME FACEUP]: ['ORANGE', 'RED', 'BLUE', 'WILD', 'PINK', 'BLACK']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 0, 1, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 0, 1, 0, 2]]
+	HungryAgent 1 [[1, 0, 1, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 0, 1, 0, 2]]
+
+TURN 56: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['RED', 'BLUE', 'WILD', 'PINK', 'BLACK', 'RED']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[2, 0, 1, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 0, 1, 0, 2]]
+	HungryAgent 1 [[2, 0, 1, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 0, 1, 0, 2]]
+	[GAME FACEUP]: ['RED', 'BLUE', 'WILD', 'BLACK', 'RED', 'GREEN']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 0, 1, 0, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 0, 1, 0, 2]]
+
+TURN 57: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['RED', 'WILD', 'BLACK', 'RED', 'GREEN', 'BLACK']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 1, 0, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 1, 0, 2]]
+	[GAME FACEUP]: ['WILD', 'BLACK', 'RED', 'GREEN', 'BLACK', 'WILD']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 0, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 1, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 0, 2]]
+
+TURN 58: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'BLACK', 'RED', 'BLACK', 'WILD', 'BLUE']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 2, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 0, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 2, 0, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 0, 2]]
+	[GAME FACEUP]: ['WILD', 'RED', 'BLACK', 'WILD', 'BLUE', 'WHITE']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 2, 1, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 0, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 2, 1, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 0, 2]]
+
+TURN 59: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'BLACK', 'WILD', 'BLUE', 'WHITE', 'BLACK']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 2, 1, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 2, 1, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 1, 2]]
+
+TURN 60: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'BLUE', 'ORANGE', 'BLACK', 'PINK', 'PINK', 'BLUE', 'BLACK', 'RED']
+	Placed ROUTE: [85] NEW YORK --2 BLACK-- WASHINGTON
+		using ['BLACK', 'BLACK'] derived from ['BLACK']
+	[PLAYER COLORS]: ['PINK', 'BLUE', 'ORANGE', 'PINK', 'PINK', 'BLUE', 'RED']
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 1, 1, 2, 1, 2]]
+
+TURN 61: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLACK', 'WILD', 'BLUE', 'WHITE', 'BLACK', 'PINK']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 2, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 2, 1, 2, 1, 2]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'BLACK', 'PINK', 'BLACK']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[2, 0, 2, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 3, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 2, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 3, 1, 2, 1, 2]]
+
+TURN 62: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'BLUE', 'ORANGE', 'PINK', 'PINK', 'BLUE', 'RED']
+	Placed ROUTE: [69] PITTSBURGH --2 GRAY-- WASHINGTON
+		using ['BLUE', 'BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['PINK', 'ORANGE', 'PINK', 'PINK', 'RED']
+
+	RandomAgent 0 [[2, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 3, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 0, 2, 1, 5, 3, 1, 2, 1, 2]]
+
+TURN 63: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'PINK', 'BLACK', 'WHITE']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[2, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 3, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 3, 1, 2, 1, 2]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'PINK', 'BLACK', 'WHITE', 'ORANGE']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[2, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[2, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 4, 1, 2, 1, 2]]
+
+TURN 64: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'PINK', 'WHITE', 'ORANGE', 'WHITE']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 4, 1, 2, 1, 2]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'ORANGE', 'WHITE', 'PINK']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[3, 0, 0, 0, 1, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[3, 0, 0, 0, 1, 0, 1, 0, 0, 2], [4, 1, 2, 1, 5, 4, 1, 2, 1, 2]]
+
+TURN 65: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'WHITE', 'PINK', 'WHITE']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[3, 0, 0, 0, 1, 0, 1, 0, 0, 2], [4, 2, 2, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[3, 0, 0, 0, 1, 0, 1, 0, 0, 2], [4, 2, 2, 1, 5, 4, 1, 2, 1, 2]]
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'PINK', 'WHITE', 'YELLOW']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[3, 0, 0, 0, 1, 0, 1, 0, 0, 2], [4, 3, 2, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[3, 0, 0, 0, 1, 0, 1, 0, 0, 2], [4, 3, 2, 1, 5, 4, 1, 2, 1, 2]]
+
+TURN 66: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'ORANGE', 'PINK', 'PINK', 'RED', 'PINK', 'ORANGE']
+	Placed ROUTE: [55] OKLAHOMA CITY --2 GRAY-- DALLAS
+		using ['ORANGE', 'ORANGE'] derived from ['ORANGE']
+	[PLAYER COLORS]: ['PINK', 'PINK', 'PINK', 'RED', 'PINK']
+
+	RandomAgent 0 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 2, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 2, 1, 5, 4, 1, 2, 1, 2]]
+
+TURN 67: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'PINK', 'WHITE', 'YELLOW', 'ORANGE']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 3, 1, 5, 4, 1, 2, 1, 2]]
+	HungryAgent 1 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 3, 1, 5, 4, 1, 2, 1, 2]]
+	[FACEDOWN DECK]: Picked up GREEN
+
+	RandomAgent 0 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+	HungryAgent 1 [[3, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+
+TURN 68: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'PINK', 'PINK', 'RED', 'PINK']
+	Placed ROUTE: [61] PHOENIX --3 GRAY-- LOS ANGELES
+		using ['PINK', 'PINK', 'PINK'] derived from ['PINK']
+	[PLAYER COLORS]: ['RED', 'PINK']
+
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+	HungryAgent 1 [[0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [4, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+
+TURN 69: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'PINK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'PINK', 'PINK', 'BLUE', 'PINK', 'ORANGE', 'RED', 'GREEN', 'WILD', 'BLACK', 'BLACK', 'WHITE', 'BLACK', 'WHITE', 'WHITE', 'BLUE', 'GREEN']
+	Placed ROUTE: [17] PORTLAND --5 PINK-- SAN FRANCISCO
+		using ['WILD', 'PINK', 'PINK', 'PINK', 'PINK'] derived from ['WILD', 'PINK']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'GREEN', 'BLACK', 'BLACK', 'WHITE', 'BLACK', 'WHITE', 'WHITE', 'BLUE', 'GREEN']
+
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 0, 0, 0, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 0, 3]]
+
+TURN 70: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'PINK', 'WHITE', 'YELLOW', 'ORANGE', 'RED']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[0, 1, 0, 0, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 0, 0, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 0, 3]]
+	[GAME FACEUP]: ['WILD', 'PINK', 'YELLOW', 'ORANGE', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 1, 0, 1, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 0, 1, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 0, 3]]
+
+TURN 71: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'PINK', 'ORANGE', 'RED', 'YELLOW', 'WILD']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[0, 1, 0, 1, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+	HungryAgent 1 [[0, 1, 0, 1, 0, 0, 1, 0, 0, 1], [0, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+
+TURN 72: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up BLACK
+
+	RandomAgent 0 [[0, 1, 0, 1, 0, 0, 1, 0, 0, 2], [0, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+	HungryAgent 1 [[0, 1, 0, 1, 0, 0, 1, 0, 0, 2], [0, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+	[GAME FACEUP]: ['PINK', 'ORANGE', 'RED', 'YELLOW', 'WILD', 'BLUE']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[0, 1, 0, 1, 1, 0, 1, 0, 0, 2], [0, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+	HungryAgent 1 [[0, 1, 0, 1, 1, 0, 1, 0, 0, 2], [0, 3, 3, 1, 5, 4, 1, 2, 1, 3]]
+
+TURN 73: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'GREEN', 'BLACK', 'BLACK', 'WHITE', 'BLACK', 'WHITE', 'WHITE', 'BLUE', 'GREEN', 'WILD']
+	Placed ROUTE: [60] PHOENIX --3 GRAY-- EL PASO
+		using ['WILD', 'WHITE', 'WHITE'] derived from ['WILD', 'WHITE']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'GREEN', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'GREEN']
+
+	RandomAgent 0 [[0, 1, 0, 1, 1, 0, 1, 0, 0, 2], [0, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 0, 1, 1, 0, 1, 0, 0, 2], [0, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+
+TURN 74: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up WILD
+
+	RandomAgent 0 [[0, 1, 0, 1, 1, 0, 1, 0, 0, 3], [0, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 0, 1, 1, 0, 1, 0, 0, 3], [0, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+	[GAME FACEUP]: ['PINK', 'RED', 'YELLOW', 'WILD', 'BLUE', 'WHITE']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 1, 0, 0, 3], [0, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 1, 0, 0, 3], [0, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+
+TURN 75: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['PINK', 'RED', 'YELLOW', 'WILD', 'WHITE', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 1, 0, 0, 3], [1, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 1, 0, 0, 3], [1, 1, 3, 1, 5, 4, 1, 2, 0, 3]]
+	[GAME FACEUP]: ['RED', 'YELLOW', 'WILD', 'WHITE', 'PINK', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 1, 0, 0, 3], [1, 1, 3, 2, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 1, 0, 0, 3], [1, 1, 3, 2, 5, 4, 1, 2, 0, 3]]
+
+TURN 76: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['RED', 'PINK', 'WHITE', 'YELLOW', 'BLACK', 'ORANGE', 'WILD', 'BLUE']
+	Placed ROUTE: [39] SAULT ST. MARIE --2 GRAY-- TORONTO
+		using ['RED', 'WILD'] derived from ['RED', 'WILD']
+	[PLAYER COLORS]: ['PINK', 'WHITE', 'YELLOW', 'BLACK', 'ORANGE', 'BLUE']
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 0, 0, 2], [1, 1, 3, 2, 5, 4, 1, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 0, 0, 2], [1, 1, 3, 2, 5, 4, 1, 2, 0, 3]]
+
+TURN 77: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['RED', 'WILD', 'WHITE', 'PINK', 'YELLOW', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 0, 0, 2], [1, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 0, 0, 2], [1, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+	[GAME FACEUP]: ['WILD', 'WHITE', 'PINK', 'YELLOW', 'RED', 'GREEN']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 0, 0, 2], [2, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 0, 0, 2], [2, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+
+TURN 78: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'WHITE', 'YELLOW', 'RED', 'GREEN', 'ORANGE']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 0, 0, 0, 0, 2], [2, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 0, 0, 0, 0, 2], [2, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+	[GAME FACEUP]: ['WILD', 'WHITE', 'RED', 'GREEN', 'ORANGE', 'YELLOW']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 5, 4, 2, 2, 0, 3]]
+
+TURN 79: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'ORANGE', 'ORANGE', 'ORANGE', 'GREEN', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'GREEN', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'GREEN', 'PINK', 'YELLOW', 'RED', 'PINK']
+	Placed ROUTE: [0] VANCOUVER --3 GRAY-- CALGARY
+		using ['GREEN', 'GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'ORANGE', 'ORANGE', 'ORANGE', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'PINK', 'YELLOW', 'RED', 'PINK']
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 5, 4, 2, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 5, 4, 2, 0, 0, 2]]
+
+TURN 80: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'WHITE', 'YELLOW', 'BLACK', 'ORANGE', 'BLUE', 'YELLOW', 'GREEN']
+	Placed ROUTE: [58] SANTA FE --2 GRAY-- EL PASO
+		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['PINK', 'WHITE', 'BLACK', 'ORANGE', 'BLUE', 'GREEN']
+
+	RandomAgent 0 [[0, 1, 1, 0, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 5, 4, 2, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 0, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 5, 4, 2, 0, 0, 2]]
+
+TURN 81: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'WHITE', 'RED', 'ORANGE', 'YELLOW', 'BLACK']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[0, 1, 1, 0, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 6, 4, 2, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 0, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 6, 4, 2, 0, 0, 2]]
+	[GAME FACEUP]: ['WILD', 'WHITE', 'RED', 'YELLOW', 'BLACK', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 1, 1, 0, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 6, 4, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 0, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 6, 4, 3, 0, 0, 2]]
+
+TURN 82: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'WHITE', 'YELLOW', 'BLACK', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 6, 4, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 2], [2, 1, 3, 2, 6, 4, 3, 0, 0, 2]]
+	[FACEDOWN DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 1, 3, 2, 6, 4, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 1, 3, 2, 6, 4, 3, 0, 0, 2]]
+
+TURN 83: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WILD', 'WHITE', 'BLACK', 'RED', 'YELLOW', 'WHITE']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 4, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 4, 3, 0, 0, 2]]
+	[GAME FACEUP]: ['WILD', 'BLACK', 'RED', 'YELLOW', 'WHITE', 'BLACK']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 5, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 5, 3, 0, 0, 2]]
+
+TURN 84: Player 0 - RandomAgent
+
+	Dealing destination cards:
+		DESTINATION: [6] DULUTH --10-- EL PASO
+		DESTINATION: [8] PORTLAND --11-- PHOENIX
+		DESTINATION: [17] DENVER --11-- PITTSBURGH
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 5, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 5, 3, 0, 0, 2]]
+	Picks 1 destinations
+		DESTINATION: [17] DENVER --11-- PITTSBURGH
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 5, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 5, 3, 0, 0, 2]]
+
+TURN 85: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['BLACK', 'ORANGE', 'YELLOW', 'BLACK', 'ORANGE', 'ORANGE', 'ORANGE', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'PINK', 'YELLOW', 'RED', 'PINK', 'ORANGE', 'RED', 'WHITE', 'BLACK']
+	Placed ROUTE: [46] CHICAGO --3 BLACK-- PITTSBURGH
+		using ['BLACK', 'BLACK', 'BLACK'] derived from ['BLACK']
+	[PLAYER COLORS]: ['ORANGE', 'YELLOW', 'ORANGE', 'ORANGE', 'ORANGE', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'PINK', 'YELLOW', 'RED', 'PINK', 'ORANGE', 'RED', 'WHITE', 'BLACK']
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+
+TURN 86: Player 0 - RandomAgent
+
+	Dealing destination cards:
+		DESTINATION: [26] WINNIPEG --12-- HOUSTON
+		DESTINATION: [25] HELENA --8-- LOS ANGELES
+		DESTINATION: [11] CALGARY --13-- PHOENIX
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+	Picks 2 destinations
+		DESTINATION: [26] WINNIPEG --12-- HOUSTON
+		DESTINATION: [11] CALGARY --13-- PHOENIX
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+
+TURN 87: Player 1 - HungryAgent
+
+	[PLAYER COLORS]: ['ORANGE', 'YELLOW', 'ORANGE', 'ORANGE', 'ORANGE', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'RED', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'PINK', 'YELLOW', 'RED', 'PINK', 'ORANGE', 'RED', 'WHITE', 'BLACK']
+	Placed ROUTE: [83] BOSTON --2 RED-- NEW YORK
+		using ['RED', 'RED'] derived from ['RED']
+	[PLAYER COLORS]: ['ORANGE', 'YELLOW', 'ORANGE', 'ORANGE', 'ORANGE', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLACK', 'BLACK', 'WHITE', 'BLUE', 'PINK', 'YELLOW', 'PINK', 'ORANGE', 'RED', 'WHITE', 'BLACK']
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 1, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 0, 3], [2, 2, 3, 2, 6, 2, 1, 0, 0, 2]]
+
+TURN 88: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['WILD', 'RED', 'YELLOW', 'WHITE', 'BLACK', 'PINK']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 1, 3], [2, 2, 3, 2, 6, 2, 1, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 1, 3], [2, 2, 3, 2, 6, 2, 1, 0, 0, 2]]
+
+TURN 89: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['RED', 'YELLOW', 'WHITE', 'BLACK', 'PINK', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 1, 3], [2, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 1, 3], [2, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'BLACK', 'PINK', 'RED', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[0, 1, 1, 1, 1, 0, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 1, 1, 0, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+
+TURN 90: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'BLACK', 'RED', 'PINK', 'PINK']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 1, 1, 1, 1, 0, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 1, 1, 0, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'BLACK', 'RED', 'PINK', 'BLACK']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[1, 1, 1, 1, 1, 1, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 1, 1, 1, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 2, 0, 0, 2]]
+
+TURN 91: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'RED', 'PINK', 'BLACK', 'RED']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[1, 1, 1, 1, 1, 1, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 1, 1, 1, 0, 1, 1, 3], [3, 2, 3, 2, 6, 2, 3, 0, 0, 2]]
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'PINK', 'BLACK', 'RED', 'WILD']
+	[FACEUP DECK]: Picked up BLACK
+
+	RandomAgent 0 [[1, 1, 1, 1, 1, 1, 0, 1, 1, 3], [3, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 1, 1, 1, 0, 1, 1, 3], [3, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+
+TURN 92: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'PINK', 'RED', 'WILD', 'WILD']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[1, 1, 1, 1, 1, 1, 1, 1, 1, 3], [3, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 1, 1, 1, 1, 1, 1, 3], [3, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+	[GAME FACEUP]: ['YELLOW', 'WHITE', 'PINK', 'WILD', 'WILD', 'PINK']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 1, 1, 3], [3, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 1, 1, 3], [3, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+
+TURN 93: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['WHITE', 'PINK', 'WILD', 'WILD', 'PINK', 'GREEN']
+	[FACEUP DECK]: Picked up PINK
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 1, 1, 3], [4, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 1, 1, 3], [4, 2, 3, 2, 6, 3, 3, 0, 0, 2]]
+	[GAME FACEUP]: ['ORANGE', 'BLUE', 'BLUE', 'WHITE', 'ORANGE', 'WILD']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 1, 1, 3], [4, 2, 3, 2, 7, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 1, 1, 3], [4, 2, 3, 2, 7, 3, 3, 0, 0, 2]]
+
+TURN 94: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'WHITE', 'BLACK', 'ORANGE', 'BLUE', 'GREEN', 'YELLOW', 'RED', 'WILD', 'PINK', 'BLACK', 'RED', 'YELLOW']
+	Placed ROUTE: [74] SAINT LOUIS --2 GRAY-- LITTLE ROCK
+		using ['GREEN', 'WILD'] derived from ['GREEN', 'WILD']
+	[PLAYER COLORS]: ['PINK', 'WHITE', 'BLACK', 'ORANGE', 'BLUE', 'YELLOW', 'RED', 'PINK', 'BLACK', 'RED', 'YELLOW']
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 2, 3, 2, 7, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 2, 3, 2, 7, 3, 3, 0, 0, 2]]
+
+TURN 95: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLUE', 'BLUE', 'WHITE', 'ORANGE', 'WILD', 'YELLOW']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 2, 4, 2, 7, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 2, 4, 2, 7, 3, 3, 0, 0, 2]]
+	[GAME FACEUP]: ['BLUE', 'WHITE', 'ORANGE', 'WILD', 'YELLOW', 'WHITE']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 3, 4, 2, 7, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 3, 4, 2, 7, 3, 3, 0, 0, 2]]
+
+TURN 96: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['BLUE', 'ORANGE', 'WILD', 'YELLOW', 'WHITE', 'WILD']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 0, 1, 3], [4, 3, 4, 2, 7, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 0, 1, 3], [4, 3, 4, 2, 7, 3, 3, 0, 0, 2]]
+
+TURN 97: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLUE', 'ORANGE', 'YELLOW', 'WHITE', 'WILD', 'WHITE']
+	[FACEUP DECK]: Picked up WHITE
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 0, 1, 3], [4, 4, 4, 2, 7, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 0, 1, 3], [4, 4, 4, 2, 7, 3, 3, 0, 0, 2]]
+	[GAME FACEUP]: ['BLUE', 'ORANGE', 'YELLOW', 'WILD', 'WHITE', 'WILD']
+	[FACEUP DECK]: Picked up ORANGE
+
+	RandomAgent 0 [[1, 1, 1, 2, 1, 1, 1, 0, 1, 3], [4, 4, 4, 2, 8, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[1, 1, 1, 2, 1, 1, 1, 0, 1, 3], [4, 4, 4, 2, 8, 3, 3, 0, 0, 2]]
+
+TURN 98: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['PINK', 'WHITE', 'BLACK', 'ORANGE', 'BLUE', 'YELLOW', 'RED', 'PINK', 'BLACK', 'RED', 'YELLOW', 'WILD']
+	Placed ROUTE: [40] SAN FRANCISCO --3 PINK-- LOS ANGELES
+		using ['PINK', 'PINK', 'WILD'] derived from ['PINK', 'WILD']
+	[PLAYER COLORS]: ['WHITE', 'BLACK', 'ORANGE', 'BLUE', 'YELLOW', 'RED', 'BLACK', 'RED', 'YELLOW']
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 1, 1, 0, 0, 2], [4, 4, 4, 2, 8, 3, 3, 0, 0, 2]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 1, 1, 0, 0, 2], [4, 4, 4, 2, 8, 3, 3, 0, 0, 2]]
+
+	This turn has triggered the last round!
+TURN 99: Player 1 - HungryAgent
+
+	[GAME FACEUP]: ['BLUE', 'YELLOW', 'WILD', 'WHITE', 'WILD', 'RED']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 1, 1, 0, 0, 2], [4, 4, 4, 2, 8, 3, 3, 0, 1, 2]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 1, 1, 0, 0, 2], [4, 4, 4, 2, 8, 3, 3, 0, 1, 2]]
+
+TURN 100: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 4, 4, 2, 8, 3, 3, 0, 1, 2]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 1, 1, 0, 0, 3], [4, 4, 4, 2, 8, 3, 3, 0, 1, 2]]
+	[GAME FACEUP]: ['BLUE', 'YELLOW', 'WHITE', 'WILD', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 1, 1, 2, 1, 1, 2, 0, 0, 3], [4, 4, 4, 2, 8, 3, 3, 0, 1, 2]]
+	HungryAgent 1 [[0, 1, 1, 2, 1, 1, 2, 0, 0, 3], [4, 4, 4, 2, 8, 3, 3, 0, 1, 2]]
+
+Player 0 - RandomAgent:
+	(+1) placed VANCOUVER --1 GRAY-- SEATTLE
+	(+1) placed SEATTLE --1 GRAY-- PORTLAND
+	(+2) placed DENVER --2 GRAY-- SANTA FE
+	(+2) placed SANTA FE --2 GRAY-- EL PASO
+	(+2) placed SAULT ST. MARIE --2 GRAY-- TORONTO
+	(+2) placed TORONTO --2 GRAY-- PITTSBURGH
+	(+4) placed SAN FRANCISCO --3 PINK-- LOS ANGELES
+	(+4) placed LOS ANGELES --3 GRAY-- PHOENIX
+	(+2) placed LOS ANGELES --2 GRAY-- LAS VEGAS
+	(+2) placed PITTSBURGH --2 GRAY-- WASHINGTON
+	(+2) placed PITTSBURGH --2 GRAY-- RALEIGH
+	(+2) placed OKLAHOMA CITY --2 GRAY-- LITTLE ROCK
+	(+2) placed OKLAHOMA CITY --2 GRAY-- DALLAS
+	(+2) placed LITTLE ROCK --2 GRAY-- SAINT LOUIS
+	(+2) placed LITTLE ROCK --2 GRAY-- DALLAS
+	(+1) placed DALLAS --1 GRAY-- HOUSTON
+	(+2) placed WASHINGTON --2 BLACK-- NEW YORK
+	(+2) placed WASHINGTON --2 GRAY-- RALEIGH
+	(+2) placed RALEIGH --2 GRAY-- ATLANTA
+	(+2) placed SAINT LOUIS --2 GRAY-- NASHVILLE
+	(+2) placed HOUSTON --2 GRAY-- NEW ORLEANS
+	(+2) placed ATLANTA --2 GRAY-- CHARLESTON
+	(-22) DESTINATION: [23] SEATTLE --22-- NEW YORK not completed
+	(-13) DESTINATION: [27] MONTREAL --13-- NEW ORLEANS not completed
+	(-12) DESTINATION: [20] BOSTON --12-- MIAMI not completed
+	(-16) DESTINATION: [16] LOS ANGELES --16-- CHICAGO not completed
+	(-11) DESTINATION: [17] DENVER --11-- PITTSBURGH not completed
+	(-12) DESTINATION: [26] WINNIPEG --12-- HOUSTON not completed
+	(-13) DESTINATION: [11] CALGARY --13-- PHOENIX not completed
 Player 1 - HungryAgent:
-1. (Player 0) HungryAgent | 0 points
-2. (Player 1) HungryAgent | 0 points
+	(+4) placed VANCOUVER --3 GRAY-- CALGARY
+	(+10) placed PORTLAND --5 PINK-- SAN FRANCISCO
+	(+4) placed DULUTH --3 GRAY-- SAULT ST. MARIE
+	(+2) placed DULUTH --2 GRAY-- OMAHA
+	(+1) placed OMAHA --1 GRAY-- KANSAS CITY
+	(+2) placed KANSAS CITY --2 GRAY-- OKLAHOMA CITY
+	(+7) placed DENVER --4 RED-- OKLAHOMA CITY
+	(+4) placed TORONTO --3 GRAY-- MONTREAL
+	(+2) placed MONTREAL --2 GRAY-- BOSTON
+	(+4) placed CHICAGO --3 BLACK-- PITTSBURGH
+	(+2) placed CHICAGO --2 GREEN-- SAINT LOUIS
+	(+4) placed PHOENIX --3 GRAY-- EL PASO
+	(+2) placed BOSTON --2 RED-- NEW YORK
+	(+2) placed RALEIGH --2 GRAY-- CHARLESTON
+	(+1) placed NASHVILLE --1 GRAY-- ATLANTA
+	(-4) DESTINATION: [24] DENVER --4-- EL PASO not completed
+	(+9) DESTINATION: [28] SAULT ST. MARIE --9-- OKLAHOMA CITY completed
+1. (Player 1) HungryAgent | 56 points
+2. (Player 0) RandomAgent | -54 points
