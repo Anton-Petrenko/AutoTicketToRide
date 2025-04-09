@@ -12,11 +12,12 @@ import players as Player
 # Do we all the points earned in the game to the nodes "total_score" on that path in montecarloPUB?
 # montecarlopub does not have progressive unpruning
 # montecarlopub free routes graph is good for CT map, but needs the extra conditionals for USA map
+# in longroutejunkie check if the destinations_not_completed function is doing the card.city1 IN correctly. (and card.city2 IN)
 
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        players=[Player.Random(), Player.Hungry()],
+        players=[Player.OneStep(), Player.LongRoute(), Player.Path(), Player.Hungry()],
         logs=True,
         filename_paths="USA_paths.txt",
         filename_dests="USA_destinations.txt",
@@ -30,7 +31,7 @@ if __name__ == "__main__":
         # orange_trains=0,
         # yellow_trains=6,
         # traincars_per_player=10,
-        longest_route_bonus=False
+        longest_route_bonus=True
     )
 
     # alphazero_options = AlphaZeroTrainingOptions(

@@ -1,6 +1,5 @@
 import operator
 import networkx as nx
-from engine.lib import Player
 from engine.game import GameEngine
 from engine.lib import *
 
@@ -131,8 +130,9 @@ class Hungry(Player):
         for move in possible_moves:
             if isinstance(move, DrawCard) and move.color != None:
                 moves_by_color[move.color] = move
+
         colors_available = {color: game.faceup_cards.count(color) for color in game.faceup_cards}
-        max_color_available = max(colors_available.items(), key=operator.itemgetter(1))
+        max_color_available = max(set(game.faceup_cards), key=game.faceup_cards.count)
         if self.colors_needed != None and len(self.colors_needed) != 0:
             most_needed_color = max(self.colors_needed.items(), key=operator.itemgetter(1))[0]
         else:
