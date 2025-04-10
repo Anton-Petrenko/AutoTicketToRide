@@ -1,1798 +1,256 @@
-PREGAME: Player 0 - OneStepAgent
-
-	Picks 3 destinations
-		DESTINATION: [12] LOS ANGELES --20-- MIAMI
-		DESTINATION: [23] SEATTLE --22-- NEW YORK
-		DESTINATION: [22] MONTREAL --9-- ATLANTA
-
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-PREGAME: Player 1 - LongRouteAgent
+PREGAME: Player 0 - RandomAgent
 
 	Picks 2 destinations
-		DESTINATION: [17] DENVER --11-- PITTSBURGH
-		DESTINATION: [7] TORONTO --10-- MIAMI
+		DESTINATION: [6] HARTFORD --4-- VERNON
+		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
 
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 
-PREGAME: Player 2 - PathAgent
+PREGAME: Player 1 - AlphaZero
 
-	Picks 3 destinations
-		DESTINATION: [4] PORTLAND --17-- NASHVILLE
-		DESTINATION: [21] CHICAGO --7-- NEW ORLEANS
-		DESTINATION: [6] DULUTH --10-- EL PASO
+	Picks 2 destinations
+		DESTINATION: [2] SIMSBURY --3-- MANCHESTER
+		DESTINATION: [3] SIMSBURY --5-- VERNON
 
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 
-TURN 0: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['PINK', 'GREEN', 'GREEN', 'BLACK', 'PINK']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['PINK', 'GREEN', 'BLACK', 'PINK', 'RED']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 1: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['PINK', 'GREEN', 'PINK', 'RED', 'RED']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['GREEN', 'PINK', 'RED', 'RED', 'RED']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 0, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 3: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['GREEN', 'PINK', 'RED', 'RED', 'ORANGE']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 1, 0, 1, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['GREEN', 'PINK', 'RED', 'RED', 'BLACK']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [1, 0, 0, 0, 0, 0, 1, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 4: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['PINK', 'RED', 'RED', 'BLACK', 'WHITE']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [1, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [1, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [1, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['PINK', 'RED', 'BLACK', 'WHITE', 'WHITE']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 1, 0, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 6: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['RED', 'BLACK', 'WHITE', 'WHITE', 'PINK']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 2, 0, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 2, 0, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 2, 0, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['RED', 'WHITE', 'WHITE', 'PINK', 'WILD']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 7: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WHITE', 'WHITE', 'PINK', 'WILD', 'WILD']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[0, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[0, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[0, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 9: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WHITE', 'WHITE', 'PINK', 'WILD', 'BLUE']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[1, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 0, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WHITE', 'WHITE', 'WILD', 'BLUE', 'WILD']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 10: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up RED
-
-	OneStepAgent 0 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 1, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 12: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WHITE', 'WILD', 'BLUE', 'WILD', 'GREEN']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[1, 2, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 2, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 2, 0, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLUE', 'WILD', 'GREEN', 'ORANGE']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 2, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 13: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'BLACK', 'BLUE', 'GREEN', 'RED', 'BLUE']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 0, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLACK', 'BLUE', 'GREEN', 'BLUE', 'YELLOW']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 2, 1, 0, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 15: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'BLACK', 'GREEN', 'BLUE', 'YELLOW', 'WHITE']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[1, 2, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 2, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 2, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLACK', 'GREEN', 'BLUE', 'WHITE', 'WHITE']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 0, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 16: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'BLACK', 'GREEN', 'BLUE', 'WHITE', 'BLACK']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 0, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'GREEN', 'BLUE', 'WHITE', 'BLACK', 'BLUE']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 3, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 18: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'BLUE', 'WHITE', 'BLACK', 'BLUE', 'YELLOW']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[1, 4, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 4, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 4, 1, 1, 1, 2, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLUE', 'BLACK', 'BLUE', 'YELLOW', 'BLACK']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 1, 0, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 19: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'BLUE', 'BLUE', 'YELLOW', 'BLACK', 'PINK']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 1, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 1, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 1, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLUE', 'BLUE', 'BLACK', 'PINK', 'WILD']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[1, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 21: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'BLUE', 'BLACK', 'PINK', 'WILD', 'BLUE']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[2, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[2, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[2, 4, 1, 1, 1, 3, 1, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLUE', 'BLACK', 'WILD', 'BLUE', 'RED']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 22: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 1, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'BLUE', 'BLACK', 'WILD', 'BLUE', 'WHITE']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[2, 4, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 24: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'BLUE', 'WILD', 'BLUE', 'WHITE', 'BLACK']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[2, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[2, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[2, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['PINK', 'BLACK', 'WHITE', 'GREEN', 'BLUE', 'GREEN']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 2, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 25: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['BLACK', 'WHITE', 'GREEN', 'BLUE', 'GREEN', 'BLUE']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 1, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WHITE', 'GREEN', 'BLUE', 'GREEN', 'BLUE', 'WILD']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 5, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 27: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WHITE', 'BLUE', 'GREEN', 'BLUE', 'WILD', 'WHITE']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[3, 6, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 6, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 6, 1, 1, 1, 3, 2, 2, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['BLUE', 'GREEN', 'BLUE', 'WILD', 'WHITE', 'PINK']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 2, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 28: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['BLUE', 'BLUE', 'WILD', 'WHITE', 'PINK', 'WILD']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 7], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 6, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 30: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['BLUE', 'WILD', 'WHITE', 'PINK', 'WILD', 'WHITE']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[3, 7, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 7, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 7, 1, 1, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['BLUE', 'WILD', 'PINK', 'WILD', 'WHITE', 'YELLOW']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 3, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 31: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['BLUE', 'WILD', 'PINK', 'WILD', 'WHITE', 'WHITE']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 2, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'PINK', 'WILD', 'WHITE', 'WHITE', 'GREEN']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[3, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 33: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'PINK', 'WILD', 'WHITE', 'WHITE', 'PINK']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 4], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 0, 4, 1, 0, 3, 3, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 34: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'WILD', 'WHITE', 'WHITE', 'PINK', 'RED']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 0, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 0, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 0, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'WILD', 'WHITE', 'WHITE', 'PINK', 'RED']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 7, 1, 2, 1, 3, 2, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 36: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'WILD', 'WHITE', 'PINK', 'RED', 'ORANGE']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 8, 1, 2, 1, 3, 2, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 8, 1, 2, 1, 3, 2, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 8, 1, 2, 1, 3, 2, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'WILD', 'PINK', 'RED', 'ORANGE', 'RED']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 8, 1, 2, 1, 3, 3, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 8, 1, 2, 1, 3, 3, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 8, 1, 2, 1, 3, 3, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 1, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 37: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'WILD', 'PINK', 'ORANGE', 'RED', 'RED']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 8, 1, 2, 1, 3, 3, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 8, 1, 2, 1, 3, 3, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 8, 1, 2, 1, 3, 3, 3, 0, 5], [2, 1, 4, 1, 0, 3, 4, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 39: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'PINK', 'ORANGE', 'RED', 'RED', 'ORANGE']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 1, 0, 3, 4, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 1, 0, 3, 4, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 1, 0, 3, 4, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 40: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['PINK', 'ORANGE', 'RED', 'RED', 'ORANGE', 'PINK']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 1, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 1, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 1, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['PINK', 'ORANGE', 'RED', 'ORANGE', 'PINK', 'YELLOW']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 42: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['PINK', 'ORANGE', 'RED', 'ORANGE', 'PINK', 'YELLOW']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[5, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[5, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[5, 8, 1, 2, 1, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['ORANGE', 'RED', 'ORANGE', 'PINK', 'YELLOW', 'WILD']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 5, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 43: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['RED', 'ORANGE', 'PINK', 'YELLOW', 'WILD', 'WILD']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 8], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[5, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 45: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['ORANGE', 'PINK', 'YELLOW', 'WILD', 'WILD', 'RED']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[6, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 2, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['ORANGE', 'YELLOW', 'WILD', 'WILD', 'RED', 'ORANGE']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 2, 0, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 46: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['YELLOW', 'WILD', 'WILD', 'RED', 'ORANGE', 'ORANGE']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 2, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 2, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 2, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['YELLOW', 'WILD', 'WILD', 'RED', 'ORANGE', 'PINK']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 3, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 3, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 1, 5], [2, 1, 4, 3, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 48: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'WILD', 'RED', 'ORANGE', 'PINK', 'RED']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 3, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 3, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 3, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 49: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'RED', 'ORANGE', 'PINK', 'RED', 'YELLOW']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 4, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 4, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 4, 1, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'RED', 'ORANGE', 'PINK', 'RED', 'BLUE']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 5], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 51: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 1, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'RED', 'PINK', 'RED', 'BLUE', 'BLUE']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[6, 8, 2, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 2, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 2, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 2, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 52: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'RED', 'PINK', 'RED', 'BLUE', 'ORANGE']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[6, 8, 2, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 2, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 2, 2, 3, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 54: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['RED', 'PINK', 'RED', 'BLUE', 'ORANGE', 'ORANGE']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[6, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[6, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[6, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['RED', 'PINK', 'RED', 'BLUE', 'ORANGE', 'BLACK']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 9], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 55: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 3, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['RED', 'RED', 'BLUE', 'ORANGE', 'BLACK', 'GREEN']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 3, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 57: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['RED', 'RED', 'BLUE', 'ORANGE', 'GREEN', 'YELLOW']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 4, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 4, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 4, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['RED', 'BLUE', 'ORANGE', 'GREEN', 'YELLOW', 'YELLOW']
-	[FACEUP DECK]: Picked up RED
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 4, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 58: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['BLUE', 'ORANGE', 'GREEN', 'YELLOW', 'YELLOW', 'WILD']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 5, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 5, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 5, 4, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['ORANGE', 'GREEN', 'YELLOW', 'YELLOW', 'WILD', 'BLACK']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 2, 4, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 60: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['ORANGE', 'GREEN', 'YELLOW', 'WILD', 'BLACK', 'WHITE']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[7, 8, 2, 3, 4, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 4, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 4, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['ORANGE', 'GREEN', 'WILD', 'BLACK', 'WHITE', 'BLUE']
-	[FACEUP DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 1, 5, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 61: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['GREEN', 'WILD', 'BLACK', 'WHITE', 'BLUE', 'BLACK']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 1, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 1, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 1, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['GREEN', 'WILD', 'BLACK', 'WHITE', 'BLACK', 'YELLOW']
-	[FACEUP DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 6], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 63: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 7], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 7], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 3, 5, 3, 2, 7], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['GREEN', 'WILD', 'BLACK', 'BLACK', 'YELLOW', 'PINK']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 5, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 64: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['GREEN', 'WILD', 'BLACK', 'YELLOW', 'PINK', 'PINK']
-	[FACEUP DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 6, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 6, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 6, 2, 4, 6, 3, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['GREEN', 'WILD', 'BLACK', 'PINK', 'PINK', 'WILD']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 7], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 66: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 8], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 8], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 8], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [2, 2, 6, 6, 2, 4, 6, 4, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 67: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'GREEN', 'WILD', 'BLUE', 'WILD', 'WILD']
-	[FACEUP DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [2, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [2, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [2, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'PINK', 'WILD', 'PINK', 'WILD', 'BLUE']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 2, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 69: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['PINK', 'WILD', 'WILD', 'BLUE', 'WILD', 'BLUE']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[7, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[7, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[7, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['WILD', 'WILD', 'WILD', 'WILD', 'PINK', 'WILD']
-	[FACEUP DECK]: Picked up PINK
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 10], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 70: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 11], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 11], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 11], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 2, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 72: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['WILD', 'WILD', 'BLACK', 'WILD', 'BLUE', 'WILD']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 3, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 3, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 3, 9], [3, 2, 6, 6, 2, 4, 6, 5, 3, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 73: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'BLUE']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 3, 9], [3, 2, 6, 6, 2, 4, 6, 5, 4, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 3, 9], [3, 2, 6, 6, 2, 4, 6, 5, 4, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 3, 9], [3, 2, 6, 6, 2, 4, 6, 5, 4, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 75: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['BLUE', 'WILD', 'BLACK', 'WILD', 'WILD']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 4, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 4, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 4, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 76: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['BLUE', 'BLACK', 'WILD', 'WILD']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 3, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 3, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 3, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 78: Player 0 - OneStepAgent
-
-	[GAME FACEUP]: ['BLUE', 'BLACK', 'WILD']
-	[FACEUP DECK]: Picked up BLUE
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 4, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[GAME FACEUP]: ['BLACK', 'WILD']
-	[FACEUP DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 5, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 5, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 5, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 5, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 79: Player 1 - LongRouteAgent
-
-	[GAME FACEUP]: ['WILD']
-	[FACEUP DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 5, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 5, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 5, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 81: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'BLACK', 'GREEN', 'BLACK', 'ORANGE', 'GREEN', 'BLACK', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'BLACK', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'WILD', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'WILD', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'WILD', 'WILD', 'BLUE', 'BLACK']
-	Placed ROUTE: [3] CALGARY --4 GRAY-- SEATTLE
-		using ['BLACK', 'BLACK', 'BLACK', 'BLACK'] derived from ['BLACK']
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'WILD', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'WILD', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'WILD', 'WILD', 'BLUE', 'BLACK']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 12], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 82: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 9], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 84: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 10], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 10], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 10], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 11], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 11], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 11], [3, 2, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 85: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'WILD', 'WILD', 'PINK', 'RED', 'RED', 'PINK', 'WILD', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'WHITE', 'WILD', 'RED', 'YELLOW', 'RED', 'WHITE', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'WILD', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'WHITE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK']
-	Placed ROUTE: [75] LITTLE ROCK --3 WHITE-- NASHVILLE
-		using ['WHITE', 'WHITE', 'WHITE'] derived from ['WHITE']
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'WILD', 'WILD', 'PINK', 'RED', 'RED', 'PINK', 'WILD', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'WILD', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'WILD', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 11], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 11], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 11], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 87: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 12], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 12], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 12], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 13], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 88: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 4, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 90: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'WILD', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'WILD', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'WILD', 'WILD', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE']
-	Placed ROUTE: [4] CALGARY --4 GRAY-- HELENA
-		using ['WILD', 'WILD', 'WILD', 'WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 14], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 91: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 15], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 15], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 15], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 93: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 6, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 94: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'WILD', 'WILD', 'PINK', 'RED', 'RED', 'PINK', 'WILD', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'WILD', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'WILD', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WHITE', 'WILD', 'WILD']
-	Placed ROUTE: [41] SAN FRANCISCO --3 YELLOW-- LOS ANGELES
-		using ['WILD', 'WILD', 'WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'PINK', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'WILD', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'WILD', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WHITE', 'WILD', 'WILD']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 96: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 16], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 16], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 16], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 3, 16], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 97: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 3, 17], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 3, 17], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 3, 17], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 99: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WILD', 'WILD', 'WILD', 'WILD']
-	Placed ROUTE: [91] RALEIGH --3 BLACK-- NASHVILLE
-		using ['WILD', 'WILD', 'WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WILD']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 17], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 17], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 17], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 100: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 3, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 102: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 3, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 3, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 3, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 103: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'PINK', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'WILD', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'WILD', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WHITE', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD']
-	Placed ROUTE: [19] DULUTH --3 GRAY-- SAULT ST. MARIE
-		using ['WHITE', 'WILD', 'WILD'] derived from ['WHITE', 'WILD']
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'PINK', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 105: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 16], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 16], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 16], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 18], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 106: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 3, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 108: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'GREEN', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WILD', 'WILD', 'WHITE', 'WILD']
-	Placed ROUTE: [77] LITTLE ROCK --2 GRAY-- DALLAS
-		using ['GREEN', 'GREEN'] derived from ['GREEN']
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WILD', 'WILD', 'WHITE', 'WILD']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 19], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 109: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 20], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 20], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 20], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 21], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 21], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 1, 0, 17], [3, 0, 6, 6, 2, 4, 6, 5, 1, 21], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 111: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'GREEN', 'ORANGE', 'GREEN', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'GREEN', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WILD', 'WILD', 'WHITE', 'WILD']
-	Placed ROUTE: [72] PITTSBURGH --5 GREEN-- SAINT LOUIS
-		using ['GREEN', 'GREEN', 'GREEN', 'WILD', 'WILD'] derived from ['GREEN', 'WILD']
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'WILD']
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 21], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 21], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 21], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 112: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 22], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 22], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 22], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 114: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 23], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 115: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 24], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 24], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 8, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 24], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 117: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'PINK', 'WHITE', 'WHITE', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'WILD', 'GREEN', 'WILD']
-	Placed ROUTE: [36] SALT LAKE CITY --4 WHITE-- SAN FRANCISCO
-		using ['WILD', 'WILD', 'WHITE', 'WHITE'] derived from ['WILD', 'WHITE']
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'PINK', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN']
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 24], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 24], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 24], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 118: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 13], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 120: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 14], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 4, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 121: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'PINK', 'ORANGE', 'RED', 'RED', 'BLUE', 'BLACK', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'BLACK', 'BLACK', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE']
-	Placed ROUTE: [46] CHICAGO --3 BLACK-- PITTSBURGH
-		using ['BLACK', 'BLACK', 'BLACK'] derived from ['BLACK']
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'PINK', 'ORANGE', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE']
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 123: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 124: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[8, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 126: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'PINK', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'PINK', 'RED', 'WHITE', 'PINK', 'WHITE', 'WHITE', 'YELLOW', 'PINK', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'WILD', 'WILD', 'BLACK', 'BLACK']
-	Placed ROUTE: [20] DULUTH --6 PINK-- TORONTO
-		using ['WILD', 'WILD', 'PINK', 'PINK', 'PINK', 'PINK'] derived from ['WILD', 'PINK']
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK']
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 127: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 28], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 28], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 28], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 15], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 129: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 130: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 30], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 30], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 30], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 3, 5, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 132: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'BLUE', 'YELLOW', 'WHITE', 'WHITE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'WILD', 'PINK']
-	Placed ROUTE: [97] CHARLESTON --2 GRAY-- ATLANTA
-		using ['WILD', 'YELLOW'] derived from ['WILD', 'YELLOW']
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'BLUE', 'WHITE', 'WHITE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK']
-
-	OneStepAgent 0 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 133: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up YELLOW
-
-	OneStepAgent 0 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 6, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 135: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'BLUE', 'WHITE', 'WHITE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK']
-	Placed ROUTE: [52] KANSAS CITY --2 GRAY-- OKLAHOMA CITY
-		using ['WHITE', 'WHITE'] derived from ['WHITE']
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'BLUE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 136: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 34], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 34], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 34], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 5, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 138: Player 0 - OneStepAgent
-
-	[PLAYER COLORS]: ['ORANGE', 'ORANGE', 'RED', 'BLUE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'ORANGE', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK']
-	Placed ROUTE: [35] SALT LAKE CITY --3 ORANGE-- LAS VEGAS
-		using ['ORANGE', 'ORANGE', 'ORANGE'] derived from ['ORANGE']
-	[PLAYER COLORS]: ['RED', 'BLUE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 139: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 16], [3, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 141: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 17], [3, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 142: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'PINK', 'ORANGE', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [73] SAINT LOUIS --2 GRAY-- NASHVILLE
-		using ['PINK', 'PINK'] derived from ['PINK']
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'RED', 'RED', 'ORANGE', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 17], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 17], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 17], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 144: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 18], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 18], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 18], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up PINK
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 19], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 19], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 19], [1, 0, 6, 6, 2, 1, 6, 5, 1, 37], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 145: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'RED', 'RED', 'ORANGE', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLACK', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [88] RALEIGH --2 GRAY-- CHARLESTON
-		using ['BLACK', 'BLACK'] derived from ['BLACK']
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'RED', 'RED', 'ORANGE', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 19], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 19], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 19], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 147: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 20], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 20], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 20], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up BLACK
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 21], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 21], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 21], [1, 0, 6, 6, 2, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 148: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'ORANGE', 'RED', 'RED', 'ORANGE', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [58] SANTA FE --2 GRAY-- EL PASO
-		using ['ORANGE', 'ORANGE'] derived from ['ORANGE']
-	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 21], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 21], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 21], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 150: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 22], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 22], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 22], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up ORANGE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 23], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 23], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 23], [1, 0, 6, 6, 0, 0, 6, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 151: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [1] VANCOUVER --1 GRAY-- SEATTLE
-		using ['RED'] derived from ['RED']
-	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 23], [1, 0, 6, 6, 0, 0, 5, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 23], [1, 0, 6, 6, 0, 0, 5, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 23], [1, 0, 6, 6, 0, 0, 5, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 153: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 24], [1, 0, 6, 6, 0, 0, 5, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 24], [1, 0, 6, 6, 0, 0, 5, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 24], [1, 0, 6, 6, 0, 0, 5, 5, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 154: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'RED', 'BLUE', 'GREEN', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [78] DALLAS --1 GRAY-- HOUSTON
-		using ['GREEN'] derived from ['GREEN']
-	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 24], [1, 0, 6, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 24], [1, 0, 6, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 24], [1, 0, 6, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 156: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up GREEN
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 25], [1, 0, 6, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 25], [1, 0, 6, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 25], [1, 0, 6, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 157: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [92] NASHVILLE --1 GRAY-- ATLANTA
-		using ['BLUE'] derived from ['BLUE']
-	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 25], [1, 0, 5, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 25], [1, 0, 5, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 25], [1, 0, 5, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 159: Player 0 - OneStepAgent
+TURN 0: Player 0 - RandomAgent
 
 	[FACEDOWN DECK]: Picked up BLUE
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 26], [1, 0, 5, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 26], [1, 0, 5, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 26], [1, 0, 5, 6, 0, 0, 5, 4, 1, 36], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 160: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [26] OMAHA --1 GRAY-- KANSAS CITY
-		using ['WHITE'] derived from ['WHITE']
-	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 26], [1, 0, 5, 6, 0, 0, 5, 4, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 26], [1, 0, 5, 6, 0, 0, 5, 4, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 26], [1, 0, 5, 6, 0, 0, 5, 4, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 162: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 27], [1, 0, 5, 6, 0, 0, 5, 4, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 27], [1, 0, 5, 6, 0, 0, 5, 4, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 27], [1, 0, 5, 6, 0, 0, 5, 4, 1, 35], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 163: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-	Placed ROUTE: [17] PORTLAND --5 PINK-- SAN FRANCISCO
-		using ['WILD', 'WILD', 'WILD', 'WILD', 'WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 27], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 27], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 27], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 165: Player 0 - OneStepAgent
-
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 	[FACEDOWN DECK]: Picked up WILD
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 28], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 28], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 28], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+TURN 1: Player 1 - AlphaZero
 
-TURN 166: Player 1 - LongRouteAgent
+	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'GREEN', 'RED']
+	Placed ROUTE: [2] SOUTHINGTON --1 RED-- WETHERSFIELD
+		using ['RED'] derived from ['RED']
+	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'GREEN']
 
-	[FACEDOWN DECK]: Picked up WILD
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 6], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
+TURN 2: Player 0 - RandomAgent
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 29], [1, 0, 5, 6, 0, 0, 5, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 168: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 30], [1, 0, 5, 6, 0, 0, 5, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 30], [1, 0, 5, 6, 0, 0, 5, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 30], [1, 0, 5, 6, 0, 0, 5, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 169: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-	Placed ROUTE: [70] PITTSBURGH --2 GRAY-- RALEIGH
-		using ['RED', 'RED'] derived from ['RED']
-	[PLAYER COLORS]: ['RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 30], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 30], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 30], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 171: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 31], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 31], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 31], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 32], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 32], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 32], [1, 0, 5, 6, 0, 0, 3, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 172: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['RED', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-	Placed ROUTE: [53] OKLAHOMA CITY --2 GRAY-- LITTLE ROCK
-		using ['RED', 'RED'] derived from ['RED']
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 32], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 32], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 32], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 174: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 33], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 33], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 33], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up RED
-
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 34], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 34], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 34], [1, 0, 5, 6, 0, 0, 1, 4, 0, 33], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 175: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-	Placed ROUTE: [8] SEATTLE --1 GRAY-- PORTLAND
+	[PLAYER COLORS]: ['RED', 'WILD', 'RED', 'RED', 'BLUE', 'WILD']
+	Placed ROUTE: [9] HARTFORD --1 GREEN-- WETHERSFIELD
 		using ['WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
+	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'WILD']
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 34], [1, 0, 5, 6, 0, 0, 1, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 34], [1, 0, 5, 6, 0, 0, 1, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 34], [1, 0, 5, 6, 0, 0, 1, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
 
+TURN 3: Player 1 - AlphaZero
 
-TURN 177: Player 0 - OneStepAgent
+	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'GREEN']
+	Placed ROUTE: [5] SIMSBURY --1 GRAY-- HARTFORD
+		using ['BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['YELLOW', 'GREEN']
 
-	[FACEDOWN DECK]: Picked up WILD
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 5], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 4, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+TURN 4: Player 0 - RandomAgent
 
-TURN 178: Player 1 - LongRouteAgent
+	[PLAYER COLORS]: ['RED', 'RED', 'RED', 'BLUE', 'WILD']
+	Placed ROUTE: [7] HARTFORD --2 RED-- MANCHESTER
+		using ['RED', 'RED'] derived from ['RED']
+	[PLAYER COLORS]: ['RED', 'BLUE', 'WILD']
 
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'BLUE', 'ORANGE', 'BLUE', 'GREEN', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-	Placed ROUTE: [89] RALEIGH --2 GRAY-- ATLANTA
-		using ['GREEN', 'GREEN'] derived from ['GREEN']
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+TURN 5: Player 1 - AlphaZero
 
+	[PLAYER COLORS]: ['YELLOW', 'GREEN']
+	Placed ROUTE: [13] GLASTONBURY --1 GRAY-- MANCHESTER
+		using ['YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['GREEN']
 
-TURN 180: Player 0 - OneStepAgent
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
 
-	[FACEDOWN DECK]: Picked up GREEN
+TURN 6: Player 0 - RandomAgent
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 36], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 36], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 36], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up GREEN
+	[PLAYER COLORS]: ['RED', 'BLUE', 'WILD']
+	Placed ROUTE: [0] SOUTHINGTON --2 BLUE-- SIMSBURY
+		using ['WILD', 'BLUE'] derived from ['WILD', 'BLUE']
+	[PLAYER COLORS]: ['RED']
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 32], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
 
-TURN 181: Player 1 - LongRouteAgent
+TURN 7: Player 1 - AlphaZero
 
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'WHITE', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'WHITE', 'WHITE', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-	Placed ROUTE: [42] TORONTO --3 GRAY-- MONTREAL
-		using ['WHITE', 'WHITE', 'WHITE'] derived from ['WHITE']
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
+	[GAME FACEUP]: ['WILD', 'BLUE', 'YELLOW', 'GREEN', 'WILD']
+	[FACEUP DECK]: Picked up WILD
 
-	OneStepAgent 0 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 4, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]]
+	AlphaZero 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]]
 
+TURN 8: Player 0 - RandomAgent
 
-TURN 183: Player 0 - OneStepAgent
+	[GAME FACEUP]: ['BLUE', 'YELLOW', 'GREEN', 'WILD', 'RED']
+	[FACEUP DECK]: Picked up YELLOW
 
-	[PLAYER COLORS]: ['RED', 'BLUE', 'RED', 'WHITE', 'WHITE', 'WHITE', 'YELLOW', 'YELLOW', 'WHITE', 'RED', 'PINK', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'WHITE', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK', 'ORANGE', 'PINK', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'ORANGE', 'RED', 'GREEN', 'BLUE', 'WHITE', 'WILD', 'WILD', 'WILD', 'RED', 'RED', 'RED', 'RED', 'WILD', 'GREEN', 'GREEN']
-	Placed ROUTE: [5] CALGARY --6 WHITE-- WINNIPEG
-		using ['WHITE', 'WHITE', 'WHITE', 'WHITE', 'WHITE', 'WHITE'] derived from ['WHITE']
-	[PLAYER COLORS]: ['RED', 'BLUE', 'RED', 'YELLOW', 'YELLOW', 'RED', 'PINK', 'PINK', 'ORANGE', 'BLACK', 'BLUE', 'ORANGE', 'PINK', 'RED', 'RED', 'YELLOW', 'ORANGE', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'BLUE', 'PINK', 'BLUE', 'BLACK', 'BLACK', 'BLACK', 'WHITE', 'GREEN', 'BLACK', 'BLACK', 'PINK', 'ORANGE', 'PINK', 'PINK', 'BLACK', 'BLACK', 'ORANGE', 'ORANGE', 'RED', 'GREEN', 'BLUE', 'WHITE', 'WILD', 'WILD', 'WILD', 'RED', 'RED', 'RED', 'RED', 'WILD', 'GREEN', 'GREEN']
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]]
+	[GAME FACEUP]: ['BLUE', 'GREEN', 'WILD', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up RED
 
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 1, 1]]
 
-TURN 184: Player 1 - LongRouteAgent
+TURN 9: Player 1 - AlphaZero
 
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'WILD', 'WILD', 'WILD', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
-	Placed ROUTE: [27] OMAHA --4 PINK-- DENVER
-		using ['WILD', 'WILD', 'WILD', 'WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'ORANGE', 'ORANGE', 'WILD', 'WILD']
+	[PLAYER COLORS]: ['GREEN', 'WILD']
+	Placed ROUTE: [14] GLASTONBURY --2 GRAY-- VERNON
+		using ['WILD', 'GREEN'] derived from ['WILD', 'GREEN']
+	[PLAYER COLORS]: []
 
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 35], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
-
-TURN 186: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 36], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 36], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 36], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 25], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 187: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 26], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 37], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 189: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 38], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 38], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 38], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 27], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 190: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 28], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 28], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 28], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 39], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 192: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 40], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 40], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 40], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 193: Player 1 - LongRouteAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 30], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 30], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 30], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 41], [1, 0, 5, 6, 0, 0, 1, 2, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-
-TURN 195: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WHITE
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 42], [1, 0, 5, 6, 0, 0, 1, 2, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 42], [1, 0, 5, 6, 0, 0, 1, 2, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 42], [1, 0, 5, 6, 0, 0, 1, 2, 0, 31], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 196: Player 1 - LongRouteAgent
-
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'WILD', 'GREEN', 'GREEN', 'GREEN', 'WILD', 'GREEN', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'ORANGE', 'ORANGE', 'WILD', 'WILD', 'WHITE', 'WILD', 'WHITE', 'WILD', 'WILD', 'WILD']
-	Placed ROUTE: [39] SAULT ST. MARIE --2 GRAY-- TORONTO
-		using ['WILD', 'WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'ORANGE', 'BLUE', 'RED', 'YELLOW', 'RED', 'ORANGE', 'YELLOW', 'YELLOW', 'ORANGE', 'YELLOW', 'BLUE', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN', 'GREEN', 'PINK', 'BLACK', 'GREEN', 'GREEN', 'GREEN', 'GREEN', 'BLACK', 'WILD', 'PINK', 'PINK', 'PINK', 'YELLOW', 'WILD', 'ORANGE', 'ORANGE', 'WILD', 'WILD', 'WHITE', 'WILD', 'WHITE', 'WILD', 'WILD', 'WILD']
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 42], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 42], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 42], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-	This turn has triggered the last round!
-
-TURN 198: Player 0 - OneStepAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 43], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 43], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 43], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-
-TURN 199: Player 1 - LongRouteAgent
+TURN 10: Player 0 - RandomAgent
 
 	Dealing destination cards:
-		DESTINATION: [0] LOS ANGELES --21-- NEW YORK
-		DESTINATION: [16] LOS ANGELES --16-- CHICAGO
-		DESTINATION: [1] DULUTH --8-- HOUSTON
+		DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY
+		DESTINATION: [1] SOUTHINGTON --5-- VERNON
+		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
 
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	Picks 1 destinations
-		DESTINATION: [1] DULUTH --8-- HOUSTON
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+	Picks 3 destinations
+		DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY
+		DESTINATION: [1] SOUTHINGTON --5-- VERNON
+		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
 
-	OneStepAgent 0 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	LongRouteAgent 1 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	PathAgent 2 [[4, 0, 4, 2, 2, 1, 5, 0, 0, 44], [1, 0, 5, 6, 0, 0, 1, 2, 0, 29], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
-Player 0 - OneStepAgent:
-	(+7) placed CALGARY --4 GRAY-- SEATTLE
-	(+7) placed CALGARY --4 GRAY-- HELENA
-	(+15) placed CALGARY --6 WHITE-- WINNIPEG
-	(+15) placed DULUTH --6 PINK-- TORONTO
-	(+4) placed SALT LAKE CITY --3 ORANGE-- LAS VEGAS
-	(+7) placed SALT LAKE CITY --4 WHITE-- SAN FRANCISCO
-	(+2) placed KANSAS CITY --2 GRAY-- OKLAHOMA CITY
-	(+10) placed PITTSBURGH --5 GREEN-- SAINT LOUIS
-	(+2) placed LITTLE ROCK --2 GRAY-- DALLAS
-	(+4) placed RALEIGH --3 BLACK-- NASHVILLE
-	(+2) placed CHARLESTON --2 GRAY-- ATLANTA
-	(-20) DESTINATION: [12] LOS ANGELES --20-- MIAMI not completed
-	(-22) DESTINATION: [23] SEATTLE --22-- NEW YORK not completed
-	(-9) DESTINATION: [22] MONTREAL --9-- ATLANTA not completed
-Player 1 - LongRouteAgent:
-	(+1) placed VANCOUVER --1 GRAY-- SEATTLE
-	(+1) placed SEATTLE --1 GRAY-- PORTLAND
-	(+10) placed PORTLAND --5 PINK-- SAN FRANCISCO
-	(+4) placed SAN FRANCISCO --3 YELLOW-- LOS ANGELES
-	(+4) placed DULUTH --3 GRAY-- SAULT ST. MARIE
-	(+2) placed SAULT ST. MARIE --2 GRAY-- TORONTO
-	(+1) placed OMAHA --1 GRAY-- KANSAS CITY
-	(+7) placed OMAHA --4 PINK-- DENVER
-	(+4) placed TORONTO --3 GRAY-- MONTREAL
-	(+4) placed CHICAGO --3 BLACK-- PITTSBURGH
-	(+2) placed PITTSBURGH --2 GRAY-- RALEIGH
-	(+2) placed OKLAHOMA CITY --2 GRAY-- LITTLE ROCK
-	(+4) placed LITTLE ROCK --3 WHITE-- NASHVILLE
-	(+2) placed SANTA FE --2 GRAY-- EL PASO
-	(+2) placed RALEIGH --2 GRAY-- CHARLESTON
-	(+2) placed RALEIGH --2 GRAY-- ATLANTA
-	(+2) placed SAINT LOUIS --2 GRAY-- NASHVILLE
-	(+1) placed NASHVILLE --1 GRAY-- ATLANTA
-	(+1) placed DALLAS --1 GRAY-- HOUSTON
-	(-11) DESTINATION: [17] DENVER --11-- PITTSBURGH not completed
-	(-10) DESTINATION: [7] TORONTO --10-- MIAMI not completed
-	(-8) DESTINATION: [1] DULUTH --8-- HOUSTON not completed
-Player 2 - PathAgent:
-	(-17) DESTINATION: [4] PORTLAND --17-- NASHVILLE not completed
-	(-7) DESTINATION: [21] CHICAGO --7-- NEW ORLEANS not completed
-	(-10) DESTINATION: [6] DULUTH --10-- EL PASO not completed
+TURN 11: Player 1 - AlphaZero
 
-Player 0 - OneStepAgent gets the longest route! (+10)
+	[GAME FACEUP]: ['BLUE', 'GREEN', 'WILD', 'YELLOW', 'BLUE']
+	[FACEUP DECK]: Picked up BLUE
 
-1. (Player 0) OneStepAgent | 34 points
-2. (Player 1) LongRouteAgent | 27 points
-3. (Player 2) PathAgent | -34 points
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]
+	[GAME FACEUP]: ['GREEN', 'WILD', 'YELLOW', 'BLUE', 'BLUE']
+	[FACEUP DECK]: Picked up GREEN
+
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 1, 0, 0]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 1], [0, 0, 1, 0, 0, 0, 0, 1, 0, 0]]
+
+TURN 12: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up GREEN
+
+	RandomAgent 0 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 1, 0, 0]]
+	AlphaZero 1 [[0, 0, 0, 1, 0, 0, 1, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 1, 0, 0]]
+	[GAME FACEUP]: ['WILD', 'YELLOW', 'BLUE', 'BLUE', 'YELLOW']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 0, 1, 1, 0, 0, 1, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 1, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 1, 0, 0, 1, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 1, 0, 0]]
+
+TURN 13: Player 1 - AlphaZero
+
+	[PLAYER COLORS]: ['BLUE', 'GREEN']
+	Placed ROUTE: [11] SOUTH WINDSOR --1 BLUE-- MANCHESTER
+		using ['BLUE'] derived from ['BLUE']
+	[PLAYER COLORS]: ['GREEN']
+
+	RandomAgent 0 [[0, 0, 1, 1, 0, 0, 1, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 1, 0, 0, 1, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+
+TURN 14: Player 0 - RandomAgent
+
+	[FACEDOWN DECK]: Picked up RED
+
+	RandomAgent 0 [[0, 0, 1, 1, 0, 0, 1, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 1, 0, 0, 1, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+	[GAME FACEUP]: ['WILD', 'YELLOW', 'BLUE', 'YELLOW', 'GREEN']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 0, 1, 2, 0, 0, 1, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 2, 0, 0, 1, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+
+TURN 15: Player 1 - AlphaZero
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'YELLOW', 'GREEN', 'WILD']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[0, 0, 1, 2, 0, 0, 1, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0]]
+	AlphaZero 1 [[0, 0, 1, 2, 0, 0, 1, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0]]
+
+TURN 16: Player 0 - RandomAgent
+
+	[GAME FACEUP]: ['BLUE', 'YELLOW', 'GREEN', 'WILD', 'GREEN']
+	[FACEUP DECK]: Picked up WILD
+
+	RandomAgent 0 [[0, 0, 1, 2, 0, 0, 1, 0, 1, 3], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0]]
+	AlphaZero 1 [[0, 0, 1, 2, 0, 0, 1, 0, 1, 3], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0]]
+
+TURN 17: Player 1 - AlphaZero
+
+	[PLAYER COLORS]: ['GREEN', 'WILD']
+	Placed ROUTE: [12] SOUTH WINDSOR --2 GREEN-- VERNON
+		using ['WILD', 'GREEN'] derived from ['WILD', 'GREEN']
+	[PLAYER COLORS]: []
+
+	RandomAgent 0 [[0, 0, 1, 2, 0, 0, 1, 0, 1, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 2, 0, 0, 1, 0, 1, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+	This turn has triggered the last round!
+TURN 18: Player 0 - RandomAgent
+
+	[PLAYER COLORS]: ['RED', 'YELLOW', 'RED', 'GREEN', 'BLUE', 'RED', 'YELLOW', 'WILD']
+	Placed ROUTE: [1] SOUTHINGTON --2 YELLOW-- HARTFORD
+		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: ['RED', 'RED', 'GREEN', 'BLUE', 'RED', 'WILD']
+	(+4) DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER completed
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 1, 0, 1, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 0, 0, 0, 1, 0, 1, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+TURN 19: Player 1 - AlphaZero
+
+	[GAME FACEUP]: ['BLUE', 'YELLOW', 'GREEN', 'GREEN', 'GREEN']
+	[FACEUP DECK]: Picked up BLUE
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 1, 0, 1, 3], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 0, 0, 0, 1, 0, 1, 3], [0, 0, 1, 0, 0, 0, 0, 0, 0, 0]]
+	[GAME FACEUP]: ['YELLOW', 'GREEN', 'GREEN', 'GREEN', 'BLUE']
+	[FACEUP DECK]: Picked up YELLOW
+
+	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 1, 0, 1, 3], [0, 0, 1, 1, 0, 0, 0, 0, 0, 0]]
+	AlphaZero 1 [[0, 0, 1, 0, 0, 0, 1, 0, 1, 3], [0, 0, 1, 1, 0, 0, 0, 0, 0, 0]]
+
+Player 0 - RandomAgent:
+	(+2) placed SOUTHINGTON --2 BLUE-- SIMSBURY
+	(+2) placed SOUTHINGTON --2 YELLOW-- HARTFORD
+	(+2) placed HARTFORD --2 RED-- MANCHESTER
+	(+1) placed HARTFORD --1 GREEN-- WETHERSFIELD
+	(-4) DESTINATION: [6] HARTFORD --4-- VERNON not completed
+	(+4) DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER completed
+	(-2) DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY not completed
+	(-5) DESTINATION: [1] SOUTHINGTON --5-- VERNON not completed
+	(-4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY not completed
+Player 1 - AlphaZero:
+	(+1) placed SOUTHINGTON --1 RED-- WETHERSFIELD
+	(+1) placed SIMSBURY --1 GRAY-- HARTFORD
+	(+1) placed GLASTONBURY --1 GRAY-- MANCHESTER
+	(+2) placed GLASTONBURY --2 GRAY-- VERNON
+	(+1) placed MANCHESTER --1 BLUE-- SOUTH WINDSOR
+	(+2) placed VERNON --2 GREEN-- SOUTH WINDSOR
+	(-3) DESTINATION: [2] SIMSBURY --3-- MANCHESTER not completed
+	(-5) DESTINATION: [3] SIMSBURY --5-- VERNON not completed
+1. (Player 1) AlphaZero | 0 points
+2. (Player 0) RandomAgent | -4 points

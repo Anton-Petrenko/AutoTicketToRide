@@ -14,7 +14,7 @@ CITY_LOCATIONS = {'VANCOUVER': np.array([-0.91, 0.90]), 'CALGARY': np.array([-0.
 
 class Player:
 
-    def __init__(self, name):
+    def __init__(self, name: str):
         self.points = 0
         self.name = name
         self.turn_order = None

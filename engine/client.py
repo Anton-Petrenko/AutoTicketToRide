@@ -8,7 +8,14 @@ class TicketToRide():
         assert isinstance(options, GameOptions)
         assert options.players != None
         self.options = options
-        self.players_list = deepcopy(self.options.players)
+
+        deep_copy = True
+        for player in self.options.players:
+            if player.name.startswith("AlphaZero") or player.name.endswith("AlphaZero"):
+                deep_copy = False
+        
+        self.players_list = deepcopy(self.options.players) if deep_copy else self.options.players
+        self.players_list = self.options.players
         self.game_engine = None
 
     def setup_game(self):

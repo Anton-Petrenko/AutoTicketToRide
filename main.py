@@ -17,21 +17,24 @@ import players as Player
 if __name__ == "__main__":
 
     game_options = GameOptions(
-        players=[Player.OneStep(), Player.LongRoute(), Player.Path(), Player.Hungry()],
+        players=[
+            Player.Random(), 
+            Player.AlphaZero(filename="model8000.keras")
+            ],
         logs=True,
-        filename_paths="USA_paths.txt",
-        filename_dests="USA_destinations.txt",
-        # red_trains=6,
-        # blue_trains=6,
-        # pink_trains=0,
-        # wild_trains=6,
-        # black_trains=0,
-        # green_trains=6,
-        # white_trains=0,
-        # orange_trains=0,
-        # yellow_trains=6,
-        # traincars_per_player=10,
-        longest_route_bonus=True
+        filename_paths="CT_paths.txt",
+        filename_dests="CT_destinations.txt",
+        red_trains=6,
+        blue_trains=6,
+        pink_trains=0,
+        wild_trains=6,
+        black_trains=0,
+        green_trains=6,
+        white_trains=0,
+        orange_trains=0,
+        yellow_trains=6,
+        traincars_per_player=10,
+        longest_route_bonus=False
     )
 
     # alphazero_options = AlphaZeroTrainingOptions(
