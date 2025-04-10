@@ -2,11 +2,11 @@ import os
 print(f"[{os.getpid()}] [AutoTicketToRide] main: Expect 2 additional TensorFlow import statements...")
 
 from keras import Model
-from numpy import ndarray
-from keras.optimizers import Adam
-from keras.models import load_model
-from keras.layers import Dense, Input, BatchNormalization, ReLU, Add
-from keras.losses import BinaryCrossentropy, CategoricalCrossentropy, MeanSquaredError
+from numpy import ndarray, any, isnan, isinf
+from keras.api.optimizers import Adam
+from keras.api.models import load_model
+from keras.api.layers import Dense, Input, BatchNormalization, ReLU, Add, LayerNormalization
+from keras.api.losses import BinaryCrossentropy, CategoricalCrossentropy, MeanSquaredError
 
 class NeuralNetOptions:
     def __init__(
@@ -65,41 +65,41 @@ class NeuralNet:
 
         inputs = Input((self.options.state_size,))
         pre = Dense(800)(inputs)
-        pre = BatchNormalization()(pre)
+        pre = LayerNormalization()(pre)
         pre = ReLU()(pre)
 
         for x in range(20):
             if x == 0: res_block = Dense(800)(pre)
             else: res_block = Dense(800)(res_block)
-            res_block = BatchNormalization()(res_block)
+            res_block = LayerNormalization()(res_block)
             res_block = ReLU()(res_block)
             res_block = Dense(800)(res_block)
-            res_block = BatchNormalization()(res_block)
+            res_block = LayerNormalization()(res_block)
             res_block = Add()([pre, res_block])
             res_block = ReLU()(res_block)
         
         action_out = Dense(400)(res_block)
-        action_out = BatchNormalization()(action_out)
+        action_out = LayerNormalization()(action_out)
         action_out = ReLU()(action_out)
         action_out = Dense(4, name="action", activation="softmax")(action_out)
 
         color_out = Dense(400)(res_block)
-        color_out = BatchNormalization()(color_out)
+        color_out = LayerNormalization()(color_out)
         color_out = ReLU()(color_out)
         color_out = Dense(9, name="color", activation="sigmoid")(color_out)
 
         dest_out = Dense(400)(res_block)
-        dest_out = BatchNormalization()(dest_out)
+        dest_out = LayerNormalization()(dest_out)
         dest_out = ReLU()(dest_out)
         dest_out = Dense(self.options.output_lengths[2], name="destination", activation="sigmoid")(dest_out)
 
         route_out = Dense(400)(res_block)
-        route_out = BatchNormalization()(route_out)
+        route_out = LayerNormalization()(route_out)
         route_out = ReLU()(route_out)
         route_out = Dense(self.options.output_lengths[3], name="route", activation="sigmoid")(route_out)
 
         win_out = Dense(400)(res_block)
-        win_out = BatchNormalization()(win_out)
+        win_out = LayerNormalization()(win_out)
         win_out = ReLU()(win_out)
         win_out = Dense(1, name="win", activation="tanh")(win_out)
         
@@ -121,7 +121,7 @@ class NeuralNet:
         return model
     
     def inference(self, input: ndarray):
-        return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=0))
+        return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=1))
     
     def update_weights(self, inputs: list[int], outputs: dict[str, list]):
         self.model.fit(inputs, outputs, verbose=0)

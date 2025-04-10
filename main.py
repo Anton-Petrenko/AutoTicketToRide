@@ -1,5 +1,5 @@
 from engine import GameOptions, TicketToRide
-# from alphazero import *
+from alphazero import *
 import players as Player
 
 # Check game win prob target in make_target - not 100% certain the player making move at that point + winner of game is being correctly deduced
@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     game_options = GameOptions(
         players=[
-            Player.Random(), 
-            Player.AlphaZero(filename="model8000.keras")
+            Player.Random(),
+            Player.Random()
             ],
         logs=True,
         filename_paths="CT_paths.txt",
@@ -37,21 +37,17 @@ if __name__ == "__main__":
         longest_route_bonus=False
     )
 
-    # alphazero_options = AlphaZeroTrainingOptions(
-    #     game_options,
-    #     num_players=2,
-    #     simulations_per_move=100,
-    #     games_in_sampled_batch=50,
-    #     num_sampling_moves=5,
-    #     batch_size=1
-    # )
-
-    ttr = TicketToRide(game_options)
-    ttr.play()
-    # hungry = Player.Hungry()
-    # hungry.decide(ttr.game_engine)
+    alphazero_options = AlphaZeroTrainingOptions(
+        game_options,
+        num_players=2,
+        simulations_per_move=100,
+        games_in_sampled_batch=50,
+        num_sampling_moves=5,
+        batch_size=1
+    )
+    
+    # ttr = TicketToRide(game_options)
     # ttr.play()
-    # ttr.game_engine.visualize_board()
 
-    # ai = AlphaZeroTrainer(alphazero_options)
-    # ai.train()
+    ai = AlphaZeroTrainer(alphazero_options)
+    ai.train()
