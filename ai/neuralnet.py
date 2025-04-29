@@ -3,10 +3,10 @@ print(f"[{os.getpid()}] [AutoTicketToRide] main: Expect 2 additional TensorFlow 
 
 from keras import Model
 from numpy import ndarray, any, isnan, isinf
-from keras.api.optimizers import Adam
-from keras.api.models import load_model
-from keras.api.layers import Dense, Input, BatchNormalization, ReLU, Add, LayerNormalization
-from keras.api.losses import BinaryCrossentropy, CategoricalCrossentropy, MeanSquaredError
+from keras.optimizers import Adam
+from keras.models import load_model
+from keras.layers import Dense, Input, BatchNormalization, ReLU, Add, LayerNormalization
+from keras.losses import BinaryCrossentropy, CategoricalCrossentropy, MeanSquaredError
 
 class NeuralNetOptions:
     def __init__(
@@ -29,11 +29,11 @@ class NeuralNet:
             # self.destination_desire_by_pickup_index = output[(4+options.output_lengths[1]):((4+options.output_lengths[1])+(options.output_lengths[2]))]
             # self.route_desire = output[((4+options.output_lengths[1])+(options.output_lengths[2])):(((4+options.output_lengths[1])+(options.output_lengths[2]))+(options.output_lengths[3]))]
             # self.win_chance = output[(((4+options.output_lengths[1])+(options.output_lengths[2]))+(options.output_lengths[3])):]
-            self.action = output[0][0]
-            self.color_desire = output[1][0]
-            self.destination_desire_by_pickup_index = output[2][0]
-            self.route_desire = output[3][0]
-            self.win_chance = output[4][0]
+            self.action: ndarray = output[0][0]
+            self.color_desire: ndarray = output[1][0]
+            self.destination_desire_by_pickup_index: ndarray = output[2][0]
+            self.route_desire: ndarray = output[3][0]
+            self.win_chance: ndarray = output[4][0]
             assert len(self.win_chance) == 1, f"[AutoTicketToRide] NeuralNetOutput: received output size {len(output)} but expecting {sum(options.output_lengths)} {options.output_lengths}"
 
     def __init__(self, options: NeuralNetOptions, load_from_path: str = None, name: str = None):
@@ -121,7 +121,7 @@ class NeuralNet:
         return model
     
     def inference(self, input: ndarray):
-        return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=1))
+        return self.NeuralNetOutput(self.options, self.model.predict(input, verbose=0))
     
     def update_weights(self, inputs: list[int], outputs: dict[str, list]):
         self.model.fit(inputs, outputs, verbose=0)

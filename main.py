@@ -15,39 +15,39 @@ import players as Player
 # in longroutejunkie check if the destinations_not_completed function is doing the card.city1 IN correctly. (and card.city2 IN)
 
 if __name__ == "__main__":
+    for i in range(20):
+        game_options = GameOptions(
+            players=[
+                Player.AlphaZero(name="AlphaZero1", filename="model1000.keras"),
+                Player.AlphaZero(name="AlphaZero5", filename="model5000.keras")
+                ],
+            logs=True,
+            filename_paths="CT_paths.txt",
+            filename_dests="CT_destinations.txt",
+            red_trains=6,
+            blue_trains=6,
+            pink_trains=0,
+            wild_trains=6,
+            black_trains=0,
+            green_trains=6,
+            white_trains=0,
+            orange_trains=0,
+            yellow_trains=6,
+            traincars_per_player=10,
+            longest_route_bonus=False
+        )
 
-    game_options = GameOptions(
-        players=[
-            Player.Random(),
-            Player.Random()
-            ],
-        logs=True,
-        filename_paths="CT_paths.txt",
-        filename_dests="CT_destinations.txt",
-        red_trains=6,
-        blue_trains=6,
-        pink_trains=0,
-        wild_trains=6,
-        black_trains=0,
-        green_trains=6,
-        white_trains=0,
-        orange_trains=0,
-        yellow_trains=6,
-        traincars_per_player=10,
-        longest_route_bonus=False
-    )
+        # alphazero_options = AlphaZeroTrainingOptions(
+        #     game_options,
+        #     num_players=2,
+        #     simulations_per_move=100,
+        #     games_in_sampled_batch=50,
+        #     num_sampling_moves=5,
+        #     batch_size=1
+        # )
+        
+        ttr = TicketToRide(game_options)
+        ttr.play()
 
-    alphazero_options = AlphaZeroTrainingOptions(
-        game_options,
-        num_players=2,
-        simulations_per_move=100,
-        games_in_sampled_batch=50,
-        num_sampling_moves=5,
-        batch_size=1
-    )
-    
-    # ttr = TicketToRide(game_options)
-    # ttr.play()
-
-    ai = AlphaZeroTrainer(alphazero_options)
-    ai.train()
+        # ai = AlphaZeroTrainer(alphazero_options)
+        # ai.train()

@@ -68,7 +68,23 @@ class GameOptions:
         ret.filename_paths = deepcopy(self.filename_paths)
         ret.filename_dests = deepcopy(self.filename_dests)
         ret.reshuffle_limit = deepcopy(self.reshuffle_limit)
+
+        ret.pink_trains = deepcopy(self.pink_trains)
+        ret.white_trains = deepcopy(self.white_trains)
+        ret.blue_trains = deepcopy(self.blue_trains)
+        ret.yellow_trains = deepcopy(self.yellow_trains)
+        ret.orange_trains = deepcopy(self.orange_trains)
+        ret.black_trains = deepcopy(self.black_trains)
+        ret.red_trains = deepcopy(self.red_trains)
+        ret.green_trains = deepcopy(self.green_trains)
+        ret.wild_trains = deepcopy(self.wild_trains)
+        ret.traincars_per_player = deepcopy(self.traincars_per_player)
+
         ret.dests_dealt_per_player_start = deepcopy(self.dests_dealt_per_player_start)
+        ret.dests_dealt_on_request = deepcopy(self.dests_dealt_on_request)
+        ret.traincolor_dealt_per_player_start = deepcopy(self.traincolor_dealt_per_player_start)
+        ret.longest_route_bonus = deepcopy(self.longest_route_bonus)
+
         return ret
 
 class GameEngine:

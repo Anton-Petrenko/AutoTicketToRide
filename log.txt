@@ -1,257 +1,240 @@
-PREGAME: Player 0 - RandomAgent
+PREGAME: Player 0 - AlphaZero1
 
 	Picks 2 destinations
 		DESTINATION: [3] SIMSBURY --5-- VERNON
 		DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 
-PREGAME: Player 1 - RandomAgent
+PREGAME: Player 1 - AlphaZero5
 
 	Picks 2 destinations
 		DESTINATION: [1] SOUTHINGTON --5-- VERNON
-		DESTINATION: [2] SIMSBURY --3-- MANCHESTER
+		DESTINATION: [6] HARTFORD --4-- VERNON
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 4], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 
-TURN 0: Player 0 - RandomAgent
+TURN 0: Player 0 - AlphaZero1
 
-	[PLAYER COLORS]: ['GREEN', 'WILD', 'WILD', 'YELLOW']
-	Placed ROUTE: [12] SOUTH WINDSOR --2 GREEN-- VERNON
-		using ['GREEN', 'WILD'] derived from ['GREEN', 'WILD']
-	[PLAYER COLORS]: ['WILD', 'YELLOW']
+	[PLAYER COLORS]: ['YELLOW', 'RED', 'WILD', 'BLUE']
+	Placed ROUTE: [0] SOUTHINGTON --2 BLUE-- SIMSBURY
+		using ['WILD', 'BLUE'] derived from ['WILD', 'BLUE']
+	[PLAYER COLORS]: ['YELLOW', 'RED']
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 4]]
 
-TURN 1: Player 1 - RandomAgent
+TURN 1: Player 1 - AlphaZero5
 
-	[PLAYER COLORS]: ['BLUE', 'RED', 'WILD', 'GREEN']
-	Placed ROUTE: [5] SIMSBURY --1 GRAY-- HARTFORD
-		using ['WILD'] derived from ['WILD']
-	[PLAYER COLORS]: ['BLUE', 'RED', 'GREEN']
+	[GAME FACEUP]: ['RED', 'BLUE', 'WILD', 'BLUE', 'WILD']
+	[FACEUP DECK]: Picked up BLUE
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 0, 0, 0, 4]]
+	[GAME FACEUP]: ['RED', 'WILD', 'BLUE', 'WILD', 'RED']
+	[FACEUP DECK]: Picked up RED
 
-TURN 2: Player 0 - RandomAgent
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 1, 0, 0, 0, 1, 0, 0, 4]]
 
-	[PLAYER COLORS]: ['WILD', 'YELLOW']
-	Placed ROUTE: [9] HARTFORD --1 GREEN-- WETHERSFIELD
-		using ['WILD'] derived from ['GREEN', 'WILD']
+TURN 2: Player 0 - AlphaZero1
+
+	[PLAYER COLORS]: ['YELLOW', 'RED']
+	Placed ROUTE: [2] SOUTHINGTON --1 RED-- WETHERSFIELD
+		using ['RED'] derived from ['RED']
 	[PLAYER COLORS]: ['YELLOW']
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 1, 0, 0, 0, 1, 0, 0, 4]]
 
-TURN 3: Player 1 - RandomAgent
+TURN 3: Player 1 - AlphaZero5
 
-	Dealing destination cards:
-		DESTINATION: [5] WETHERSFIELD --3-- MANCHESTER
-		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
-		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
-
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	Picks 1 destinations
-		DESTINATION: [5] WETHERSFIELD --3-- MANCHESTER
-
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-
-TURN 4: Player 0 - RandomAgent
-
-	[FACEDOWN DECK]: Picked up YELLOW
-
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	[FACEDOWN DECK]: Picked up GREEN
-
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 3]]
-
-TURN 5: Player 1 - RandomAgent
-
-	[PLAYER COLORS]: ['BLUE', 'RED', 'GREEN']
+	[PLAYER COLORS]: ['BLUE', 'RED', 'RED', 'YELLOW', 'BLUE', 'RED']
 	Placed ROUTE: [13] GLASTONBURY --1 GRAY-- MANCHESTER
 		using ['BLUE'] derived from ['BLUE']
-	[PLAYER COLORS]: ['RED', 'GREEN']
+	[PLAYER COLORS]: ['RED', 'RED', 'YELLOW', 'BLUE', 'RED']
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 1, 0, 0, 4]]
 
-TURN 6: Player 0 - RandomAgent
+TURN 4: Player 0 - AlphaZero1
 
-	[GAME FACEUP]: ['BLUE', 'BLUE', 'YELLOW', 'GREEN', 'GREEN']
+	[PLAYER COLORS]: ['YELLOW']
+	Placed ROUTE: [5] SIMSBURY --1 GRAY-- HARTFORD
+		using ['YELLOW'] derived from ['YELLOW']
+	[PLAYER COLORS]: []
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0, 0, 4]]
+
+TURN 5: Player 1 - AlphaZero5
+
+	[GAME FACEUP]: ['WILD', 'BLUE', 'WILD', 'RED', 'YELLOW']
 	[FACEUP DECK]: Picked up BLUE
 
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
-	[GAME FACEUP]: ['BLUE', 'YELLOW', 'GREEN', 'GREEN', 'YELLOW']
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 1, 0, 0, 4]]
+	[GAME FACEUP]: ['WILD', 'WILD', 'RED', 'YELLOW', 'GREEN']
 	[FACEUP DECK]: Picked up YELLOW
 
-	RandomAgent 0 [[0, 0, 1, 1, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
-	RandomAgent 1 [[0, 0, 1, 1, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 4]]
 
-TURN 7: Player 1 - RandomAgent
+TURN 6: Player 0 - AlphaZero1
 
-	[GAME FACEUP]: ['BLUE', 'GREEN', 'GREEN', 'YELLOW', 'WILD']
+	[GAME FACEUP]: ['WILD', 'WILD', 'RED', 'GREEN', 'BLUE']
 	[FACEUP DECK]: Picked up WILD
 
-	RandomAgent 0 [[0, 0, 1, 1, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 1, 2]]
-	RandomAgent 1 [[0, 0, 1, 1, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 1, 2]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 1, 1, 0, 0, 1, 0, 0, 4]]
 
-TURN 8: Player 0 - RandomAgent
+TURN 7: Player 1 - AlphaZero5
 
-	[PLAYER COLORS]: ['YELLOW', 'YELLOW', 'GREEN', 'BLUE', 'YELLOW']
-	Placed ROUTE: [15] MANCHESTER --2 YELLOW-- VERNON
-		using ['YELLOW', 'YELLOW'] derived from ['YELLOW']
-	[PLAYER COLORS]: ['GREEN', 'BLUE', 'YELLOW']
-
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 1, 2]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 1, 2]]
-
-TURN 9: Player 1 - RandomAgent
-
-	[PLAYER COLORS]: ['RED', 'GREEN', 'WILD']
-	Placed ROUTE: [14] GLASTONBURY --2 GRAY-- VERNON
-		using ['RED', 'WILD'] derived from ['RED', 'WILD']
-	[PLAYER COLORS]: ['GREEN']
-
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 2], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
-
-TURN 10: Player 0 - RandomAgent
-
-	[FACEDOWN DECK]: Picked up WILD
-
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
-	[GAME FACEUP]: ['BLUE', 'GREEN', 'GREEN', 'YELLOW', 'RED']
+	[GAME FACEUP]: ['WILD', 'RED', 'GREEN', 'BLUE', 'GREEN']
 	[FACEUP DECK]: Picked up BLUE
 
-	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
-	RandomAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 1, 0, 0, 1, 0, 0, 4]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 1, 0, 0, 1, 0, 0, 4]]
+	[FACEDOWN DECK]: Picked up BLUE
 
-TURN 11: Player 1 - RandomAgent
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 1, 0, 0, 1, 0, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 1, 0, 0, 1, 0, 0, 5]]
 
-	[GAME FACEUP]: ['GREEN', 'GREEN', 'YELLOW', 'RED', 'BLUE']
+TURN 8: Player 0 - AlphaZero1
+
+	[PLAYER COLORS]: ['WILD']
+	Placed ROUTE: [9] HARTFORD --1 GREEN-- WETHERSFIELD
+		using ['WILD'] derived from ['WILD']
+	[PLAYER COLORS]: []
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0, 1, 0, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0, 1, 0, 0, 5]]
+
+TURN 9: Player 1 - AlphaZero5
+
+	[GAME FACEUP]: ['WILD', 'RED', 'GREEN', 'GREEN', 'GREEN']
 	[FACEUP DECK]: Picked up GREEN
 
-	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	[FACEDOWN DECK]: Picked up WILD
-
-	RandomAgent 0 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 2]]
-	RandomAgent 1 [[0, 0, 2, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 2]]
-
-TURN 12: Player 0 - RandomAgent
-
-	[GAME FACEUP]: ['GREEN', 'YELLOW', 'RED', 'BLUE', 'YELLOW']
-	[FACEUP DECK]: Picked up BLUE
-
-	RandomAgent 0 [[0, 0, 3, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 2]]
-	RandomAgent 1 [[0, 0, 3, 0, 0, 0, 0, 0, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 2]]
-	[GAME FACEUP]: ['GREEN', 'YELLOW', 'RED', 'YELLOW', 'RED']
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0, 1, 1, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0, 1, 1, 0, 5]]
+	[GAME FACEUP]: ['WILD', 'RED', 'GREEN', 'GREEN', 'WILD']
 	[FACEUP DECK]: Picked up GREEN
 
-	RandomAgent 0 [[0, 0, 3, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 2]]
-	RandomAgent 1 [[0, 0, 3, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 2]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0, 1, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 1, 0, 0, 1, 2, 0, 5]]
 
-TURN 13: Player 1 - RandomAgent
+TURN 10: Player 0 - AlphaZero1
 
-	[PLAYER COLORS]: ['GREEN', 'GREEN', 'WILD']
-	Placed ROUTE: [2] SOUTHINGTON --1 RED-- WETHERSFIELD
-		using ['WILD'] derived from ['RED', 'WILD']
-	[PLAYER COLORS]: ['GREEN', 'GREEN']
+	[GAME FACEUP]: ['WILD', 'RED', 'GREEN', 'WILD', 'RED']
+	[FACEUP DECK]: Picked up WILD
 
-	RandomAgent 0 [[0, 0, 3, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 3, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 1, 0, 0, 1, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 1, 0, 0, 1, 2, 0, 5]]
 
-TURN 14: Player 0 - RandomAgent
+TURN 11: Player 1 - AlphaZero5
 
-	[PLAYER COLORS]: ['GREEN', 'BLUE', 'YELLOW', 'WILD', 'BLUE', 'BLUE', 'GREEN']
-	Placed ROUTE: [0] SOUTHINGTON --2 BLUE-- SIMSBURY
-		using ['BLUE', 'BLUE'] derived from ['BLUE']
-	[PLAYER COLORS]: ['GREEN', 'YELLOW', 'WILD', 'BLUE', 'GREEN']
+	[GAME FACEUP]: ['RED', 'GREEN', 'WILD', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up YELLOW
 
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 2, 0, 0, 1, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 2, 0, 0, 1, 2, 0, 5]]
+	[GAME FACEUP]: ['RED', 'GREEN', 'WILD', 'RED', 'YELLOW']
+	[FACEUP DECK]: Picked up RED
 
-TURN 15: Player 1 - RandomAgent
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 2, 0, 0, 2, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 2, 2, 0, 0, 2, 2, 0, 5]]
 
-	Dealing destination cards:
-		DESTINATION: [6] HARTFORD --4-- VERNON
-		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
-		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
+TURN 12: Player 0 - AlphaZero1
 
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	Picks 3 destinations
-		DESTINATION: [6] HARTFORD --4-- VERNON
-		DESTINATION: [4] SIMSBURY --4-- GLASTONBURY
-		DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER
-
-	RandomAgent 0 [[0, 0, 1, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 1, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-
-TURN 16: Player 0 - RandomAgent
-
-	[PLAYER COLORS]: ['GREEN', 'YELLOW', 'WILD', 'BLUE', 'GREEN']
+	[PLAYER COLORS]: ['WILD']
 	Placed ROUTE: [11] SOUTH WINDSOR --1 BLUE-- MANCHESTER
-		using ['BLUE'] derived from ['BLUE']
-	[PLAYER COLORS]: ['GREEN', 'YELLOW', 'WILD', 'GREEN']
+		using ['WILD'] derived from ['WILD']
+	[PLAYER COLORS]: []
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 0, 0, 2, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 2, 0, 0, 2, 2, 0, 5]]
+
+TURN 13: Player 1 - AlphaZero5
+
+	[GAME FACEUP]: ['GREEN', 'WILD', 'RED', 'YELLOW', 'GREEN']
+	[FACEUP DECK]: Picked up YELLOW
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 5]]
+	[FACEDOWN DECK]: Picked up WILD
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 6]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 6]]
+
+TURN 14: Player 0 - AlphaZero1
+
+	[GAME FACEUP]: ['GREEN', 'WILD', 'RED', 'GREEN', 'WILD']
+	[FACEUP DECK]: Picked up GREEN
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 6]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 6]]
+	[GAME FACEUP]: ['WILD', 'RED', 'GREEN', 'WILD', 'GREEN']
+	[FACEUP DECK]: Picked up GREEN
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 2, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 6]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 2, 0, 0], [0, 0, 2, 3, 0, 0, 2, 2, 0, 6]]
+
+TURN 15: Player 1 - AlphaZero5
+
+	[PLAYER COLORS]: ['RED', 'RED', 'YELLOW', 'BLUE', 'RED', 'BLUE', 'YELLOW', 'BLUE', 'BLUE', 'GREEN', 'GREEN', 'YELLOW', 'RED', 'YELLOW', 'WILD']
+	Placed ROUTE: [6] HARTFORD --3 GRAY-- SOUTH WINDSOR
+		using ['WILD', 'BLUE', 'BLUE'] derived from ['WILD', 'BLUE']
+	[PLAYER COLORS]: ['RED', 'RED', 'YELLOW', 'RED', 'YELLOW', 'BLUE', 'BLUE', 'GREEN', 'GREEN', 'YELLOW', 'RED', 'YELLOW']
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 3, 0, 0, 2, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 2, 0, 0], [0, 0, 0, 3, 0, 0, 2, 2, 0, 5]]
+
+TURN 16: Player 0 - AlphaZero1
+
+	[PLAYER COLORS]: ['GREEN', 'GREEN']
+	Placed ROUTE: [14] GLASTONBURY --2 GRAY-- VERNON
+		using ['GREEN', 'GREEN'] derived from ['GREEN']
+	[PLAYER COLORS]: []
+
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 2, 2, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 2, 2, 0, 5]]
 
 	This turn has triggered the last round!
-TURN 17: Player 1 - RandomAgent
+TURN 17: Player 1 - AlphaZero5
 
-	[GAME FACEUP]: ['YELLOW', 'RED', 'YELLOW', 'RED', 'BLUE']
-	[FACEUP DECK]: Picked up RED
+	[GAME FACEUP]: ['WILD', 'RED', 'WILD', 'GREEN', 'YELLOW']
+	[FACEUP DECK]: Picked up GREEN
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 1, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 3], [0, 0, 0, 0, 0, 0, 1, 1, 0, 1]]
-	[GAME FACEUP]: ['YELLOW', 'YELLOW', 'RED', 'BLUE', 'RED']
-	[FACEUP DECK]: Picked up BLUE
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 2, 3, 0, 5]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 2, 3, 0, 5]]
+	[FACEDOWN DECK]: Picked up BLUE
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 3], [0, 0, 1, 0, 0, 0, 1, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 0, 1, 0, 3], [0, 0, 1, 0, 0, 0, 1, 1, 0, 1]]
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 2, 3, 0, 6]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 3, 0, 0, 2, 3, 0, 6]]
 
-TURN 18: Player 0 - RandomAgent
+TURN 18: Player 0 - AlphaZero1
 
-	[GAME FACEUP]: ['YELLOW', 'YELLOW', 'RED', 'RED', 'RED']
-	[FACEUP DECK]: Picked up RED
+	[GAME FACEUP]: ['WILD', 'RED', 'WILD', 'YELLOW', 'GREEN']
+	[FACEUP DECK]: Picked up WILD
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 1, 1, 0, 3], [0, 0, 1, 0, 0, 0, 1, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 1, 1, 0, 3], [0, 0, 1, 0, 0, 0, 1, 1, 0, 1]]
-	[GAME FACEUP]: ['YELLOW', 'YELLOW', 'RED', 'RED', 'YELLOW']
-	[FACEUP DECK]: Picked up RED
+	AlphaZero1 0 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 3, 0, 0, 2, 3, 0, 6]]
+	AlphaZero5 1 [[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 3, 0, 0, 2, 3, 0, 6]]
 
-	RandomAgent 0 [[0, 0, 0, 0, 0, 0, 2, 1, 0, 3], [0, 0, 1, 0, 0, 0, 1, 1, 0, 1]]
-	RandomAgent 1 [[0, 0, 0, 0, 0, 0, 2, 1, 0, 3], [0, 0, 1, 0, 0, 0, 1, 1, 0, 1]]
-
-Player 0 - RandomAgent:
+Player 0 - AlphaZero1:
 	(+2) placed SOUTHINGTON --2 BLUE-- SIMSBURY
-	(+1) placed HARTFORD --1 GREEN-- WETHERSFIELD
-	(+1) placed SOUTH WINDSOR --1 BLUE-- MANCHESTER
-	(+2) placed SOUTH WINDSOR --2 GREEN-- VERNON
-	(+2) placed MANCHESTER --2 YELLOW-- VERNON
-	(-5) DESTINATION: [3] SIMSBURY --5-- VERNON not completed
-	(-2) DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY not completed
-Player 1 - RandomAgent:
 	(+1) placed SOUTHINGTON --1 RED-- WETHERSFIELD
 	(+1) placed SIMSBURY --1 GRAY-- HARTFORD
-	(+1) placed GLASTONBURY --1 GRAY-- MANCHESTER
+	(+1) placed WETHERSFIELD --1 GREEN-- HARTFORD
 	(+2) placed GLASTONBURY --2 GRAY-- VERNON
+	(+1) placed SOUTH WINDSOR --1 BLUE-- MANCHESTER
+	(-5) DESTINATION: [3] SIMSBURY --5-- VERNON not completed
+	(-2) DESTINATION: [7] SOUTH WINDSOR --2-- GLASTONBURY not completed
+Player 1 - AlphaZero5:
+	(+4) placed HARTFORD --3 GRAY-- SOUTH WINDSOR
+	(+1) placed GLASTONBURY --1 GRAY-- MANCHESTER
 	(-5) DESTINATION: [1] SOUTHINGTON --5-- VERNON not completed
-	(-3) DESTINATION: [2] SIMSBURY --3-- MANCHESTER not completed
-	(-3) DESTINATION: [5] WETHERSFIELD --3-- MANCHESTER not completed
 	(-4) DESTINATION: [6] HARTFORD --4-- VERNON not completed
-	(-4) DESTINATION: [4] SIMSBURY --4-- GLASTONBURY not completed
-	(-4) DESTINATION: [0] SOUTHINGTON --4-- MANCHESTER not completed
-1. (Player 0) RandomAgent | 1 points
-2. (Player 1) RandomAgent | -18 points
+1. (Player 0) AlphaZero1 | 1 points
+2. (Player 1) AlphaZero5 | -4 points
