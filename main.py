@@ -15,11 +15,11 @@ import players as Player
 # in longroutejunkie check if the destinations_not_completed function is doing the card.city1 IN correctly. (and card.city2 IN)
 
 if __name__ == "__main__":
-    for i in range(20):
+    for i in range(10):
         game_options = GameOptions(
             players=[
-                Player.AlphaZero(name="AlphaZero1", filename="model1000.keras"),
-                Player.AlphaZero(name="AlphaZero5", filename="model5000.keras")
+                Player.FlatWinsMonteCarlo(),
+                Player.Path()
                 ],
             logs=True,
             filename_paths="CT_paths.txt",

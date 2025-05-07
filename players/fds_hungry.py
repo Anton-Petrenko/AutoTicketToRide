@@ -3,6 +3,10 @@ import networkx as nx
 from engine.game import GameEngine
 from engine.lib import *
 
+class CustomHungry(Player):
+    def __init__(self, name = "CustomHungry"):
+        super().__init__(name)
+
 class Hungry(Player):
 
     def __init__(self, name = "HungryAgent"):
@@ -132,6 +136,7 @@ class Hungry(Player):
                 moves_by_color[move.color] = move
 
         colors_available = {color: game.faceup_cards.count(color) for color in game.faceup_cards}
+        if len(game.faceup_cards) == 0: return Random.choice(Random(), possible_moves)
         max_color_available = max(set(game.faceup_cards), key=game.faceup_cards.count)
         if self.colors_needed != None and len(self.colors_needed) != 0:
             most_needed_color = max(self.colors_needed.items(), key=operator.itemgetter(1))[0]
@@ -142,10 +147,10 @@ class Hungry(Player):
         if most_needed_color in colors_available:
             return moves_by_color[most_needed_color]
         
-        if self.colors_needed != None and len(self.colors_needed) > 0 and self.colors_needed[max_color_available[0]] > 0 and max_color_available in moves_by_color:
-            return moves_by_color[max_color_available[0]]
+        if self.colors_needed != None and len(self.colors_needed) > 0 and self.colors_needed[max_color_available] > 0 and max_color_available in moves_by_color:
+            return moves_by_color[max_color_available]
 
-        if most_needed_color == 'GRAY' and max_color_available[1] > 1:
+        if most_needed_color == 'GRAY' and game.faceup_cards.count(max_color_available) > 1:
             if max_color_available[0] in moves_by_color:
                 return moves_by_color[max_color_available[0]]
         
